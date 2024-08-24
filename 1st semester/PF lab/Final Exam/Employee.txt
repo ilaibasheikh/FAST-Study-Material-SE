@@ -1,0 +1,2 @@
+S.no	Emp.No		Emp_name	Salary	Age	Depart_id	Depart_name
+ 1 	 
