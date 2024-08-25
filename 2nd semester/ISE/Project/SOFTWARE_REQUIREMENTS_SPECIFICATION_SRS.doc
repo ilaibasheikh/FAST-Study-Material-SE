@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fnil\fcharset0 Times New Roman;}{\f3\fnil\fcharset0 Calibri Light;}}
+{\colortbl ;\red0\green0\blue255;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\ri-1066\sa200\sl276\slmult1\lang9\b\f0\fs36     \ul  SOFTWARE REQUIREMENTS SPECIFICATION (SRS)                                    FOR STUDENT INFORMATION MANAGEMENT  SYSTEM   \ulnone\par
+\pard\fi-360\li360\qj\tx360\lang1033\f1\fs28\par
+1.\tab INTRODUCTION\par
+\pard\sa160\sl259\slmult0\qc\lang9\f0\fs24\par
+\pard\sa160\sl259\slmult0\qj THE STUDENT MANAGEMENT SYSTEM CAN HANDLE ALL THE DETAILS ABOUT A STUDENT. THE DETAILS INCLUDE COLLEGE DETAILS , COURSE DETAILS , STUDENT PERSONAL DETAILS , ACADEMIC DETAILS etc., THE STUDENT MANAGEMENT SYSTEM IS AN AUTOMATED VERSION OF MANUAL STUDENT MANAGEMENT SYSTEM.\b0\par
+\pard\sa200\sl276\slmult1\b\f2\fs28 1.1 PURPOSE\f0\fs36\par
+\pard\sa200\sl276\slmult1\qj\fs24 This SRS Document contains the complete software requirements for the Online StudentInformation Management System (OS I MS) and describes the design decisions, architecturaldesign and the detailed design needed to implement the system. It provides the visibility in thedesign and provides information needed for software support.New reliable and fast schoolmanagement software with the great customers support. It'll help you with your daily schoolmanagement routines and deliver you from your paperwork.       \par
+\pard\sa200\sl276\slmult1\f2\fs28\par
+1.2 SCOPE\f0\fs36\par
+\pard\sa200\sl276\slmult1\qj\fs24 Online Student Information Management System is developing for general purpose and used to replace old paper work system and PUMS. OSIMS is to build upon theexisting information system PUMS in order to efficiently provide student information to teachersand school administration .This increase in efficiency of result making, provide result to parents,give feedback to student, finally, publication and email student result. It provides a mechanism toedit the student information form which makes the system flexible.\fs36\line\pard\sa200\sl276\slmult1\par
+\f2\fs28 1.3 DEFINITIONS, ACRONYMS, AND ABBREVIATIONS\f0\fs36\par
+\fs24 IEEE     -  The Institute of Electrical and Electronics Engineers, Inc.\par
+OSIMS -  Online Student Information Management System\par
+PUMS  -  Project Units Management System\par
+J2EE     -  Java 2 Platform Enterprise Edition\par
+JSP       -  Java Server Page \par
+SRS      -  Software Requirements Specification\fs36\par
+\fs24 OS       -  Operating System\fs36\par
+\pard\fi-432\li792\qj\tx792\lang1033\f1\fs28\par
+\pard\qj\tx792 1.4 REFERENCES\fs24\par
+\pard\qj\b0\par
+\pard\fi-360\li720\qj\tx720\b\f0 (a)\tab{\field{\*\fldinst{HYPERLINK "https://www.scribd.com/doc/48111565/Software-Requirements-Specification-for-online-student-management-system"}}{\fldrslt{\ul\cf1 https://www.scribd.com/doc/48111565/Software-Requirements-Specification-for-online-student-management-system}}}\f0\fs24 .\par
+\pard\fi-360\li720\qj (b)\tab\lquote Software Engineering\rquote  by K.K. Aggarwal & Yogesh Singh, New Age Publishing House, 2\super nd\nosupersub  Ed.\par
+(c)\tab IEEE Recommended Practice for Software Requirements Specifications \endash  IEEE Std 830-1998.\par
+(d)\tab IEEE Standard for Software Test Documentation \endash  IEEE Std. 829-1998.\par
+\pard\fi-360\li360\qj\tx360\f1\fs28\par
+2.\tab Overall Description\par
+\par
+\pard\sa160\sl259\slmult0\qj\lang9\f0\fs24 THE STUDENT MANAGEMENT SYSTEM ALLOWS AUTHORIZED MEMBERS TO ACCESS THE RECORS OF ACADEMICALLYB REGISTERED STUDENTS. IT CAN BE USED IN VARIOUS EDUCATIONAL INSTITUTES ACROSS THE GLOBE AND SIMPLIFIES WORKING OF INSTITUTES.\par
+\pard\qj\tx792\lang1033\f1\fs28 2.1. Product Perspective\fs24\par
+\pard\qj\b0\par
+\b\f0 The proposed system shall be developed using client/server architecture and be compatible with Microsoft Windows Operating System. The front end of the system will be developed using Visual Basic 6.0 and backend will be developed using MS SQL Server 2000\b0\f1 .\par
+ \par
+\pard\qj\tx1440\b\fs28 2.1.1. System Interfaces\fs24\par
+\pard\qj\b0\par
+\pard\fi142\qj\b\f0 None\f1\par
+\pard\fi-504\li1224\qj\tx1440\par
+\pard\qj\tx1440\fs28 2.1.2. User Interfaces\par
+\pard\qj\par
+\f0\fs24 The ONSMS will have following user-friendly and menu driven interfaces\par
+\par
+a)\tab Login: to allow the entry of only authorized users through valid login Id and password.\par
+b)\tab School Details: to maintain school details.\par
+c)\tab Programme Details: to maintain programme details. \par
+d)\tab Scheme Details : to maintain scheme details of a programme.\par
+Paper Details: to maintain paper details of a scheme for a particular programme\par
+g)\tab Faculty Details : to maintain the faculty details.\b0\f1\par
+\pard\fi-504\li1224\qj\tx1440\b\par
+\pard\qj\tx1440\fs28 2.1.3. Hardware Interfaces\fs24\par
+\b0\par
+\b\f0 a)         Screen resolution of at least 640 x 480 or above.\par
+\lang1036 b)         Support for printer (dot matrix, deskjet, laserjet)\par
+\lang1033 c)        Computer systems will be in the networked environment as it is a multi-user system.\par
+\par
+\f1\fs28 2.1.4. Software Interfaces\par
+\b0\fs24\par
+\b\f0 a)         MS-Windows Operating System\par
+b)        Microsoft Visual Basic 6.0 for designing front-end\par
+c)         MS SQL Server 2000 for backend\par
+\lang9 d)        PLATEFORM : JAVA LANGUAGE\par
+e)        INTEGRATED DEVELOPMENT ENVIRONMENT(IDE):ECLIPSE\f3\fs28\par
+\lang1033\f1\fs24\par
+\fs28 2.1.5. Communication Interfaces\par
+\f0\fs24\par
+None\par
+\b0\f1\par
+\b\fs28 2.1.6. Memory Constraints\par
+\b0\fs24\par
+\b\f0 At least 512 MB RAM and 500 MB space of hard disk will be required to run the software.\par
+\par
+\f1\fs28 2.1.7. Operations\par
+\b0\fs24\par
+\b\f0 None\b0\f1\par
+\par
+\b\fs28 2.1.8. Site Adaptation Requirements\par
+\b0\fs24\par
+\b\f0 The terminal at client site will have to support the hardware and software interfaces specified in the section 2.1.3 and 2.1.4 respectively.\b0\f1\par
+\pard\fi-432\li792\qj\tx792\b\par
+\pard\qj\tx792\fs28 2.2. Product Functions\fs24\par
+\b0\par
+\b\f0 The ONSMS will allow access only to authorized users with specific roles (System administrator, Faculty and Student). Depending upon the user\rquote s role, he/she will be able to access only specific modules of the system. \par
+A summary of major functions that the URS will perform\par
+\'b7\tab A login facility for enabling only authorized access to the system.\par
+\'b7\tab System administrator will be able to add, modify or delete programme, school, scheme, paper and login information.\par
+\'b7\tab Students will be able to add/modify his/her details and register for papers to be studied in the current semester.\par
+\'b7\tab System administrator/Faculty will be able to generate reports.\par
+\par
+\f1\fs28 2.3. User Characteristics\par
+\b0\fs24\par
+\b\f0\'b7\tab Qualification: At least matriculation and comfortable with English.\par
+\'b7\tab Experience: Should be well versed/informed about the registration process of the university.\par
+\'b7\tab Technical Experience: Elementary knowledge of computers\par
+\par
+\f1\fs28 2.4. Constraints\fs24\par
+\b0\par
+\b\f0\'b7\tab There will only be one administrator.\par
+\'b7\tab The delete operation is available only to the administrator. To reduce the complexity of the system, there is no check on delete operation. Hence, administrator should be very careful before deletion of any record and he/she will be responsible for data consistency.\par
+\b0\f1\par
+\pard\qj\tx720\b\fs28 2.5\tab Assumptions and Dependencies\fs24\par
+\pard\qj\b0\par
+\pard\qj\tx720\b\f0\'b7\tab The login Id and password must be created by system administrator and communicated  to the concerned user confidentially to avoid unauthorized access to the system.\par
+\'b7\tab It is assumed that a student registering for the subsequent semester has been promoted to that semester by the university as per rules and has paid desired university fee. \par
+\'b7\tab Registration process will be open only for specific duration.\par
+\f1\par
+\fs28 2.6\tab Apportioning of Requirements\fs24\par
+\b0\par
+\b\f0 Not Required\b0\f1\par
+\b\fs28\par
+3.1.1\tab Hardware Interfaces\fs24\par
+\b0\par
+\b\f0 As stated in Section 2.1.3\par
+\b0\f1\par
+\b\fs28 3.1.2\tab Software Interfaces\fs24\par
+\b0\par
+\b\f0 As stated in Section 2.1.4\par
+\b0\f1\par
+\b\fs28 3.1.3\tab Communication Interfaces\fs24\par
+\b0\par
+\b\f0 None\b0\f1\par
+\b\fs28\par
+3.2\tab Functional Requirements\fs24\par
+\par
+\fs28 3.2.1 LOGIN \fs24\par
+\b0       \par
+\b A. Use Case Description\par
+\pard\qj\par
+\pard\qj\tx360\tab 1 \i  \i0 Introduction\par
+\par
+\pard\qj\b0  \b\f0 This use case documents the steps that must be followed in order to log into the  \par
+  University Registration System.\par
+\b0\f1\par
+\pard\qj\tx360\tab\b 2  Actors\par
+\par
+\pard\fi360\li360\qj\f0 Administrator\par
+Student \par
+Faculty\b0\f1\par
+\par
+\pard\li360\qj\par
+\pard\qj\tx360\tab\b 3  Pre-Condition\par
+\par
+\pard\qj\b0   \b\f0 The user must have valid login Id and password.\par
+\pard\li720\qj\par
+\pard\qj\tx360\b0\f1\tab\b 4  Post Condition\par
+ \par
+\pard\qj\b0   \b\f0 If the use case is successful, the actor is logged into the system. if not, the system    \par
+    state remains unchanged.\par
+\pard\keepn\s2\qj\tx360\lang16393\b0\f1\tab\par
+     \lang1033\b 5 Basic Flow\par
+\b0  \par
+\tab\b\f0 Starts when actor wishes to login onto the URS\par
+\pard\fi-360\li1440\qj\tx1440 i.\tab The system requests that the actor specify the function he/she would like to perform (either Login, Change Password)\par
+\pard\fi-360\li1440\qj ii.\tab Once the actor provides the requested information, one of the sub flows is executed.\par
+\pard\li450\qj\tx360\tx450\tx630\tab\i\par
+\pard\fi-360\li1440\qj\tx1440\i0\'b7\tab If the actor selects \ldblquote Login\rdblquote , the Login sub flow is executed.\par
+\pard\li1440\qj\par
+\pard\fi-360\li1440\qj\tx1440\'b7\tab If the actor selects \ldblquote Change Password\rdblquote , the Change Password sub flow is executed.\par
+\pard\li1440\qj\b0\f1\par
+\pard\li720\qj\par
+\par
+\pard\fi360\li360\qj\par
+\pard\par
+\pard\fi-360\li720\qj\par
+\pard\qj\par
+\pard\fi-270\li900\qj\par
+\pard\li720\qj\par
+\pard\qj\par
+\pard\li720\qj\par
+\par
+\par
+\pard\qj\par
+\pard\fi-360\li1080\qj\par
+\pard\qj\par
+\pard\fi-360\li1080\qj\tx1080\par
+\pard\fi720\li720\qj\par
+\par
+\pard\li360\qj\par
+\pard\qc\fs20\par
+\pard\li360\qj\fs24\par
+\par
+\par
+\par
+\par
+\pard\sa160\sl259\slmult0\lang9\b\f3\fs28\par
+\pard\fi-360\li360\qj\tx360\lang1033\f1\par
+\pard\fi-360\li720\qj\b0\fs24\par
+\pard\qj\par
+\pard\sa200\sl276\slmult1\lang9\b\f0\fs36\par
+\par
+}
+ 

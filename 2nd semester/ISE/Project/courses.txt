@@ -1,0 +1,5 @@
+5195 Laiba NS1001:Physics MT1003:Calculus  
+1234 Rameen MT1003:Calculus  NS1001:Physics CL1000:ICT 
+4822 Bharti SS1004:English  
+5678 Hafsa NS1001:Physics MT1003:Calculus  CL1000:ICT CS1002:Programming  SS1004:English  
+3456 Fatima SS1004:English  MT1003:Calculus  CL1000:ICT NS1001:Physics 

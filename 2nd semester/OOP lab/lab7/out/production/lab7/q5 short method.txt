@@ -1,0 +1,76 @@
+q5 short method
+import java.util.Arrays;
+
+ class Sorting {
+    public void sort(int[] a) {
+        Arrays.sort(a);
+    }
+
+    public void sort(String[] a) {
+        Arrays.sort(a);
+    }
+
+    public void sort(int[] a, boolean descending) {
+        if(descending) {
+            Arrays.sort(a);
+            reverse(a);
+        } else {
+            Arrays.sort(a);
+        }
+    }
+
+    public void sort(String[] a, boolean descending) {
+        if(descending) {
+            Arrays.sort(a);
+            reverse(a);
+        } else {
+            Arrays.sort(a);
+        }
+    }
+
+    public void reverse(int[] a) {
+        int i = 0;
+        int j = a.length - 1;
+        while(i < j) {
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+            i++;
+            j--;
+        }
+    }
+
+    public void reverse(String[] a) {
+        int i = 0;
+        int j = a.length - 1;
+        while(i < j) {
+            String temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+            i++;
+            j--;
+        }
+    }
+}
+public class q5 {
+    public static void main(String[] args) {
+        Sorting sorting = new Sorting();
+
+        int[] number1 = {6, 7, 2, 5, 1};
+        sorting.sort(number1);
+        System.out.println(Arrays.toString(number1));
+
+        String[] name1 = {"Laiba", "Mustafa", "Hafsa", "Umair"};
+        sorting.sort(name1);
+        System.out.println(Arrays.toString(name1));
+
+        int[] number2 = {6, 7, 2, 5, 1};
+        sorting.sort(number2, true);
+        System.out.println(Arrays.toString(number2));
+
+        String[] name2 = {"Laiba", "Mustafa", "Hafsa", "Umair"};
+        sorting.sort(name2, true);
+        System.out.println(Arrays.toString(name2));
+    }
+}
+  
