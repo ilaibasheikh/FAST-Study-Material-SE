@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_xWjkEPQvEe6Kh6sbbPcWsg" name="lab6">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_xaXtEPQvEe6Kh6sbbPcWsg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_xYUeoPQvEe6Kh6sbbPcWsg" name="Create Customer Account" node="_M_gdEPQwEe6Kh6sbbPcWsg _VHAvsPQwEe6Kh6sbbPcWsg _q_wkoPQwEe6Kh6sbbPcWsg _ytaz4PQwEe6Kh6sbbPcWsg _2L7iIPQwEe6Kh6sbbPcWsg _6RzLUPQwEe6Kh6sbbPcWsg _60uSMPQwEe6Kh6sbbPcWsg _-gL3UPQwEe6Kh6sbbPcWsg __vTV0PQwEe6Kh6sbbPcWsg _IiDk4PQxEe6Kh6sbbPcWsg" group="_DPZ08PQwEe6Kh6sbbPcWsg _nfdGoPQwEe6Kh6sbbPcWsg">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TvIhUPQxEe6Kh6sbbPcWsg" target="_VHAvsPQwEe6Kh6sbbPcWsg" source="_M_gdEPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ix588PQxEe6Kh6sbbPcWsg" target="_q_wkoPQwEe6Kh6sbbPcWsg" source="_VHAvsPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ozE1MPQxEe6Kh6sbbPcWsg" target="_ytaz4PQwEe6Kh6sbbPcWsg" source="_q_wkoPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sg3VkPQxEe6Kh6sbbPcWsg" target="_2L7iIPQwEe6Kh6sbbPcWsg" source="_ytaz4PQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_0m9S8PQxEe6Kh6sbbPcWsg" target="_6RzLUPQwEe6Kh6sbbPcWsg" source="_2L7iIPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3UU4IPQxEe6Kh6sbbPcWsg" target="_60uSMPQwEe6Kh6sbbPcWsg" source="_6RzLUPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5rN3APQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg" target="_-gL3UPQwEe6Kh6sbbPcWsg" source="_60uSMPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8VhhIPQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg" target="__vTV0PQwEe6Kh6sbbPcWsg" source="_-gL3UPQwEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9jkooPQxEe6Kh6sbbPcWsg" target="_IiDk4PQxEe6Kh6sbbPcWsg" source="__vTV0PQwEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_DPZ08PQwEe6Kh6sbbPcWsg" name="Customer" node="_VHAvsPQwEe6Kh6sbbPcWsg _ytaz4PQwEe6Kh6sbbPcWsg _6RzLUPQwEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_nfdGoPQwEe6Kh6sbbPcWsg" name="System" node="_q_wkoPQwEe6Kh6sbbPcWsg _2L7iIPQwEe6Kh6sbbPcWsg _60uSMPQwEe6Kh6sbbPcWsg _-gL3UPQwEe6Kh6sbbPcWsg __vTV0PQwEe6Kh6sbbPcWsg" edge="_5rN3APQxEe6Kh6sbbPcWsg _8VhhIPQxEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_M_gdEPQwEe6Kh6sbbPcWsg" name="start" outgoing="_TvIhUPQxEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_VHAvsPQwEe6Kh6sbbPcWsg" name="open customer account registration form" incoming="_TvIhUPQxEe6Kh6sbbPcWsg" outgoing="_ix588PQxEe6Kh6sbbPcWsg" inPartition="_DPZ08PQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_q_wkoPQwEe6Kh6sbbPcWsg" name="display the customer account registration form" incoming="_ix588PQxEe6Kh6sbbPcWsg" outgoing="_ozE1MPQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ytaz4PQwEe6Kh6sbbPcWsg" name="fills the required customer data" incoming="_ozE1MPQxEe6Kh6sbbPcWsg" outgoing="_sg3VkPQxEe6Kh6sbbPcWsg" inPartition="_DPZ08PQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_2L7iIPQwEe6Kh6sbbPcWsg" name="display the customer data" incoming="_sg3VkPQxEe6Kh6sbbPcWsg" outgoing="_0m9S8PQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6RzLUPQwEe6Kh6sbbPcWsg" name="inputs the credit info" incoming="_0m9S8PQxEe6Kh6sbbPcWsg" outgoing="_3UU4IPQxEe6Kh6sbbPcWsg" inPartition="_DPZ08PQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_60uSMPQwEe6Kh6sbbPcWsg" name="creates account of customer" incoming="_3UU4IPQxEe6Kh6sbbPcWsg" outgoing="_5rN3APQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_-gL3UPQwEe6Kh6sbbPcWsg" name="verifies credit info" incoming="_5rN3APQxEe6Kh6sbbPcWsg" outgoing="_8VhhIPQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__vTV0PQwEe6Kh6sbbPcWsg" name="saves the account details" incoming="_8VhhIPQxEe6Kh6sbbPcWsg" outgoing="_9jkooPQxEe6Kh6sbbPcWsg" inPartition="_nfdGoPQwEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_IiDk4PQxEe6Kh6sbbPcWsg" name="end" incoming="_9jkooPQxEe6Kh6sbbPcWsg"/>
+  </packagedElement>
+</uml:Model>

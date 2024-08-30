@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PRmgAAi_Ee-fcMCtpeQGGw" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_PSWG4Ai_Ee-fcMCtpeQGGw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_PRvp8Ai_Ee-fcMCtpeQGGw" name="Order food">
+    <region xmi:type="uml:Region" xmi:id="_PR5a8Ai_Ee-fcMCtpeQGGw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_yQCxwA_DEe-cnJs7UqCL2Q" name="initially" source="_Rb7pkAi_Ee-fcMCtpeQGGw" target="_cTVp4A_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_0UjnMA_DEe-cnJs7UqCL2Q" name="customer placed an order" source="_cTVp4A_DEe-cnJs7UqCL2Q" target="_fCzg0A_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_3jUpQA_DEe-cnJs7UqCL2Q" name="[customer cancelled order]" source="_GZr2kBAyEe-2zOnkjFmOxg" target="_hiE_oA_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_8Y0_oA_DEe-cnJs7UqCL2Q" source="_GZr2kBAyEe-2zOnkjFmOxg" target="_jj008A_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-5vdMA_DEe-cnJs7UqCL2Q" name="order is delivered" source="_jj008A_DEe-cnJs7UqCL2Q" target="_ug4YYA_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_B7D5IA_EEe-cnJs7UqCL2Q" source="_hiE_oA_DEe-cnJs7UqCL2Q" target="_SJw_8Ai_Ee-fcMCtpeQGGw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_DiRHgA_EEe-cnJs7UqCL2Q" source="_ug4YYA_DEe-cnJs7UqCL2Q" target="_SJw_8Ai_Ee-fcMCtpeQGGw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_KIMIoBAyEe-2zOnkjFmOxg" source="_fCzg0A_DEe-cnJs7UqCL2Q" target="_GZr2kBAyEe-2zOnkjFmOxg"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_Rb7pkAi_Ee-fcMCtpeQGGw" name=""/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_SJw_8Ai_Ee-fcMCtpeQGGw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_cTVp4A_DEe-cnJs7UqCL2Q" name="idle state"/>
+      <subvertex xmi:type="uml:State" xmi:id="_fCzg0A_DEe-cnJs7UqCL2Q" name="Order Placed State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_hiE_oA_DEe-cnJs7UqCL2Q" name="Cancelled State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_jj008A_DEe-cnJs7UqCL2Q" name="Prepared state"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ug4YYA_DEe-cnJs7UqCL2Q" name="Served state"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_GZr2kBAyEe-2zOnkjFmOxg" name="Choice15" kind="choice"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SXD_qAjAEe-fcMCtpeQGGw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SXD_qQjAEe-fcMCtpeQGGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

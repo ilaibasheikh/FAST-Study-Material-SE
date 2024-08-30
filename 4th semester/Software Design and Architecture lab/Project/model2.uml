@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ui34oAjBEe-fcMCtpeQGGw" name="model2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ujUkkAjBEe-fcMCtpeQGGw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_ujBpoAjBEe-fcMCtpeQGGw" name="Update Room Inventory">
+    <region xmi:type="uml:Region" xmi:id="_ujBpoQjBEe-fcMCtpeQGGw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_7ZxrgA_FEe-cnJs7UqCL2Q" name="initally all items are stocked" source="_w8qagAjBEe-fcMCtpeQGGw" target="_wwZ5EA_FEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_I9z4QA_GEe-cnJs7UqCL2Q" name="item is finished" source="_wwZ5EA_FEe-cnJs7UqCL2Q" target="_HfvXwA_GEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_WCCjkA_GEe-cnJs7UqCL2Q" name="customer calls staff for item" source="_HfvXwA_GEe-cnJs7UqCL2Q" target="_MQaRcA_GEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_cTZM4A_GEe-cnJs7UqCL2Q" source="_MQaRcA_GEe-cnJs7UqCL2Q" target="_bKPzgA_GEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_nfIFgA_GEe-cnJs7UqCL2Q" name="[item is available]" source="_bKPzgA_GEe-cnJs7UqCL2Q" target="_05DwgA_FEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_GCzGYA_LEe-cnJs7UqCL2Q" name="[item is unavailable]" source="_bKPzgA_GEe-cnJs7UqCL2Q" target="_2U41UA_FEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_MMSNIA_LEe-cnJs7UqCL2Q" source="_05DwgA_FEe-cnJs7UqCL2Q" target="_x43kEAjBEe-fcMCtpeQGGw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_SOhcYA_LEe-cnJs7UqCL2Q" name="staff is ordering item externally" source="_2U41UA_FEe-cnJs7UqCL2Q" target="_PDx-sA_LEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Vq0kIA_LEe-cnJs7UqCL2Q" source="_PDx-sA_LEe-cnJs7UqCL2Q" target="_wwZ5EA_FEe-cnJs7UqCL2Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_w8qagAjBEe-fcMCtpeQGGw" name=""/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_x43kEAjBEe-fcMCtpeQGGw" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_wwZ5EA_FEe-cnJs7UqCL2Q" name="Stocked State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_05DwgA_FEe-cnJs7UqCL2Q" name="Restocked State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_2U41UA_FEe-cnJs7UqCL2Q" name="Unavailable State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_HfvXwA_GEe-cnJs7UqCL2Q" name="Missing State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_MQaRcA_GEe-cnJs7UqCL2Q" name="Calling State"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_bKPzgA_GEe-cnJs7UqCL2Q" name="" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_PDx-sA_LEe-cnJs7UqCL2Q" name="Order State"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8cvLdwjBEe-fcMCtpeQGGw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8cvLeAjBEe-fcMCtpeQGGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,18 @@
+#Sun May 12 00:20:49 PKT 2024
+rulergrid.gridlinestyle=6
+print.margin.bottom=0.5
+print.margin.top=0.5
+print.page.height=11.0
+print.usePortrait=true
+print.margin.left=0.5
+rulergrid.gridlinecolor=3289650
+rulergrid.gridspacing=20.0
+print.margin.right=0.5
+rulergrid.rulerunit=2
+rulergrid.viewgrid=true
+rulergrid.snaptogrid=true
+print.page.size=Letter
+rulergrid.gridlevel=false
+print.useInches=true
+zoom=0.5
+print.page.width=8.5

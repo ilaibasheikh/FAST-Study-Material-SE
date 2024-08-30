@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_k1c9UAyAEe-5MsEssi3Pgw" name="class">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_k1v4QAyAEe-5MsEssi3Pgw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oOhK4AyAEe-5MsEssi3Pgw" name="Vending Mahinge">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_priigAyAEe-5MsEssi3Pgw" name="item" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_umdkYAyAEe-5MsEssi3Pgw" name="money" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0hmtIAyAEe-5MsEssi3Pgw" name="hr" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PXkqAwyBEe-5MsEssi3Pgw" name="class3" type="_O5TZoAyBEe-5MsEssi3Pgw" association="_PXkqAAyBEe-5MsEssi3Pgw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PXkqBAyBEe-5MsEssi3Pgw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PXkqBQyBEe-5MsEssi3Pgw" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LAU88AyBEe-5MsEssi3Pgw" name="sell"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_h1EDkAyCEe-5MsEssi3Pgw" name="setItem">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ppgQQAyCEe-5MsEssi3Pgw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_twtWMAyCEe-5MsEssi3Pgw" name="getItem">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wiycQAyCEe-5MsEssi3Pgw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-RKQwAyCEe-5MsEssi3Pgw" name="VendingMachine()">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Biv9UAyDEe-5MsEssi3Pgw" name="item">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_DkcIQAyDEe-5MsEssi3Pgw" name="money">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_O5TZoAyBEe-5MsEssi3Pgw" name="Class3"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PXkqAAyBEe-5MsEssi3Pgw" name="ells" memberEnd="_PXkqAwyBEe-5MsEssi3Pgw _PXkqBgyBEe-5MsEssi3Pgw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PXkqAQyBEe-5MsEssi3Pgw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PXkqAgyBEe-5MsEssi3Pgw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_PXkqBgyBEe-5MsEssi3Pgw" name="vending mahinge" type="_oOhK4AyAEe-5MsEssi3Pgw" association="_PXkqAAyBEe-5MsEssi3Pgw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VEGH8QyBEe-5MsEssi3Pgw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kvKSoAyBEe-5MsEssi3Pgw" name="Class5">
+    <generalization xmi:type="uml:Generalization" xmi:id="_vBHqoAyBEe-5MsEssi3Pgw" general="_O5TZoAyBEe-5MsEssi3Pgw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ppllQwyBEe-5MsEssi3Pgw" name="class3" type="_O5TZoAyBEe-5MsEssi3Pgw" aggregation="composite" association="_ppllQAyBEe-5MsEssi3Pgw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ppvWQAyBEe-5MsEssi3Pgw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ppvWQQyBEe-5MsEssi3Pgw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rNluowyBEe-5MsEssi3Pgw" name="class3" type="_O5TZoAyBEe-5MsEssi3Pgw" aggregation="shared" association="_rNluoAyBEe-5MsEssi3Pgw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rNlupAyBEe-5MsEssi3Pgw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rNlupQyBEe-5MsEssi3Pgw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ppllQAyBEe-5MsEssi3Pgw" memberEnd="_ppllQwyBEe-5MsEssi3Pgw _ppvWQgyBEe-5MsEssi3Pgw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ppllQQyBEe-5MsEssi3Pgw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ppllQgyBEe-5MsEssi3Pgw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ppvWQgyBEe-5MsEssi3Pgw" name="class5" type="_kvKSoAyBEe-5MsEssi3Pgw" association="_ppllQAyBEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rNluoAyBEe-5MsEssi3Pgw" memberEnd="_rNluowyBEe-5MsEssi3Pgw _rNlupgyBEe-5MsEssi3Pgw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rNluoQyBEe-5MsEssi3Pgw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rNluogyBEe-5MsEssi3Pgw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rNlupgyBEe-5MsEssi3Pgw" name="class5" type="_kvKSoAyBEe-5MsEssi3Pgw" association="_rNluoAyBEe-5MsEssi3Pgw"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QOuKEPQ7Ee6Kh6sbbPcWsg" name="model3">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_QPK2APQ7Ee6Kh6sbbPcWsg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_QO37EPQ7Ee6Kh6sbbPcWsg" name="book a car" node="_aPBxYPQ7Ee6Kh6sbbPcWsg _kvuwAPQ7Ee6Kh6sbbPcWsg _o7dJkPQ7Ee6Kh6sbbPcWsg _tMIUkPQ7Ee6Kh6sbbPcWsg _vpIigPQ7Ee6Kh6sbbPcWsg _wYFTMPQ7Ee6Kh6sbbPcWsg _zCWhEPQ7Ee6Kh6sbbPcWsg _2FgwEPQ7Ee6Kh6sbbPcWsg _6Ip1YPQ7Ee6Kh6sbbPcWsg _AWPZAPQ8Ee6Kh6sbbPcWsg _GwW8wPQ8Ee6Kh6sbbPcWsg _KZYR4PQ8Ee6Kh6sbbPcWsg _SNS6IPQ8Ee6Kh6sbbPcWsg _4iqAkPQ-Ee6Kh6sbbPcWsg _TrFxAPRAEe6Kh6sbbPcWsg _7e62APRBEe6Kh6sbbPcWsg _9iURIPRBEe6Kh6sbbPcWsg" group="_gpCncPQ7Ee6Kh6sbbPcWsg _iRBR4PQ7Ee6Kh6sbbPcWsg _0igIYPQ_Ee6Kh6sbbPcWsg">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_eDloIPQ7Ee6Kh6sbbPcWsg">
+      <body>The customer has access to the car booking system.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_UzQPwPQ8Ee6Kh6sbbPcWsg">
+      <body>The customer has successfully booked a car.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Wc2DwPQ8Ee6Kh6sbbPcWsg">
+      <body>The reserved car is ready for the customer to pick up at the designated&#xD;
+location.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_YlM3YPQ8Ee6Kh6sbbPcWsg">
+      <body>The system updates the availability status of the booked car.</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__XApQPQ-Ee6Kh6sbbPcWsg" target="_kvuwAPQ7Ee6Kh6sbbPcWsg" source="_aPBxYPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Iwwm4PQ_Ee6Kh6sbbPcWsg" target="_o7dJkPQ7Ee6Kh6sbbPcWsg" source="_kvuwAPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_KNCXoPQ_Ee6Kh6sbbPcWsg" target="_tMIUkPQ7Ee6Kh6sbbPcWsg" source="_o7dJkPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_QlMMgPQ_Ee6Kh6sbbPcWsg" target="_wYFTMPQ7Ee6Kh6sbbPcWsg" source="_tMIUkPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YWygkPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg" target="_zCWhEPQ7Ee6Kh6sbbPcWsg" source="_wYFTMPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_atAKAPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg" target="_2FgwEPQ7Ee6Kh6sbbPcWsg" source="_zCWhEPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c-HRAPQ_Ee6Kh6sbbPcWsg" target="_vpIigPQ7Ee6Kh6sbbPcWsg" source="_2FgwEPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_JF6soPRBEe6Kh6sbbPcWsg" target="_6Ip1YPQ7Ee6Kh6sbbPcWsg" source="_vpIigPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_h2d1IPRBEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg" target="_4iqAkPQ-Ee6Kh6sbbPcWsg" source="_6Ip1YPQ7Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lNsPoPRBEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg" target="_GwW8wPQ8Ee6Kh6sbbPcWsg" source="_4iqAkPQ-Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mKCjIPRBEe6Kh6sbbPcWsg" target="_KZYR4PQ8Ee6Kh6sbbPcWsg" source="_GwW8wPQ8Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tiwnsPRCEe6Kh6sbbPcWsg" target="_9iURIPRBEe6Kh6sbbPcWsg" source="_7e62APRBEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_0lx-gPRCEe6Kh6sbbPcWsg" target="_SNS6IPQ8Ee6Kh6sbbPcWsg" source="_9iURIPRBEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_gpCncPQ7Ee6Kh6sbbPcWsg" name="z" node="_kvuwAPQ7Ee6Kh6sbbPcWsg _tMIUkPQ7Ee6Kh6sbbPcWsg _vpIigPQ7Ee6Kh6sbbPcWsg _KZYR4PQ8Ee6Kh6sbbPcWsg _9iURIPRBEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_iRBR4PQ7Ee6Kh6sbbPcWsg" name="System" node="_o7dJkPQ7Ee6Kh6sbbPcWsg _wYFTMPQ7Ee6Kh6sbbPcWsg _zCWhEPQ7Ee6Kh6sbbPcWsg _2FgwEPQ7Ee6Kh6sbbPcWsg _6Ip1YPQ7Ee6Kh6sbbPcWsg _GwW8wPQ8Ee6Kh6sbbPcWsg _4iqAkPQ-Ee6Kh6sbbPcWsg _7e62APRBEe6Kh6sbbPcWsg" edge="_YWygkPQ_Ee6Kh6sbbPcWsg _atAKAPQ_Ee6Kh6sbbPcWsg _h2d1IPRBEe6Kh6sbbPcWsg _lNsPoPRBEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:InterruptibleActivityRegion" xmi:id="_0igIYPQ_Ee6Kh6sbbPcWsg" name="InterruptibleActivityRegion28" node="_TrFxAPRAEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_aPBxYPQ7Ee6Kh6sbbPcWsg" name="start" outgoing="__XApQPQ-Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_kvuwAPQ7Ee6Kh6sbbPcWsg" name="logs into the car booking system" incoming="__XApQPQ-Ee6Kh6sbbPcWsg" outgoing="_Iwwm4PQ_Ee6Kh6sbbPcWsg" inPartition="_gpCncPQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_o7dJkPQ7Ee6Kh6sbbPcWsg" name="presents options to book a car" incoming="_Iwwm4PQ_Ee6Kh6sbbPcWsg" outgoing="_KNCXoPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tMIUkPQ7Ee6Kh6sbbPcWsg" name="selects the option to book a car" incoming="_KNCXoPQ_Ee6Kh6sbbPcWsg" outgoing="_QlMMgPQ_Ee6Kh6sbbPcWsg" inPartition="_gpCncPQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_vpIigPQ7Ee6Kh6sbbPcWsg" name="selects a car for booking" incoming="_c-HRAPQ_Ee6Kh6sbbPcWsg" outgoing="_JF6soPRBEe6Kh6sbbPcWsg" inPartition="_gpCncPQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wYFTMPQ7Ee6Kh6sbbPcWsg" name="initiates the booking process" incoming="_QlMMgPQ_Ee6Kh6sbbPcWsg" outgoing="_YWygkPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_zCWhEPQ7Ee6Kh6sbbPcWsg" name="searches for the nearest available cars" incoming="_YWygkPQ_Ee6Kh6sbbPcWsg" outgoing="_atAKAPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_2FgwEPQ7Ee6Kh6sbbPcWsg" name="presents the available cars " incoming="_atAKAPQ_Ee6Kh6sbbPcWsg" outgoing="_c-HRAPQ_Ee6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6Ip1YPQ7Ee6Kh6sbbPcWsg" name="confirms booking" incoming="_JF6soPRBEe6Kh6sbbPcWsg" outgoing="_h2d1IPRBEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_AWPZAPQ8Ee6Kh6sbbPcWsg" name="reserves the selected car "/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_GwW8wPQ8Ee6Kh6sbbPcWsg" name="completes the booking process" incoming="_lNsPoPRBEe6Kh6sbbPcWsg" outgoing="_mKCjIPRBEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_KZYR4PQ8Ee6Kh6sbbPcWsg" name="receives booking confirmation with details" incoming="_mKCjIPRBEe6Kh6sbbPcWsg" inPartition="_gpCncPQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_SNS6IPQ8Ee6Kh6sbbPcWsg" name="end" incoming="_0lx-gPRCEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4iqAkPQ-Ee6Kh6sbbPcWsg" name="Reserves car" incoming="_h2d1IPRBEe6Kh6sbbPcWsg" outgoing="_lNsPoPRBEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_TrFxAPRAEe6Kh6sbbPcWsg" name="cancel booking" inInterruptibleRegion="_0igIYPQ_Ee6Kh6sbbPcWsg">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_HUFtMPRCEe6Kh6sbbPcWsg"/>
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_H3QEoPRCEe6Kh6sbbPcWsg"/>
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_Ii8tAPRCEe6Kh6sbbPcWsg"/>
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_LhBnsPRCEe6Kh6sbbPcWsg"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_7e62APRBEe6Kh6sbbPcWsg" name="Cancel booking" outgoing="_tiwnsPRCEe6Kh6sbbPcWsg" inPartition="_iRBR4PQ7Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9iURIPRBEe6Kh6sbbPcWsg" name="Recieves cancellation notification" incoming="_tiwnsPRCEe6Kh6sbbPcWsg" outgoing="_0lx-gPRCEe6Kh6sbbPcWsg" inPartition="_gpCncPQ7Ee6Kh6sbbPcWsg"/>
+  </packagedElement>
+</uml:Model>

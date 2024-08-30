@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_k0TlQAxpEe-5MsEssi3Pgw" name="model2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_k0kD8AxpEe-5MsEssi3Pgw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_SM1XAAxtEe-5MsEssi3Pgw" name="Content Delivery">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_-EWwYAxtEe-5MsEssi3Pgw" name="Port2" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_X04IIAxuEe-5MsEssi3Pgw" name="Port4" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_17bsAAxuEe-5MsEssi3Pgw" name="Port7" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_2oSK8AxuEe-5MsEssi3Pgw" name="Port8" aggregation="composite"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_4ZMkYwxtEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_4ZCzYAxtEe-5MsEssi3Pgw" contract="_4ZCzYAxtEe-5MsEssi3Pgw"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QLJ9sAxuEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_QLAzwAxuEe-5MsEssi3Pgw" contract="_QLAzwAxuEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_e8qqMAxuEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_e8hgQAxuEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_s5VZYAxuEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_s5MPcAxuEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_SujkAAxtEe-5MsEssi3Pgw" name="Content Catalog">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iadmwAxuEe-5MsEssi3Pgw" client="_SujkAAxtEe-5MsEssi3Pgw" supplier="_iaT1wAxuEe-5MsEssi3Pgw" contract="_iaT1wAxuEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_S03nYAxtEe-5MsEssi3Pgw" name="Content Recommendation Engine">
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_VvZpYAxuEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_S03nYAxtEe-5MsEssi3Pgw" realizingClassifier="_SM1XAAxtEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_T1pH4AxtEe-5MsEssi3Pgw" name="User Subscription Managemetn">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_7kuaUAxvEe-5MsEssi3Pgw" client="_T1pH4AxtEe-5MsEssi3Pgw" supplier="_4rTWIAxvEe-5MsEssi3Pgw"/>
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_VOlT8AxxEe-5MsEssi3Pgw" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_T1pH4AxtEe-5MsEssi3Pgw" realizingClassifier="_UZHBUAxtEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_T65bUAxtEe-5MsEssi3Pgw" name="User">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_eeFl4AxwEe-5MsEssi3Pgw" client="_T65bUAxtEe-5MsEssi3Pgw" supplier="_edyD4AxwEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_hSYScAxwEe-5MsEssi3Pgw" client="_T65bUAxtEe-5MsEssi3Pgw" supplier="_hSFXgAxwEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_nCiTMAxwEe-5MsEssi3Pgw" client="_T65bUAxtEe-5MsEssi3Pgw" supplier="_nCOxMAxwEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UBMQkAxtEe-5MsEssi3Pgw" name="User Authentication">
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_T1rnUAxxEe-5MsEssi3Pgw" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_UBMQkAxtEe-5MsEssi3Pgw" realizingClassifier="_UZHBUAxtEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UGUBIAxtEe-5MsEssi3Pgw" name="Manage Playback">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_u2WfsAxuEe-5MsEssi3Pgw" client="_UGUBIAxtEe-5MsEssi3Pgw" supplier="_u2NVwAxuEe-5MsEssi3Pgw" contract="_u2NVwAxuEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ULbKoAxtEe-5MsEssi3Pgw" name="Video Player">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_JlKrsAxvEe-5MsEssi3Pgw" client="_ULbKoAxtEe-5MsEssi3Pgw" supplier="_2oSK8AxuEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UQOLEAxtEe-5MsEssi3Pgw" name="Video Search Engine">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Fe29oAxvEe-5MsEssi3Pgw" client="_UQOLEAxtEe-5MsEssi3Pgw" supplier="_17bsAAxuEe-5MsEssi3Pgw"/>
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_FXjRMAxuEe-5MsEssi3Pgw" client="_SM1XAAxtEe-5MsEssi3Pgw" supplier="_UQOLEAxtEe-5MsEssi3Pgw" realizingClassifier="_SM1XAAxtEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UUu3oAxtEe-5MsEssi3Pgw" name="Billing">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TZEOsAxvEe-5MsEssi3Pgw" client="_UUu3oAxtEe-5MsEssi3Pgw" supplier="_TYwssAxvEe-5MsEssi3Pgw" contract="_TYwssAxvEe-5MsEssi3Pgw"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cceI4AxvEe-5MsEssi3Pgw" name="Manage Subscription" client="_UUu3oAxtEe-5MsEssi3Pgw" supplier="_ccLN8AxvEe-5MsEssi3Pgw" contract="_ccLN8AxvEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UZHBUAxtEe-5MsEssi3Pgw" name="User Account">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_4rTWIAxvEe-5MsEssi3Pgw" name="Port2" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_DxCfAAxxEe-5MsEssi3Pgw" name="Port6" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_EIk1QAxxEe-5MsEssi3Pgw" name="Port7" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_EsZUAAxxEe-5MsEssi3Pgw" name="Port8" aggregation="composite"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FLxNEAxwEe-5MsEssi3Pgw" name="Login/SignUp" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_FLeSIAxwEe-5MsEssi3Pgw" contract="_FLeSIAxwEe-5MsEssi3Pgw"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_OV6BYAxwEe-5MsEssi3Pgw" name="Subscription Management" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_OVnGcAxwEe-5MsEssi3Pgw" contract="_OVnGcAxwEe-5MsEssi3Pgw"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PTXIIAxwEe-5MsEssi3Pgw" name="Manage Profile" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_PTENMAxwEe-5MsEssi3Pgw" contract="_PTENMAxwEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dbJXoAxvEe-5MsEssi3Pgw" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_da2csAxvEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Uc1qwAxtEe-5MsEssi3Pgw" name="User Profile Management">
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_UlQDEAxxEe-5MsEssi3Pgw" client="_UZHBUAxtEe-5MsEssi3Pgw" supplier="_Uc1qwAxtEe-5MsEssi3Pgw" realizingClassifier="_UZHBUAxtEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_4ZCzYAxtEe-5MsEssi3Pgw" name="Content Search"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_QLAzwAxuEe-5MsEssi3Pgw" name="Recommendation"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_e8hgQAxuEe-5MsEssi3Pgw" name="Content Catalog"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_iaT1wAxuEe-5MsEssi3Pgw" name="Interface17"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_s5MPcAxuEe-5MsEssi3Pgw" name="Manage Playback"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_u2NVwAxuEe-5MsEssi3Pgw" name="Interface19"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_TYwssAxvEe-5MsEssi3Pgw" name="Manage Payment"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ccLN8AxvEe-5MsEssi3Pgw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_da2csAxvEe-5MsEssi3Pgw"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_FLeSIAxwEe-5MsEssi3Pgw" name="Interface23"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_OVnGcAxwEe-5MsEssi3Pgw" name="Interface24"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_PTENMAxwEe-5MsEssi3Pgw" name="Interface25"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_edyD4AxwEe-5MsEssi3Pgw" name="Interface26"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_hSFXgAxwEe-5MsEssi3Pgw" name="Interface27"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_nCOxMAxwEe-5MsEssi3Pgw" name="Interface28"/>
+</uml:Model>

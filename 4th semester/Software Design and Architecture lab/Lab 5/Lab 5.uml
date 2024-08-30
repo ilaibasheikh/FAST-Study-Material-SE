@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ECB="http:///schemas/ECB/_TGAFheYfEe69p4O7VxqIBw/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ECB/_TGAFheYfEe69p4O7VxqIBw/2 ECB.profile.uml#_TGAFhuYfEe69p4O7VxqIBw">
+  <uml:Model xmi:id="_i7ISgOYcEe69p4O7VxqIBw" name="Lab 5">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_i9EzQOYcEe69p4O7VxqIBw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qktTAOYcEe69p4O7VxqIBw" name="CustomerAddressListSelector">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sAeXUOYlEe69p4O7VxqIBw" name="listofAddress">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JFmXkOYfEe69p4O7VxqIBw" name="User">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HBuzoOYlEe69p4O7VxqIBw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OwDKMOYlEe69p4O7VxqIBw" name="address">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-jzXUOYfEe69p4O7VxqIBw" name="ClicksCheckoutButton"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3h9aUOYhEe69p4O7VxqIBw" name="ClicksSelectButton"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MGANgOYfEe69p4O7VxqIBw" name="EditShoppingCartPage">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1gHo8-YiEe69p4O7VxqIBw" name="system" type="_PzuccOYfEe69p4O7VxqIBw" association="_1gHo8OYiEe69p4O7VxqIBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PzuccOYfEe69p4O7VxqIBw" name="System">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wlkag-YiEe69p4O7VxqIBw" name="user" type="_JFmXkOYfEe69p4O7VxqIBw" association="_wlkagOYiEe69p4O7VxqIBw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wlkaheYiEe69p4O7VxqIBw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3_nxQ-YiEe69p4O7VxqIBw" name="customeraddresslistselector" type="_qktTAOYcEe69p4O7VxqIBw" association="_3_nxQOYiEe69p4O7VxqIBw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9stP4-YiEe69p4O7VxqIBw" name="deliveryaddresspage" type="_PJ4_0OYgEe69p4O7VxqIBw" association="_9stP4OYiEe69p4O7VxqIBw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YcisYOYfEe69p4O7VxqIBw" name="DisplayEditShoppingCartPage"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LePNcOYgEe69p4O7VxqIBw" name="RetrieveDeliveryAddress"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7B0MYOYhEe69p4O7VxqIBw" name="SetsDeliveryAddress"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NVTx4OYiEe69p4O7VxqIBw" name="DisplayDeliveryAddressPage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PJ4_0OYgEe69p4O7VxqIBw" name="DeliveryAddressPage">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uMQDoOYrEe69p4O7VxqIBw" name="SelectAddress"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wlkagOYiEe69p4O7VxqIBw" memberEnd="_wlkag-YiEe69p4O7VxqIBw _wlkahuYiEe69p4O7VxqIBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wlkageYiEe69p4O7VxqIBw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wlkaguYiEe69p4O7VxqIBw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wlkahuYiEe69p4O7VxqIBw" name="system" type="_PzuccOYfEe69p4O7VxqIBw" association="_wlkagOYiEe69p4O7VxqIBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_1gHo8OYiEe69p4O7VxqIBw" memberEnd="_1gHo8-YiEe69p4O7VxqIBw _1gHo9uYiEe69p4O7VxqIBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1gHo8eYiEe69p4O7VxqIBw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1gHo8uYiEe69p4O7VxqIBw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_1gHo9uYiEe69p4O7VxqIBw" name="editshoppingcartpage" type="_MGANgOYfEe69p4O7VxqIBw" association="_1gHo8OYiEe69p4O7VxqIBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3_nxQOYiEe69p4O7VxqIBw" memberEnd="_3_nxQ-YiEe69p4O7VxqIBw _3_nxRuYiEe69p4O7VxqIBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3_nxQeYiEe69p4O7VxqIBw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3_nxQuYiEe69p4O7VxqIBw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3_nxRuYiEe69p4O7VxqIBw" name="system" type="_PzuccOYfEe69p4O7VxqIBw" association="_3_nxQOYiEe69p4O7VxqIBw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9stP4OYiEe69p4O7VxqIBw" memberEnd="_9stP4-YiEe69p4O7VxqIBw _9stP5uYiEe69p4O7VxqIBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9stP4eYiEe69p4O7VxqIBw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9stP4uYiEe69p4O7VxqIBw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9stP5uYiEe69p4O7VxqIBw" name="system" type="_PzuccOYfEe69p4O7VxqIBw" association="_9stP4OYiEe69p4O7VxqIBw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_9PW0T-YcEe69p4O7VxqIBw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9PW0UOYcEe69p4O7VxqIBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="ECB.profile.uml#_TGAFhuYfEe69p4O7VxqIBw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="ECB.profile.uml#_9PDSQOYcEe69p4O7VxqIBw"/>
+    </profileApplication>
+  </uml:Model>
+  <ECB:entity xmi:id="_9PW0UeYcEe69p4O7VxqIBw" base_Class="_qktTAOYcEe69p4O7VxqIBw" name="entity"/>
+  <ECB:entity xmi:id="_JFvhlOYfEe69p4O7VxqIBw" base_Class="_JFmXkOYfEe69p4O7VxqIBw" name="entity"/>
+  <ECB:boundary xmi:id="_PMkV0uYfEe69p4O7VxqIBw" base_Class="_MGANgOYfEe69p4O7VxqIBw" name="boundary"/>
+  <ECB:controller xmi:id="_TGAFpeYfEe69p4O7VxqIBw" base_Class="_PzuccOYfEe69p4O7VxqIBw" name="controller"/>
+  <ECB:boundary xmi:id="_PKCw5OYgEe69p4O7VxqIBw" base_Class="_PJ4_0OYgEe69p4O7VxqIBw" name="boundary"/>
+</xmi:XMI>

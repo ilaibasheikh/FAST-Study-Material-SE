@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_U61C8PQyEe6Kh6sbbPcWsg" name="model2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_U7z6YPQyEe6Kh6sbbPcWsg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_U6-M4PQyEe6Kh6sbbPcWsg" name="Enroll A Course" node="_aSm_8PQyEe6Kh6sbbPcWsg _sImxIPQyEe6Kh6sbbPcWsg _stnisPQyEe6Kh6sbbPcWsg _s-dbEPQyEe6Kh6sbbPcWsg _tOCIIPQyEe6Kh6sbbPcWsg _tVYGQPQyEe6Kh6sbbPcWsg _tncGoPQyEe6Kh6sbbPcWsg _uN_JQPQyEe6Kh6sbbPcWsg _uWsZUPQyEe6Kh6sbbPcWsg _8UuacPQyEe6Kh6sbbPcWsg _Ioc14PQzEe6Kh6sbbPcWsg _Q7EzYPQzEe6Kh6sbbPcWsg _rJwGwPQzEe6Kh6sbbPcWsg _0nelcPQzEe6Kh6sbbPcWsg _3RXY0PQzEe6Kh6sbbPcWsg _6CHCIPQzEe6Kh6sbbPcWsg _COPWEPQ0Ee6Kh6sbbPcWsg _IeaToPQ0Ee6Kh6sbbPcWsg _KpJs4PQ0Ee6Kh6sbbPcWsg" group="_V5GpEPQyEe6Kh6sbbPcWsg _XEdo8PQyEe6Kh6sbbPcWsg">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_mb7iMPQyEe6Kh6sbbPcWsg">
+      <body>The student accesses the course registration portal of the&#xD;
+university.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ODd3oPQ0Ee6Kh6sbbPcWsg">
+      <body>The student has successfully enrolled in the desired courses for the&#xD;
+upcoming semester.&#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_QXehoPQ0Ee6Kh6sbbPcWsg">
+      <body>The university updates the student&amp;#39;s course enrollment records.</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ua21sPQ0Ee6Kh6sbbPcWsg" target="_sImxIPQyEe6Kh6sbbPcWsg" source="_aSm_8PQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zxlp0PQ0Ee6Kh6sbbPcWsg" target="_stnisPQyEe6Kh6sbbPcWsg" source="_sImxIPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2ScdAPQ0Ee6Kh6sbbPcWsg" target="_tncGoPQyEe6Kh6sbbPcWsg" source="_stnisPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DEhoYPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_0nelcPQzEe6Kh6sbbPcWsg" source="_tncGoPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_J8GkMPQ1Ee6Kh6sbbPcWsg" name="[Found]" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_uN_JQPQyEe6Kh6sbbPcWsg" source="_0nelcPQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Rp1r8PQ1Ee6Kh6sbbPcWsg" name="[Not Found]" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_8UuacPQyEe6Kh6sbbPcWsg" source="_0nelcPQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_VnEWgPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_3RXY0PQzEe6Kh6sbbPcWsg" source="_8UuacPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XQtN0PQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_tncGoPQyEe6Kh6sbbPcWsg" source="_3RXY0PQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ahSNwPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_6CHCIPQzEe6Kh6sbbPcWsg" source="_8UuacPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bxi7wPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_KpJs4PQ0Ee6Kh6sbbPcWsg" source="_6CHCIPQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jwkAwPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_Ioc14PQzEe6Kh6sbbPcWsg" source="_uN_JQPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_oxm4wPQ1Ee6Kh6sbbPcWsg" name="[meets prerequisites]" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_uWsZUPQyEe6Kh6sbbPcWsg" source="_Ioc14PQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yTFPAPQ1Ee6Kh6sbbPcWsg" name="[Doesn't meet prerequisites]" target="_COPWEPQ0Ee6Kh6sbbPcWsg" source="_Ioc14PQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_V_-JQPQ2Ee6Kh6sbbPcWsg" target="_Q7EzYPQzEe6Kh6sbbPcWsg" source="_COPWEPQ0Ee6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_dJ9DsPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_tncGoPQyEe6Kh6sbbPcWsg" source="_Q7EzYPQzEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_q9rSQPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_tVYGQPQyEe6Kh6sbbPcWsg" source="_uWsZUPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_t395IPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg" target="_tOCIIPQyEe6Kh6sbbPcWsg" source="_tVYGQPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3bHDUPQ2Ee6Kh6sbbPcWsg" target="_s-dbEPQyEe6Kh6sbbPcWsg" source="_tOCIIPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_7tuvEPQ2Ee6Kh6sbbPcWsg" target="_rJwGwPQzEe6Kh6sbbPcWsg" source="_s-dbEPQyEe6Kh6sbbPcWsg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BVxVoPQ3Ee6Kh6sbbPcWsg" target="_IeaToPQ0Ee6Kh6sbbPcWsg" source="_rJwGwPQzEe6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_V5GpEPQyEe6Kh6sbbPcWsg" name="Student" node="_sImxIPQyEe6Kh6sbbPcWsg _tncGoPQyEe6Kh6sbbPcWsg _uN_JQPQyEe6Kh6sbbPcWsg _uWsZUPQyEe6Kh6sbbPcWsg _8UuacPQyEe6Kh6sbbPcWsg _Ioc14PQzEe6Kh6sbbPcWsg _Q7EzYPQzEe6Kh6sbbPcWsg _tVYGQPQyEe6Kh6sbbPcWsg _tOCIIPQyEe6Kh6sbbPcWsg _rJwGwPQzEe6Kh6sbbPcWsg _0nelcPQzEe6Kh6sbbPcWsg _3RXY0PQzEe6Kh6sbbPcWsg _6CHCIPQzEe6Kh6sbbPcWsg _KpJs4PQ0Ee6Kh6sbbPcWsg" edge="_DEhoYPQ1Ee6Kh6sbbPcWsg _J8GkMPQ1Ee6Kh6sbbPcWsg _Rp1r8PQ1Ee6Kh6sbbPcWsg _VnEWgPQ1Ee6Kh6sbbPcWsg _XQtN0PQ1Ee6Kh6sbbPcWsg _ahSNwPQ1Ee6Kh6sbbPcWsg _bxi7wPQ1Ee6Kh6sbbPcWsg _jwkAwPQ1Ee6Kh6sbbPcWsg _oxm4wPQ1Ee6Kh6sbbPcWsg _dJ9DsPQ2Ee6Kh6sbbPcWsg _q9rSQPQ2Ee6Kh6sbbPcWsg _t395IPQ2Ee6Kh6sbbPcWsg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_XEdo8PQyEe6Kh6sbbPcWsg" name="University Course Registration System" node="_stnisPQyEe6Kh6sbbPcWsg _s-dbEPQyEe6Kh6sbbPcWsg _COPWEPQ0Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_aSm_8PQyEe6Kh6sbbPcWsg" name="Start" outgoing="_ua21sPQ0Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_sImxIPQyEe6Kh6sbbPcWsg" name="logs into the course registration portal" incoming="_ua21sPQ0Ee6Kh6sbbPcWsg" outgoing="_zxlp0PQ0Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_stnisPQyEe6Kh6sbbPcWsg" name="displays a list of available courses" incoming="_zxlp0PQ0Ee6Kh6sbbPcWsg" outgoing="_2ScdAPQ0Ee6Kh6sbbPcWsg" inPartition="_XEdo8PQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_s-dbEPQyEe6Kh6sbbPcWsg" name="registers the student in the selected courses" incoming="_3bHDUPQ2Ee6Kh6sbbPcWsg" outgoing="_7tuvEPQ2Ee6Kh6sbbPcWsg" inPartition="_XEdo8PQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tOCIIPQyEe6Kh6sbbPcWsg" name="confirms the course selection" incoming="_t395IPQ2Ee6Kh6sbbPcWsg" outgoing="_3bHDUPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tVYGQPQyEe6Kh6sbbPcWsg" name="view and edit course enrollment" incoming="_q9rSQPQ2Ee6Kh6sbbPcWsg" outgoing="_t395IPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tncGoPQyEe6Kh6sbbPcWsg" name="searches for a desired course" incoming="_2ScdAPQ0Ee6Kh6sbbPcWsg _XQtN0PQ1Ee6Kh6sbbPcWsg _dJ9DsPQ2Ee6Kh6sbbPcWsg" outgoing="_DEhoYPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_uN_JQPQyEe6Kh6sbbPcWsg" name="views the course details" incoming="_J8GkMPQ1Ee6Kh6sbbPcWsg" outgoing="_jwkAwPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_uWsZUPQyEe6Kh6sbbPcWsg" name="adds the course to the enrollment" incoming="_oxm4wPQ1Ee6Kh6sbbPcWsg" outgoing="_q9rSQPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_8UuacPQyEe6Kh6sbbPcWsg" incoming="_Rp1r8PQ1Ee6Kh6sbbPcWsg" outgoing="_VnEWgPQ1Ee6Kh6sbbPcWsg _ahSNwPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_Ioc14PQzEe6Kh6sbbPcWsg" incoming="_jwkAwPQ1Ee6Kh6sbbPcWsg" outgoing="_oxm4wPQ1Ee6Kh6sbbPcWsg _yTFPAPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Q7EzYPQzEe6Kh6sbbPcWsg" name="selects another course" incoming="_V_-JQPQ2Ee6Kh6sbbPcWsg" outgoing="_dJ9DsPQ2Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_rJwGwPQzEe6Kh6sbbPcWsg" name="exits the course registration portal" incoming="_7tuvEPQ2Ee6Kh6sbbPcWsg" outgoing="_BVxVoPQ3Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_0nelcPQzEe6Kh6sbbPcWsg" incoming="_DEhoYPQ1Ee6Kh6sbbPcWsg" outgoing="_J8GkMPQ1Ee6Kh6sbbPcWsg _Rp1r8PQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_3RXY0PQzEe6Kh6sbbPcWsg" name="searches for another course" incoming="_VnEWgPQ1Ee6Kh6sbbPcWsg" outgoing="_XQtN0PQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6CHCIPQzEe6Kh6sbbPcWsg" name="exit the system" incoming="_ahSNwPQ1Ee6Kh6sbbPcWsg" outgoing="_bxi7wPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_COPWEPQ0Ee6Kh6sbbPcWsg" name="notifies the student about the prerequisites" incoming="_yTFPAPQ1Ee6Kh6sbbPcWsg" outgoing="_V_-JQPQ2Ee6Kh6sbbPcWsg" inPartition="_XEdo8PQyEe6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_IeaToPQ0Ee6Kh6sbbPcWsg" name="end" incoming="_BVxVoPQ3Ee6Kh6sbbPcWsg"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_KpJs4PQ0Ee6Kh6sbbPcWsg" name="end" incoming="_bxi7wPQ1Ee6Kh6sbbPcWsg" inPartition="_V5GpEPQyEe6Kh6sbbPcWsg"/>
+  </packagedElement>
+</uml:Model>

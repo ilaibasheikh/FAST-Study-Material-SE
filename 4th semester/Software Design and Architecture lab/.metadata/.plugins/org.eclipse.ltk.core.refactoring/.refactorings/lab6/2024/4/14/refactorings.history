@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;model2.di, model2.notation, model2.png, model2.uml&apos; to &apos;lab6&apos;" description="Move 4 resources to &apos;lab6&apos;" destination="/lab6" element1="/SDAassignment1/model2.di" element2="/SDAassignment1/model2.notation" element3="/SDAassignment1/model2.png" element4="/SDAassignment1/model2.uml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="4" stamp="1712423171343" updateReferences="true"/>
+</session>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_uBmj4AlLEe-PntwDyRqL1Q" name="model3">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_uD_JgAlLEe-PntwDyRqL1Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_uCpFsAlLEe-PntwDyRqL1Q" name="Payment Collection">
+    <region xmi:type="uml:Region" xmi:id="_uDFxoAlLEe-PntwDyRqL1Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_xbs1oA_BEe-cnJs7UqCL2Q" name="customer has booked room" source="_uri4wAlLEe-PntwDyRqL1Q" target="_fQMugA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_2CJcUA_BEe-cnJs7UqCL2Q" source="_fQMugA_BEe-cnJs7UqCL2Q" target="_AV-ckA_CEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_CCN78A_CEe-cnJs7UqCL2Q" name="[customer chose advance]" source="_AV-ckA_CEe-cnJs7UqCL2Q" target="_iARpcA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_NaDW4A_CEe-cnJs7UqCL2Q" name="[Customer cancelled booking]" source="_iARpcA_BEe-cnJs7UqCL2Q" target="_kPhIMA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_X18G8A_CEe-cnJs7UqCL2Q" name="[Customer pays a little amount]" source="_AV-ckA_CEe-cnJs7UqCL2Q" target="_u9_dEA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_uXx8MA_CEe-cnJs7UqCL2Q" name="Customer checks out" source="_u9_dEA_BEe-cnJs7UqCL2Q" target="_tYuvcA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_1K9gMA_CEe-cnJs7UqCL2Q" source="_tYuvcA_BEe-cnJs7UqCL2Q" target="_xjj7sA_CEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_13-XMA_CEe-cnJs7UqCL2Q" name="[paid at checkout]" source="_xjj7sA_CEe-cnJs7UqCL2Q" target="_g1l_AA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_8HqzoA_CEe-cnJs7UqCL2Q" name="[paid after due date]" source="_xjj7sA_CEe-cnJs7UqCL2Q" target="_lzFMsA_BEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_EYbI4A_DEe-cnJs7UqCL2Q" source="_kPhIMA_BEe-cnJs7UqCL2Q" target="_BP-KMA_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_FCn8cA_DEe-cnJs7UqCL2Q" source="_lzFMsA_BEe-cnJs7UqCL2Q" target="_DDO3kA_DEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Fnnf4A_DEe-cnJs7UqCL2Q" source="_g1l_AA_BEe-cnJs7UqCL2Q" target="_DDO3kA_DEe-cnJs7UqCL2Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_uri4wAlLEe-PntwDyRqL1Q" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_fQMugA_BEe-cnJs7UqCL2Q" name="Unpaid State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_g1l_AA_BEe-cnJs7UqCL2Q" name="Paid State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_iARpcA_BEe-cnJs7UqCL2Q" name="Advanced Payment State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_kPhIMA_BEe-cnJs7UqCL2Q" name="Refund State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_lzFMsA_BEe-cnJs7UqCL2Q" name="Late State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_tYuvcA_BEe-cnJs7UqCL2Q" name="Overdue State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_u9_dEA_BEe-cnJs7UqCL2Q" name="Partially Paid State"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_AV-ckA_CEe-cnJs7UqCL2Q" name="" kind="choice"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_xjj7sA_CEe-cnJs7UqCL2Q" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_BP-KMA_DEe-cnJs7UqCL2Q"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_DDO3kA_DEe-cnJs7UqCL2Q"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_LwywpwlMEe-PntwDyRqL1Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LwywqAlMEe-PntwDyRqL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

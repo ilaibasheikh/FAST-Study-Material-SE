@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BfG3AAV-Ee-RWLvpx_Biig" name="2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_BfiU0AV-Ee-RWLvpx_Biig">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_BfQA8AV-Ee-RWLvpx_Biig" name="Order Food" node="_PCbSEAV-Ee-RWLvpx_Biig _bI8X8AV-Ee-RWLvpx_Biig _cnpKkAV-Ee-RWLvpx_Biig _ijsSQAV-Ee-RWLvpx_Biig _kEMbsAV-Ee-RWLvpx_Biig _nNRsgAV-Ee-RWLvpx_Biig _BeNpsAV_Ee-RWLvpx_Biig _HF4c0AV_Ee-RWLvpx_Biig _S60DcAV_Ee-RWLvpx_Biig _dfjNgAV_Ee-RWLvpx_Biig _rE_vgAV_Ee-RWLvpx_Biig _wYlwEAV_Ee-RWLvpx_Biig _27Z80AV_Ee-RWLvpx_Biig _-D_wIAV_Ee-RWLvpx_Biig _rSQ6AAWAEe-RWLvpx_Biig _kcnbYAWBEe-RWLvpx_Biig" group="_IYRuQAV-Ee-RWLvpx_Biig _JsM0QAV-Ee-RWLvpx_Biig _1zOpQAV-Ee-RWLvpx_Biig _JuYowAWCEe-RWLvpx_Biig">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_T1exYAV-Ee-RWLvpx_Biig">
+      <body>System shall be updated with the latest food menu &#xD;
+</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_C84KoAWAEe-RWLvpx_Biig">
+      <body>&#xD;
+Order placed successfully &#xD;
+&#xD;
+Order ready to serve &#xD;
+&#xD;
+</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_vVa4UAV-Ee-RWLvpx_Biig" target="_bI8X8AV-Ee-RWLvpx_Biig" source="_PCbSEAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_wA3CAAV-Ee-RWLvpx_Biig" target="_cnpKkAV-Ee-RWLvpx_Biig" source="_bI8X8AV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_wuSIsAV-Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig" target="_ijsSQAV-Ee-RWLvpx_Biig" source="_cnpKkAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xnN70AV-Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig" target="_kEMbsAV-Ee-RWLvpx_Biig" source="_ijsSQAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yeYNUAV-Ee-RWLvpx_Biig" target="_nNRsgAV-Ee-RWLvpx_Biig" source="_kEMbsAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_JQ7YEAV_Ee-RWLvpx_Biig" name="[no]" inPartition="_JsM0QAV-Ee-RWLvpx_Biig" target="_BeNpsAV_Ee-RWLvpx_Biig" source="_nNRsgAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_JxcrMAV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig" target="_HF4c0AV_Ee-RWLvpx_Biig" source="_BeNpsAV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XOwk4AV_Ee-RWLvpx_Biig" name="[yes]" target="_dfjNgAV_Ee-RWLvpx_Biig" source="_nNRsgAV-Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_eyUc8AV_Ee-RWLvpx_Biig" target="_S60DcAV_Ee-RWLvpx_Biig" source="_dfjNgAV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tXMboAV_Ee-RWLvpx_Biig" target="_rE_vgAV_Ee-RWLvpx_Biig" source="_S60DcAV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yoIJwAV_Ee-RWLvpx_Biig" target="_wYlwEAV_Ee-RWLvpx_Biig" source="_rE_vgAV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4vtzEAV_Ee-RWLvpx_Biig" target="_27Z80AV_Ee-RWLvpx_Biig" source="_wYlwEAV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__lkQkAV_Ee-RWLvpx_Biig" target="_-D_wIAV_Ee-RWLvpx_Biig" source="_27Z80AV_Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FYEv0AWCEe-RWLvpx_Biig" target="_-D_wIAV_Ee-RWLvpx_Biig" source="_kcnbYAWBEe-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_IYRuQAV-Ee-RWLvpx_Biig" name="Customer" node="_cnpKkAV-Ee-RWLvpx_Biig _ijsSQAV-Ee-RWLvpx_Biig _kEMbsAV-Ee-RWLvpx_Biig _wYlwEAV_Ee-RWLvpx_Biig" edge="_wuSIsAV-Ee-RWLvpx_Biig _xnN70AV-Ee-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_JsM0QAV-Ee-RWLvpx_Biig" name="System" node="_bI8X8AV-Ee-RWLvpx_Biig _nNRsgAV-Ee-RWLvpx_Biig _BeNpsAV_Ee-RWLvpx_Biig _HF4c0AV_Ee-RWLvpx_Biig _S60DcAV_Ee-RWLvpx_Biig _27Z80AV_Ee-RWLvpx_Biig" edge="_JQ7YEAV_Ee-RWLvpx_Biig _JxcrMAV_Ee-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_1zOpQAV-Ee-RWLvpx_Biig" name="Admin" node="_dfjNgAV_Ee-RWLvpx_Biig _rE_vgAV_Ee-RWLvpx_Biig"/>
+    <group xmi:type="uml:InterruptibleActivityRegion" xmi:id="_JuYowAWCEe-RWLvpx_Biig" name="InterruptibleActivityRegion36"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_PCbSEAV-Ee-RWLvpx_Biig" name="" outgoing="_vVa4UAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bI8X8AV-Ee-RWLvpx_Biig" name="Presents menu" incoming="_vVa4UAV-Ee-RWLvpx_Biig" outgoing="_wA3CAAV-Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_cnpKkAV-Ee-RWLvpx_Biig" name="Browses menu" incoming="_wA3CAAV-Ee-RWLvpx_Biig" outgoing="_wuSIsAV-Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ijsSQAV-Ee-RWLvpx_Biig" name="selects item" incoming="_wuSIsAV-Ee-RWLvpx_Biig" outgoing="_xnN70AV-Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_kEMbsAV-Ee-RWLvpx_Biig" name="place order" incoming="_xnN70AV-Ee-RWLvpx_Biig" outgoing="_yeYNUAV-Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_nNRsgAV-Ee-RWLvpx_Biig" name="Available" incoming="_yeYNUAV-Ee-RWLvpx_Biig" outgoing="_JQ7YEAV_Ee-RWLvpx_Biig _XOwk4AV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_BeNpsAV_Ee-RWLvpx_Biig" name="notify customer" incoming="_JQ7YEAV_Ee-RWLvpx_Biig" outgoing="_JxcrMAV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_HF4c0AV_Ee-RWLvpx_Biig" name="" incoming="_JxcrMAV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_S60DcAV_Ee-RWLvpx_Biig" name="prompts for payment method options" incoming="_eyUc8AV_Ee-RWLvpx_Biig" outgoing="_tXMboAV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dfjNgAV_Ee-RWLvpx_Biig" name="notified about order" incoming="_XOwk4AV_Ee-RWLvpx_Biig" outgoing="_eyUc8AV_Ee-RWLvpx_Biig" inPartition="_1zOpQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_rE_vgAV_Ee-RWLvpx_Biig" name="forwards order to restaurant" incoming="_tXMboAV_Ee-RWLvpx_Biig" outgoing="_yoIJwAV_Ee-RWLvpx_Biig" inPartition="_1zOpQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wYlwEAV_Ee-RWLvpx_Biig" name="Recieve notification that order is placed" incoming="_yoIJwAV_Ee-RWLvpx_Biig" outgoing="_4vtzEAV_Ee-RWLvpx_Biig" inPartition="_IYRuQAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_27Z80AV_Ee-RWLvpx_Biig" name="confirms successful payment" incoming="_4vtzEAV_Ee-RWLvpx_Biig" outgoing="__lkQkAV_Ee-RWLvpx_Biig" inPartition="_JsM0QAV-Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_-D_wIAV_Ee-RWLvpx_Biig" incoming="__lkQkAV_Ee-RWLvpx_Biig _FYEv0AWCEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_rSQ6AAWAEe-RWLvpx_Biig" name="Cancel order"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_kcnbYAWBEe-RWLvpx_Biig" name="Cancel order" outgoing="_FYEv0AWCEe-RWLvpx_Biig"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_twm_QATREe-Sc4Fwh8yKEQ" name="lab8">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_t2-tAATREe-Sc4Fwh8yKEQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_tycLQATREe-Sc4Fwh8yKEQ" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_yFFsMATREe-Sc4Fwh8yKEQ" name="User" coveredBy="_DxFz4ATSEe-Sc4Fwh8yKEQ _JWFtgQTSEe-Sc4Fwh8yKEQ _PzDJ4ATSEe-Sc4Fwh8yKEQ _PzDJ4QTSEe-Sc4Fwh8yKEQ _a-0ewQTSEe-Sc4Fwh8yKEQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_zodjcATREe-Sc4Fwh8yKEQ" name="Librarian" coveredBy="_DxHCAATSEe-Sc4Fwh8yKEQ _JWFtgATSEe-Sc4Fwh8yKEQ _oe-REQTSEe-Sc4Fwh8yKEQ _ofAGQATSEe-Sc4Fwh8yKEQ _wjzqMATSEe-Sc4Fwh8yKEQ _wjzqMQTSEe-Sc4Fwh8yKEQ _CyzxQATTEe-Sc4Fwh8yKEQ _KeylgATTEe-Sc4Fwh8yKEQ _OcDFQATTEe-Sc4Fwh8yKEQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_1NoxgATREe-Sc4Fwh8yKEQ" name="System" coveredBy="_a-0ewATSEe-Sc4Fwh8yKEQ _ezGBoATSEe-Sc4Fwh8yKEQ _ezGBoQTSEe-Sc4Fwh8yKEQ _CyzxQQTTEe-Sc4Fwh8yKEQ _KeylgQTTEe-Sc4Fwh8yKEQ _OcDFQQTTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DxFz4ATSEe-Sc4Fwh8yKEQ" name="Message4SendEvent" covered="_yFFsMATREe-Sc4Fwh8yKEQ" message="_DxD-sATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DxHCAATSEe-Sc4Fwh8yKEQ" name="Message4ReceiveEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_DxD-sATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JWFtgATSEe-Sc4Fwh8yKEQ" name="Message7SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_JWFGcATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_JWFtgQTSEe-Sc4Fwh8yKEQ" name="Message7ReceiveEvent" covered="_yFFsMATREe-Sc4Fwh8yKEQ" message="_JWFGcATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_PzDJ4ATSEe-Sc4Fwh8yKEQ" name="Message10SendEvent" covered="_yFFsMATREe-Sc4Fwh8yKEQ" message="_PzCi0ATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_PzDJ4QTSEe-Sc4Fwh8yKEQ" name="Message10ReceiveEvent" covered="_yFFsMATREe-Sc4Fwh8yKEQ" message="_PzCi0ATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a-0ewATSEe-Sc4Fwh8yKEQ" name="Message13SendEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_a-z3sATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a-0ewQTSEe-Sc4Fwh8yKEQ" name="Message13ReceiveEvent" covered="_yFFsMATREe-Sc4Fwh8yKEQ" message="_a-z3sATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ezGBoATSEe-Sc4Fwh8yKEQ" name="Message16SendEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_ezEzgATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ezGBoQTSEe-Sc4Fwh8yKEQ" name="Message16ReceiveEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_ezEzgATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oe-REQTSEe-Sc4Fwh8yKEQ" name="Message19SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_oe-REATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ofAGQATSEe-Sc4Fwh8yKEQ" name="Message19ReceiveEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_oe-REATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wjzqMATSEe-Sc4Fwh8yKEQ" name="Message22SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_wjzDIATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wjzqMQTSEe-Sc4Fwh8yKEQ" name="Message22ReceiveEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_wjzDIATSEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CyzxQATTEe-Sc4Fwh8yKEQ" name="Message25SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_CyzKMATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CyzxQQTTEe-Sc4Fwh8yKEQ" name="Message25ReceiveEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_CyzKMATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KeylgATTEe-Sc4Fwh8yKEQ" name="Message28SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_Kex-cATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KeylgQTTEe-Sc4Fwh8yKEQ" name="Message28ReceiveEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_Kex-cATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OcDFQATTEe-Sc4Fwh8yKEQ" name="Message31SendEvent" covered="_zodjcATREe-Sc4Fwh8yKEQ" message="_OcCeMATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OcDFQQTTEe-Sc4Fwh8yKEQ" name="Message31ReceiveEvent" covered="_1NoxgATREe-Sc4Fwh8yKEQ" message="_OcCeMATTEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_DxD-sATSEe-Sc4Fwh8yKEQ" name="1. Request to reset lib acc pwd()" messageSort="asynchCall" receiveEvent="_DxHCAATSEe-Sc4Fwh8yKEQ" sendEvent="_DxFz4ATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_JWFGcATSEe-Sc4Fwh8yKEQ" name="2. Send temp pwd or reset email()" messageSort="asynchCall" receiveEvent="_JWFtgQTSEe-Sc4Fwh8yKEQ" sendEvent="_JWFtgATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_PzCi0ATSEe-Sc4Fwh8yKEQ" name="3.Follow instructions and set pwd()" messageSort="asynchCall" receiveEvent="_PzDJ4QTSEe-Sc4Fwh8yKEQ" sendEvent="_PzDJ4ATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_a-z3sATSEe-Sc4Fwh8yKEQ" name="4. Send confirmation email()" messageSort="asynchCall" receiveEvent="_a-0ewQTSEe-Sc4Fwh8yKEQ" sendEvent="_a-0ewATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_ezEzgATSEe-Sc4Fwh8yKEQ" name="1.5.1. update user acc with new pwd()" messageSort="asynchCall" receiveEvent="_ezGBoQTSEe-Sc4Fwh8yKEQ" sendEvent="_ezGBoATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_oe-REATSEe-Sc4Fwh8yKEQ" name="1.4. ask ques for verifying()" messageSort="asynchCall" receiveEvent="_ofAGQATSEe-Sc4Fwh8yKEQ" sendEvent="_oe-REQTSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_wjzDIATSEe-Sc4Fwh8yKEQ" name="1.5. generate temp pwd and reset email()" messageSort="asynchCall" receiveEvent="_wjzqMQTSEe-Sc4Fwh8yKEQ" sendEvent="_wjzqMATSEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_CyzKMATTEe-Sc4Fwh8yKEQ" name="1.1. initiate reset pwd process()" messageSort="asynchCall" receiveEvent="_CyzxQQTTEe-Sc4Fwh8yKEQ" sendEvent="_CyzxQATTEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_Kex-cATTEe-Sc4Fwh8yKEQ" name="1.2. select user acc()" messageSort="asynchCall" receiveEvent="_KeylgQTTEe-Sc4Fwh8yKEQ" sendEvent="_KeylgATTEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_OcCeMATTEe-Sc4Fwh8yKEQ" name="1.3. verify user identity()" messageSort="asynchCall" receiveEvent="_OcDFQQTTEe-Sc4Fwh8yKEQ" sendEvent="_OcDFQATTEe-Sc4Fwh8yKEQ"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zDNE0ATSEe-Sc4Fwh8yKEQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zDNr4ATSEe-Sc4Fwh8yKEQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_xJbdcAi8Ee-fcMCtpeQGGw" name="8">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_xPsdgAi8Ee-fcMCtpeQGGw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_xK6rMAi8Ee-fcMCtpeQGGw" name="Room booking">
+    <region xmi:type="uml:Region" xmi:id="_xNdB0Ai8Ee-fcMCtpeQGGw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="__AjMoA-_Ee-cnJs7UqCL2Q" name="initially" source="_01oCYAi8Ee-fcMCtpeQGGw" target="_k7iyoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_BzHa4A_AEe-cnJs7UqCL2Q" name="Customer books room" source="_k7iyoA-_Ee-cnJs7UqCL2Q" target="_4IfIoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Ly76AA_AEe-cnJs7UqCL2Q" source="_4IfIoA-_Ee-cnJs7UqCL2Q" target="_K1xHIA_AEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_NoftcA_AEe-cnJs7UqCL2Q" name="[Customer cancels booking]" source="_K1xHIA_AEe-cnJs7UqCL2Q" target="_tUgBoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_RKf0kA_AEe-cnJs7UqCL2Q" source="_tUgBoA-_Ee-cnJs7UqCL2Q" target="_k7iyoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_WwX38A_AEe-cnJs7UqCL2Q" name="Customer arrives" source="_K1xHIA_AEe-cnJs7UqCL2Q" target="_phV5EA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_b1ZRAA_AEe-cnJs7UqCL2Q" name="[Customer checks out]" source="_phV5EA-_Ee-cnJs7UqCL2Q" target="_Fz5vwA_AEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_qAEnAA_AEe-cnJs7UqCL2Q" source="_Fz5vwA_AEe-cnJs7UqCL2Q" target="_n2OloA_AEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_rMFuMA_AEe-cnJs7UqCL2Q" name="[furniture broken]" source="_n2OloA_AEe-cnJs7UqCL2Q" target="_rfVPwA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_v_DG4A_AEe-cnJs7UqCL2Q" name="cleaning done" source="_n2OloA_AEe-cnJs7UqCL2Q" target="_k7iyoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_zWZdMA_AEe-cnJs7UqCL2Q" name="[funriture replaced]" source="_rfVPwA-_Ee-cnJs7UqCL2Q" target="_k7iyoA-_Ee-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_5jTrYA_AEe-cnJs7UqCL2Q" source="_rfVPwA-_Ee-cnJs7UqCL2Q" target="_4nqigA_AEe-cnJs7UqCL2Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_qDkqIA_EEe-cnJs7UqCL2Q" name="[customer extends booking]" source="_phV5EA-_Ee-cnJs7UqCL2Q" target="_phV5EA-_Ee-cnJs7UqCL2Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_01oCYAi8Ee-fcMCtpeQGGw" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_k7iyoA-_Ee-cnJs7UqCL2Q" name="Available State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_phV5EA-_Ee-cnJs7UqCL2Q" name="Occupied State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_rfVPwA-_Ee-cnJs7UqCL2Q" name="Out of Service State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_tUgBoA-_Ee-cnJs7UqCL2Q" name="Cancel State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_4IfIoA-_Ee-cnJs7UqCL2Q" name="Reserved State"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Fz5vwA_AEe-cnJs7UqCL2Q" name="Maintenance State"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_K1xHIA_AEe-cnJs7UqCL2Q" name="Choice10" kind="choice"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_n2OloA_AEe-cnJs7UqCL2Q" name="" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_4nqigA_AEe-cnJs7UqCL2Q" name=""/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_-s2mOAi8Ee-fcMCtpeQGGw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-s2mOQi8Ee-fcMCtpeQGGw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

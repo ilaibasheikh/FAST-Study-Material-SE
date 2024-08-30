@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qzn-0ATTEe-Sc4Fwh8yKEQ" name="q2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_q0YMwATTEe-Sc4Fwh8yKEQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_qz1aMATTEe-Sc4Fwh8yKEQ" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_saQlcATTEe-Sc4Fwh8yKEQ" name="User" coveredBy="_0SJuwATTEe-Sc4Fwh8yKEQ _6F6dIQTTEe-Sc4Fwh8yKEQ _GfS0oQTUEe-Sc4Fwh8yKEQ _J4vcsATUEe-Sc4Fwh8yKEQ _dzxAsATUEe-Sc4Fwh8yKEQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_tNc88ATTEe-Sc4Fwh8yKEQ" name="System" coveredBy="_0SJuwQTTEe-Sc4Fwh8yKEQ _6F7EMATTEe-Sc4Fwh8yKEQ _GfS0oATUEe-Sc4Fwh8yKEQ _J4u1oATUEe-Sc4Fwh8yKEQ _dzwZoQTUEe-Sc4Fwh8yKEQ _sRvGIATUEe-Sc4Fwh8yKEQ _uEjHkQTUEe-Sc4Fwh8yKEQ _vXCDIATUEe-Sc4Fwh8yKEQ _z9ep0QTUEe-Sc4Fwh8yKEQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_uBIcoATTEe-Sc4Fwh8yKEQ" name="Database" coveredBy="_sRvGIQTUEe-Sc4Fwh8yKEQ _uEjHkATUEe-Sc4Fwh8yKEQ _vXCDIQTUEe-Sc4Fwh8yKEQ _z9fQ4ATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0SJuwATTEe-Sc4Fwh8yKEQ" name="Message4SendEvent" covered="_saQlcATTEe-Sc4Fwh8yKEQ" message="_0SJHsATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0SJuwQTTEe-Sc4Fwh8yKEQ" name="Message4ReceiveEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_0SJHsATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6F6dIQTTEe-Sc4Fwh8yKEQ" name="Message7SendEvent" covered="_saQlcATTEe-Sc4Fwh8yKEQ" message="_6F6dIATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6F7EMATTEe-Sc4Fwh8yKEQ" name="Message7ReceiveEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_6F6dIATTEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GfS0oATUEe-Sc4Fwh8yKEQ" name="Message10SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_GfRmgATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GfS0oQTUEe-Sc4Fwh8yKEQ" name="Message10ReceiveEvent" covered="_saQlcATTEe-Sc4Fwh8yKEQ" message="_GfRmgATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J4u1oATUEe-Sc4Fwh8yKEQ" name="Message13SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_J4uOkATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_J4vcsATUEe-Sc4Fwh8yKEQ" name="Message13ReceiveEvent" covered="_saQlcATTEe-Sc4Fwh8yKEQ" message="_J4uOkATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dzwZoQTUEe-Sc4Fwh8yKEQ" name="Message16SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_dzwZoATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dzxAsATUEe-Sc4Fwh8yKEQ" name="Message16ReceiveEvent" covered="_saQlcATTEe-Sc4Fwh8yKEQ" message="_dzwZoATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sRvGIATUEe-Sc4Fwh8yKEQ" name="Message19SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_sRt4AATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sRvGIQTUEe-Sc4Fwh8yKEQ" name="Message19ReceiveEvent" covered="_uBIcoATTEe-Sc4Fwh8yKEQ" message="_sRt4AATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uEjHkATUEe-Sc4Fwh8yKEQ" name="Message22SendEvent" covered="_uBIcoATTEe-Sc4Fwh8yKEQ" message="_uEiggATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uEjHkQTUEe-Sc4Fwh8yKEQ" name="Message22ReceiveEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_uEiggATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vXCDIATUEe-Sc4Fwh8yKEQ" name="Message25SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_vXBcEATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vXCDIQTUEe-Sc4Fwh8yKEQ" name="Message25ReceiveEvent" covered="_uBIcoATTEe-Sc4Fwh8yKEQ" message="_vXBcEATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_z9ep0QTUEe-Sc4Fwh8yKEQ" name="Message28SendEvent" covered="_tNc88ATTEe-Sc4Fwh8yKEQ" message="_z9ep0ATUEe-Sc4Fwh8yKEQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_z9fQ4ATUEe-Sc4Fwh8yKEQ" name="Message28ReceiveEvent" covered="_uBIcoATTEe-Sc4Fwh8yKEQ" message="_z9ep0ATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_0SJHsATTEe-Sc4Fwh8yKEQ" name="1. select option to update profile()" messageSort="asynchCall" receiveEvent="_0SJuwQTTEe-Sc4Fwh8yKEQ" sendEvent="_0SJuwATTEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_6F6dIATTEe-Sc4Fwh8yKEQ" name="2. modifies desired profile details()" messageSort="asynchCall" receiveEvent="_6F7EMATTEe-Sc4Fwh8yKEQ" sendEvent="_6F6dIQTTEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_GfRmgATUEe-Sc4Fwh8yKEQ" name="3. confirmation message()" messageSort="asynchCall" receiveEvent="_GfS0oQTUEe-Sc4Fwh8yKEQ" sendEvent="_GfS0oATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_J4uOkATUEe-Sc4Fwh8yKEQ" name="4. notify for validation error()" messageSort="asynchCall" receiveEvent="_J4vcsATUEe-Sc4Fwh8yKEQ" sendEvent="_J4u1oATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_dzwZoATUEe-Sc4Fwh8yKEQ" name="5. prompt to correct info()" messageSort="asynchCall" receiveEvent="_dzxAsATUEe-Sc4Fwh8yKEQ" sendEvent="_dzwZoQTUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_sRt4AATUEe-Sc4Fwh8yKEQ" name="1.1. retrieve user current profile info()" messageSort="asynchCall" receiveEvent="_sRvGIQTUEe-Sc4Fwh8yKEQ" sendEvent="_sRvGIATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_uEiggATUEe-Sc4Fwh8yKEQ" name="1.2. return user current profile info()" messageSort="asynchCall" receiveEvent="_uEjHkQTUEe-Sc4Fwh8yKEQ" sendEvent="_uEjHkATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_vXBcEATUEe-Sc4Fwh8yKEQ" name="2.1. validate updated info" messageSort="asynchCall" receiveEvent="_vXCDIQTUEe-Sc4Fwh8yKEQ" sendEvent="_vXCDIATUEe-Sc4Fwh8yKEQ"/>
+    <message xmi:type="uml:Message" xmi:id="_z9ep0ATUEe-Sc4Fwh8yKEQ" name="2.2. update profile info" messageSort="asynchCall" receiveEvent="_z9fQ4ATUEe-Sc4Fwh8yKEQ" sendEvent="_z9ep0QTUEe-Sc4Fwh8yKEQ"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_23VBRwTTEe-Sc4Fwh8yKEQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_23VBSATTEe-Sc4Fwh8yKEQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

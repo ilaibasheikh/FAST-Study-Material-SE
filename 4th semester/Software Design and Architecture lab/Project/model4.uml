@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Oig_cAlOEe-PntwDyRqL1Q" name="model4">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_OjjhQAlOEe-PntwDyRqL1Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_Oi9EUAlOEe-PntwDyRqL1Q" name="Extend booking">
+    <region xmi:type="uml:Region" xmi:id="_Oi9EUQlOEe-PntwDyRqL1Q" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_bJ9oIAlOEe-PntwDyRqL1Q" name="customer clicks extend booking option" source="_QJlD4AlOEe-PntwDyRqL1Q" target="_RZnIYAlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_sKz6AAlOEe-PntwDyRqL1Q" source="_RZnIYAlOEe-PntwDyRqL1Q" target="_qb12wAlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_uTA8oAlOEe-PntwDyRqL1Q" name="no" source="_qb12wAlOEe-PntwDyRqL1Q" target="_SpxIsAlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_6R-pAAlOEe-PntwDyRqL1Q" name="yes" source="_qb12wAlOEe-PntwDyRqL1Q" target="_TJYc4AlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-xSF4AlOEe-PntwDyRqL1Q" source="_SpxIsAlOEe-PntwDyRqL1Q" target="_8cLPsAlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_NS58QAlPEe-PntwDyRqL1Q" source="_TJYc4AlOEe-PntwDyRqL1Q" target="_R5jMsAlOEe-PntwDyRqL1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Te0E4AlPEe-PntwDyRqL1Q" source="_QQFfEAlPEe-PntwDyRqL1Q" target="_RwdFoAlPEe-PntwDyRqL1Q"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_QJlD4AlOEe-PntwDyRqL1Q" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_RZnIYAlOEe-PntwDyRqL1Q" name="select extend booking"/>
+      <subvertex xmi:type="uml:State" xmi:id="_R5jMsAlOEe-PntwDyRqL1Q" name="Update reservation"/>
+      <subvertex xmi:type="uml:State" xmi:id="_SpxIsAlOEe-PntwDyRqL1Q" name="Show alternatives"/>
+      <subvertex xmi:type="uml:State" xmi:id="_TJYc4AlOEe-PntwDyRqL1Q" name="verify extension availability"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_qb12wAlOEe-PntwDyRqL1Q" name="[witihin limit]" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_8cLPsAlOEe-PntwDyRqL1Q"/>
+      <subvertex xmi:type="uml:State" xmi:id="_QQFfEAlPEe-PntwDyRqL1Q" name="confirm reservation"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_RwdFoAlPEe-PntwDyRqL1Q" name=""/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ktdXqAlOEe-PntwDyRqL1Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ktdXqQlOEe-PntwDyRqL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

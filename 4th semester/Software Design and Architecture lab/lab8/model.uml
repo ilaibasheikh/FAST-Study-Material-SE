@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_EG1JAAyWEe-5MsEssi3Pgw" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_EHID8AyWEe-5MsEssi3Pgw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_EG-S8AyWEe-5MsEssi3Pgw" name="Interaction1">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_GW01sAyWEe-5MsEssi3Pgw"/>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_HDQd4AyWEe-5MsEssi3Pgw" name="Constraint4" constrainedElement="_GAwfEAyWEe-5MsEssi3Pgw">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_HDQd4QyWEe-5MsEssi3Pgw" name="constraintSpec">
+        <language>OCL</language>
+        <body>true</body>
+      </specification>
+    </ownedRule>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Es1ZEAyWEe-5MsEssi3Pgw" name="Lifeline1" coveredBy="_IgPZQQyWEe-5MsEssi3Pgw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_GAwfEAyWEe-5MsEssi3Pgw" name="Lifeline2" coveredBy="_IgPZQgyWEe-5MsEssi3Pgw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IgPZQQyWEe-5MsEssi3Pgw" name="Message5SendEvent" covered="_Es1ZEAyWEe-5MsEssi3Pgw" message="_IgPZQAyWEe-5MsEssi3Pgw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IgPZQgyWEe-5MsEssi3Pgw" name="Message5ReceiveEvent" covered="_GAwfEAyWEe-5MsEssi3Pgw" message="_IgPZQAyWEe-5MsEssi3Pgw"/>
+    <message xmi:type="uml:Message" xmi:id="_IgPZQAyWEe-5MsEssi3Pgw" name="Message5" messageSort="asynchCall" receiveEvent="_IgPZQgyWEe-5MsEssi3Pgw" sendEvent="_IgPZQQyWEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DurationObservation" xmi:id="_HgArUAyWEe-5MsEssi3Pgw" name="DurationObservation3"/>
+  <packagedElement xmi:type="uml:TimeObservation" xmi:id="_H_wiYAyWEe-5MsEssi3Pgw" name="TimeObservation4"/>
+</uml:Model>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_jCFZsAxpEe-5MsEssi3Pgw" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_jCiFoAxpEe-5MsEssi3Pgw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_mRDQEAxpEe-5MsEssi3Pgw" name="TransactionHandler">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Pre78wxqEe-5MsEssi3Pgw" name="Transaction Manager" client="_mRDQEAxpEe-5MsEssi3Pgw" supplier="_PrVyAAxqEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_nWcK0AxpEe-5MsEssi3Pgw" name="AccountManager">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Q-JoQwxrEe-5MsEssi3Pgw" name="Account Managing" client="_nWcK0AxpEe-5MsEssi3Pgw" supplier="_Q-CTgAxrEe-5MsEssi3Pgw" contract="_Q-CTgAxrEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_oQTLAAxpEe-5MsEssi3Pgw" name="User">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_3-5f8AxrEe-5MsEssi3Pgw" client="_oQTLAAxpEe-5MsEssi3Pgw" supplier="_3-vu8AxrEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_qN9KgAxpEe-5MsEssi3Pgw" name="Banking Application">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_7nfzwAxqEe-5MsEssi3Pgw" name="" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_roqGkAxsEe-5MsEssi3Pgw" name="" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_8VQmwAxsEe-5MsEssi3Pgw" name="Port8" aggregation="composite"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_leVkQAxqEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_leMaUAxqEe-5MsEssi3Pgw" contract="_leMaUAxqEe-5MsEssi3Pgw"/>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_sMclkwxrEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_sMS0kAxrEe-5MsEssi3Pgw" contract="_sMS0kAxrEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_KAPa8AxrEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_KAGRAAxrEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Wn6QoAxsEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_WnrnIAxsEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_wIbdgAxsEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_wISTkAxsEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_q0WcIAxpEe-5MsEssi3Pgw" name="Authentication Server">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_b-3uQAxsEe-5MsEssi3Pgw" client="_q0WcIAxpEe-5MsEssi3Pgw" supplier="_b-t9QAxsEe-5MsEssi3Pgw" contract="_b-t9QAxsEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_rc97UAxpEe-5MsEssi3Pgw" name="AccountDatabase">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_0fUlQAxsEe-5MsEssi3Pgw" client="_rc97UAxpEe-5MsEssi3Pgw" supplier="_0fBDQAxsEe-5MsEssi3Pgw" contract="_0fBDQAxsEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_sNjqwAxpEe-5MsEssi3Pgw" name="TransationManager">
+    <realization xmi:type="uml:ComponentRealization" xmi:id="_EJIdoAxrEe-5MsEssi3Pgw" client="_qN9KgAxpEe-5MsEssi3Pgw" supplier="_sNjqwAxpEe-5MsEssi3Pgw" realizingClassifier="_qN9KgAxpEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_slGBAAxpEe-5MsEssi3Pgw" name="AccountSummary">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NFhUYAxsEe-5MsEssi3Pgw" client="_slGBAAxpEe-5MsEssi3Pgw" supplier="_NFXjYAxsEe-5MsEssi3Pgw"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_-X0UYAxsEe-5MsEssi3Pgw" client="_slGBAAxpEe-5MsEssi3Pgw" supplier="_8VQmwAxsEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_svvx0AxpEe-5MsEssi3Pgw" name="UserAuthentication">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_tlp-wAxsEe-5MsEssi3Pgw" client="_svvx0AxpEe-5MsEssi3Pgw" supplier="_qN9KgAxpEe-5MsEssi3Pgw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_PrVyAAxqEe-5MsEssi3Pgw" name="TransactionManager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_leMaUAxqEe-5MsEssi3Pgw" name="Transaction Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_KAGRAAxrEe-5MsEssi3Pgw" name="Interface13"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_Q-CTgAxrEe-5MsEssi3Pgw" name="Account Managing"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_sMS0kAxrEe-5MsEssi3Pgw" name="Interface15"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_3-vu8AxrEe-5MsEssi3Pgw" name="Banking Application"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_NFXjYAxsEe-5MsEssi3Pgw" name="Interface17"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_WnrnIAxsEe-5MsEssi3Pgw" name="Authentication Server"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_b-t9QAxsEe-5MsEssi3Pgw" name="Interface19"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_wISTkAxsEe-5MsEssi3Pgw" name="Account Data Interface"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_0fBDQAxsEe-5MsEssi3Pgw" name="Interface21"/>
+</uml:Model>

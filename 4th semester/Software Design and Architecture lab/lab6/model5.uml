@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Y2nlEAyGEe-5MsEssi3Pgw" name="model5">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_Y3XNCwyGEe-5MsEssi3Pgw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_Y3ERAAyGEe-5MsEssi3Pgw" name="Activity1" node="__C_ZgAyGEe-5MsEssi3Pgw __rI-oAyGEe-5MsEssi3Pgw _AV2vkAyHEe-5MsEssi3Pgw _BMCJoAyHEe-5MsEssi3Pgw _CCX7wAyHEe-5MsEssi3Pgw _C48-cAyHEe-5MsEssi3Pgw _GXF5QAyHEe-5MsEssi3Pgw _OWc8gAyHEe-5MsEssi3Pgw _TFSDIAyHEe-5MsEssi3Pgw _UfDScAyHEe-5MsEssi3Pgw _WGhmkAyHEe-5MsEssi3Pgw _W1lE8AyHEe-5MsEssi3Pgw _gtiokAyHEe-5MsEssi3Pgw _mbGWYAyJEe-5MsEssi3Pgw _ntqKcAyJEe-5MsEssi3Pgw" group="_8alz4AyGEe-5MsEssi3Pgw _GXF5QAyHEe-5MsEssi3Pgw _gtiokAyHEe-5MsEssi3Pgw">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_VN5VcAyHEe-5MsEssi3Pgw" name="Activity12" node="_Y3R28AyHEe-5MsEssi3Pgw">
+      <node xmi:type="uml:AcceptEventAction" xmi:id="_Y3R28AyHEe-5MsEssi3Pgw" name="AcceptEventAction1"/>
+    </ownedBehavior>
+    <structuredNode xmi:type="uml:ExpansionRegion" xmi:id="_GXF5QAyHEe-5MsEssi3Pgw" name="ExpansionRegion8" outputElement="_NTJFYAyHEe-5MsEssi3Pgw" inputElement="_MORIAAyHEe-5MsEssi3Pgw">
+      <node xmi:type="uml:ExpansionNode" xmi:id="_MORIAAyHEe-5MsEssi3Pgw" name="ExpansionNode1" regionAsInput="_GXF5QAyHEe-5MsEssi3Pgw">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_MORIAQyHEe-5MsEssi3Pgw" value="1"/>
+      </node>
+      <node xmi:type="uml:ExpansionNode" xmi:id="_NTJFYAyHEe-5MsEssi3Pgw" name="ExpansionNode2" regionAsOutput="_GXF5QAyHEe-5MsEssi3Pgw">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_NTJFYQyHEe-5MsEssi3Pgw" value="1"/>
+      </node>
+    </structuredNode>
+    <structuredNode xmi:type="uml:ExpansionRegion" xmi:id="_gtiokAyHEe-5MsEssi3Pgw" name="ExpansionRegion15"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_8alz4AyGEe-5MsEssi3Pgw" name="ActivityPartition1" node="__C_ZgAyGEe-5MsEssi3Pgw __rI-oAyGEe-5MsEssi3Pgw _AV2vkAyHEe-5MsEssi3Pgw _TFSDIAyHEe-5MsEssi3Pgw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="__C_ZgAyGEe-5MsEssi3Pgw" name="ActivityFinalNode2" inPartition="_8alz4AyGEe-5MsEssi3Pgw"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="__rI-oAyGEe-5MsEssi3Pgw" name="FlowFinalNode3" inPartition="_8alz4AyGEe-5MsEssi3Pgw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_AV2vkAyHEe-5MsEssi3Pgw" name="DecisionNode4" inPartition="_8alz4AyGEe-5MsEssi3Pgw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_BMCJoAyHEe-5MsEssi3Pgw" name="MergeNode5"/>
+    <node xmi:type="uml:ForkNode" xmi:id="_CCX7wAyHEe-5MsEssi3Pgw" name="ForkNode6"/>
+    <node xmi:type="uml:JoinNode" xmi:id="_C48-cAyHEe-5MsEssi3Pgw" name="JoinNode7"/>
+    <node xmi:type="uml:SendSignalAction" xmi:id="_OWc8gAyHEe-5MsEssi3Pgw" name="SendSignal2" signal="_OyO5kAyHEe-5MsEssi3Pgw">
+      <target xmi:type="uml:InputPin" xmi:id="_PDclYAyHEe-5MsEssi3Pgw" name="target">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PDclYQyHEe-5MsEssi3Pgw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PDclYgyHEe-5MsEssi3Pgw" value="1"/>
+      </target>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TFSDIAyHEe-5MsEssi3Pgw" name="OpaqueAction10" inPartition="_8alz4AyGEe-5MsEssi3Pgw">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_cLTzgAyHEe-5MsEssi3Pgw"/>
+    </node>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_UfDScAyHEe-5MsEssi3Pgw" name="AcceptEventAction11">
+      <handler xmi:type="uml:ExceptionHandler" xmi:id="_Y33FwAyHEe-5MsEssi3Pgw"/>
+    </node>
+    <node xmi:type="uml:CentralBufferNode" xmi:id="_WGhmkAyHEe-5MsEssi3Pgw" name="CentralBufferNode13">
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_WGiNoAyHEe-5MsEssi3Pgw" value="1"/>
+    </node>
+    <node xmi:type="uml:DataStoreNode" xmi:id="_W1lE8AyHEe-5MsEssi3Pgw" name="DataStoreNode14">
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_W1lE8QyHEe-5MsEssi3Pgw" value="1"/>
+    </node>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_mbGWYAyJEe-5MsEssi3Pgw" name="CreateObjectAction16">
+      <result xmi:type="uml:OutputPin" xmi:id="_mbKAwAyJEe-5MsEssi3Pgw" name="result">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mbKAwQyJEe-5MsEssi3Pgw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mbKAwgyJEe-5MsEssi3Pgw" value="1"/>
+      </result>
+    </node>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_ntqKcAyJEe-5MsEssi3Pgw" name="CreateObjectAction17">
+      <result xmi:type="uml:OutputPin" xmi:id="_ntqKcQyJEe-5MsEssi3Pgw" name="result">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ntqKcgyJEe-5MsEssi3Pgw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ntqKcwyJEe-5MsEssi3Pgw" value="1"/>
+      </result>
+    </node>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_OyO5kAyHEe-5MsEssi3Pgw" name="Signal2"/>
+</uml:Model>

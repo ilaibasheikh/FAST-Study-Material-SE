@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nattable:Table xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nattable="http://www.eclipse.org/papyrus/nattable/model" xmlns:nattableaxisprovider="http://www.eclipse.org/papyrus/nattable/model/table/nattableaxisprovider" xmlns:nattableconfiguration="http://www.eclipse.org/papyrus/nattable/model/nattableconfiguration" xmlns:nattablestyle="http://www.eclipse.org/papyrus/nattable/model/table/nattablestyle" xmi:id="_T3wUAPRAEe6Kh6sbbPcWsg" description="Sets the elements you want to display in the Diagram" name="Stereotype display">
+  <styles xmi:type="nattablestyle:TableDisplayStyle" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_guSKgTzQEei_1txcmoHe_A"/>
+  <styles xmi:type="nattablestyle:IntListValueStyle" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_ug5fIN3pEeStRPnNv2jObA"/>
+  <styles xmi:type="nattablestyle:BooleanValueStyle" xmi:id="_T3wUA_RAEe6Kh6sbbPcWsg" name="columnsWidthAsPercentage" booleanValue="true"/>
+  <styles xmi:type="nattablestyle:BooleanValueStyle" xmi:id="_T3wUBPRAEe6Kh6sbbPcWsg" name="expandAll" booleanValue="true"/>
+  <tableConfiguration xmi:type="nattableconfiguration:TableConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#PapyrusStereotypeDisplayTreeTable_XMI_ID"/>
+  <columnAxisProvidersHistory xmi:type="nattableaxisprovider:SlaveObjectAxisProvider" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_guSxnzzQEei_1txcmoHe_A"/>
+  <rowAxisProvidersHistory xmi:type="nattableaxisprovider:MasterObjectAxisProvider" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_guSxqjzQEei_1txcmoHe_A"/>
+  <currentRowAxisProvider xmi:type="nattableaxisprovider:MasterObjectAxisProvider" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_guSxqjzQEei_1txcmoHe_A"/>
+  <currentColumnAxisProvider xmi:type="nattableaxisprovider:SlaveObjectAxisProvider" href="platform:/plugin/org.eclipse.papyrus.uml.nattable.stereotype.display/config/stereotype.nattableconfiguration#_guSxnzzQEei_1txcmoHe_A"/>
+</nattable:Table>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ux6zsAGOEe-S5rZYxUJiIw" name="q4">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_uyYGsAGOEe-S5rZYxUJiIw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_uyEksAGOEe-S5rZYxUJiIw" name="Interaction1">
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_1eKowAyQEe-5MsEssi3Pgw" name="CombinedFragment1" interactionOperator="alt">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_1eKowQyQEe-5MsEssi3Pgw" name="InteractionOperand0">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_1eKowgyQEe-5MsEssi3Pgw" name="guard">
+          <specification xmi:type="uml:LiteralString" xmi:id="_2DMBYAyQEe-5MsEssi3Pgw" value="rr4"/>
+        </guard>
+      </operand>
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_4w8oIAyQEe-5MsEssi3Pgw" name="InteractionOperand2">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_4w8oIQyQEe-5MsEssi3Pgw" name="guard">
+          <specification xmi:type="uml:LiteralString" xmi:id="_5F1TAAyQEe-5MsEssi3Pgw" value="t4t"/>
+        </guard>
+      </operand>
+    </fragment>
+  </packagedElement>
+</uml:Model>

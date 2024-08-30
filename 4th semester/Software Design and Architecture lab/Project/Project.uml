@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_KYc7cAVsEe-RWLvpx_Biig" name="Project">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_KbSNAAVsEe-RWLvpx_Biig">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_KaGhQAVsEe-RWLvpx_Biig" name="Room booking" node="_Z-2BgAVsEe-RWLvpx_Biig _cFu1gAVsEe-RWLvpx_Biig _hOvWsAVsEe-RWLvpx_Biig _jPBMYAVsEe-RWLvpx_Biig _m4_jwAVsEe-RWLvpx_Biig _oR9h0AVsEe-RWLvpx_Biig _rKz-QAVsEe-RWLvpx_Biig _wRTW8AVsEe-RWLvpx_Biig _nMjjgAVtEe-RWLvpx_Biig _j0lI0AVyEe-RWLvpx_Biig _5vrHIAVyEe-RWLvpx_Biig _G4CEgAVzEe-RWLvpx_Biig _xH6xsAVzEe-RWLvpx_Biig _4ilzgAVzEe-RWLvpx_Biig _APvscAV0Ee-RWLvpx_Biig _iBgWwAV0Ee-RWLvpx_Biig _9DwcIAV0Ee-RWLvpx_Biig _dmu_IAV1Ee-RWLvpx_Biig" group="_N7_hYAVxEe-RWLvpx_Biig _EK4XMAVyEe-RWLvpx_Biig _GLZdcAVyEe-RWLvpx_Biig">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_fkF9UAVtEe-RWLvpx_Biig">
+      <body>Availability of vacant rooms</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_vMuNIAVvEe-RWLvpx_Biig">
+      <body>Room booked successfully or Room not available&#xD;
+</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1K9NgAVsEe-RWLvpx_Biig" target="_hOvWsAVsEe-RWLvpx_Biig" source="_Z-2BgAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_IN_ZkAVtEe-RWLvpx_Biig" target="_cFu1gAVsEe-RWLvpx_Biig" source="_dmu_IAV1Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_F7TIwAVuEe-RWLvpx_Biig" target="_nMjjgAVtEe-RWLvpx_Biig" source="_hOvWsAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_R0MpYAVuEe-RWLvpx_Biig" name="[yes]" target="_5vrHIAVyEe-RWLvpx_Biig" source="_nMjjgAVtEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YDVFIAVuEe-RWLvpx_Biig" target="_G4CEgAVzEe-RWLvpx_Biig" source="_jPBMYAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_saZvIAVyEe-RWLvpx_Biig" name="[no]" target="_j0lI0AVyEe-RWLvpx_Biig" source="_nMjjgAVtEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yVlUIAVyEe-RWLvpx_Biig" target="_hOvWsAVsEe-RWLvpx_Biig" source="_j0lI0AVyEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__f4yQAVyEe-RWLvpx_Biig" target="_jPBMYAVsEe-RWLvpx_Biig" source="_5vrHIAVyEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_h16nQAVzEe-RWLvpx_Biig" target="_m4_jwAVsEe-RWLvpx_Biig" source="_G4CEgAVzEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_po9s0AVzEe-RWLvpx_Biig" target="_rKz-QAVsEe-RWLvpx_Biig" source="_m4_jwAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6EwJ0AVzEe-RWLvpx_Biig" target="_4ilzgAVzEe-RWLvpx_Biig" source="_xH6xsAVzEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6vJKoAVzEe-RWLvpx_Biig" name="[yes]" inPartition="_EK4XMAVyEe-RWLvpx_Biig" target="_xH6xsAVzEe-RWLvpx_Biig" source="_rKz-QAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_B_AqoAV0Ee-RWLvpx_Biig" name="[no]" target="_APvscAV0Ee-RWLvpx_Biig" source="_rKz-QAVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mfFVUAV0Ee-RWLvpx_Biig" inPartition="_GLZdcAVyEe-RWLvpx_Biig" target="_iBgWwAV0Ee-RWLvpx_Biig" source="_APvscAV0Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ql-5QAV0Ee-RWLvpx_Biig" target="_m4_jwAVsEe-RWLvpx_Biig" source="_iBgWwAV0Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ykpY8AV0Ee-RWLvpx_Biig" target="_9DwcIAV0Ee-RWLvpx_Biig" source="_4ilzgAVzEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Tgg9EAV1Ee-RWLvpx_Biig" target="_oR9h0AVsEe-RWLvpx_Biig" source="_9DwcIAV0Ee-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Zu05cAV1Ee-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig" target="_wRTW8AVsEe-RWLvpx_Biig" source="_oR9h0AVsEe-RWLvpx_Biig"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hoNQgAV1Ee-RWLvpx_Biig" target="_dmu_IAV1Ee-RWLvpx_Biig" source="_wRTW8AVsEe-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_N7_hYAVxEe-RWLvpx_Biig" name="Customer" node="_hOvWsAVsEe-RWLvpx_Biig _nMjjgAVtEe-RWLvpx_Biig _m4_jwAVsEe-RWLvpx_Biig _wRTW8AVsEe-RWLvpx_Biig _oR9h0AVsEe-RWLvpx_Biig" edge="_Zu05cAV1Ee-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_EK4XMAVyEe-RWLvpx_Biig" name="System" node="_j0lI0AVyEe-RWLvpx_Biig _5vrHIAVyEe-RWLvpx_Biig _G4CEgAVzEe-RWLvpx_Biig _rKz-QAVsEe-RWLvpx_Biig _xH6xsAVzEe-RWLvpx_Biig _9DwcIAV0Ee-RWLvpx_Biig _dmu_IAV1Ee-RWLvpx_Biig" edge="_6vJKoAVzEe-RWLvpx_Biig"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_GLZdcAVyEe-RWLvpx_Biig" name="Admin" node="_4ilzgAVzEe-RWLvpx_Biig _APvscAV0Ee-RWLvpx_Biig _iBgWwAV0Ee-RWLvpx_Biig" edge="_mfFVUAV0Ee-RWLvpx_Biig"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_Z-2BgAVsEe-RWLvpx_Biig" name="" outgoing="_1K9NgAVsEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_cFu1gAVsEe-RWLvpx_Biig" name="" incoming="_IN_ZkAVtEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_hOvWsAVsEe-RWLvpx_Biig" name="Login" incoming="_1K9NgAVsEe-RWLvpx_Biig _yVlUIAVyEe-RWLvpx_Biig" outgoing="_F7TIwAVuEe-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jPBMYAVsEe-RWLvpx_Biig" name="Browse Menu" incoming="__f4yQAVyEe-RWLvpx_Biig" outgoing="_YDVFIAVuEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_m4_jwAVsEe-RWLvpx_Biig" name="Select room" incoming="_h16nQAVzEe-RWLvpx_Biig _ql-5QAV0Ee-RWLvpx_Biig" outgoing="_po9s0AVzEe-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_oR9h0AVsEe-RWLvpx_Biig" name="Enter payment details" incoming="_Tgg9EAV1Ee-RWLvpx_Biig" outgoing="_Zu05cAV1Ee-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_rKz-QAVsEe-RWLvpx_Biig" name="Room availiability" incoming="_po9s0AVzEe-RWLvpx_Biig" outgoing="_6vJKoAVzEe-RWLvpx_Biig _B_AqoAV0Ee-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wRTW8AVsEe-RWLvpx_Biig" name="Confirms booking" incoming="_Zu05cAV1Ee-RWLvpx_Biig" outgoing="_hoNQgAV1Ee-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_nMjjgAVtEe-RWLvpx_Biig" name="Correct credentitals" incoming="_F7TIwAVuEe-RWLvpx_Biig" outgoing="_R0MpYAVuEe-RWLvpx_Biig _saZvIAVyEe-RWLvpx_Biig" inPartition="_N7_hYAVxEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_j0lI0AVyEe-RWLvpx_Biig" name="Display error message" incoming="_saZvIAVyEe-RWLvpx_Biig" outgoing="_yVlUIAVyEe-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_5vrHIAVyEe-RWLvpx_Biig" name="Present booking option" incoming="_R0MpYAVuEe-RWLvpx_Biig" outgoing="__f4yQAVyEe-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_G4CEgAVzEe-RWLvpx_Biig" name="display available room" incoming="_YDVFIAVuEe-RWLvpx_Biig" outgoing="_h16nQAVzEe-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_xH6xsAVzEe-RWLvpx_Biig" name="Confirms room selection" incoming="_6vJKoAVzEe-RWLvpx_Biig" outgoing="_6EwJ0AVzEe-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4ilzgAVzEe-RWLvpx_Biig" name="Gets notification" incoming="_6EwJ0AVzEe-RWLvpx_Biig" outgoing="_ykpY8AV0Ee-RWLvpx_Biig" inPartition="_GLZdcAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_APvscAV0Ee-RWLvpx_Biig" name="Cancel request" incoming="_B_AqoAV0Ee-RWLvpx_Biig" outgoing="_mfFVUAV0Ee-RWLvpx_Biig" inPartition="_GLZdcAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_iBgWwAV0Ee-RWLvpx_Biig" name="Notify customer" incoming="_mfFVUAV0Ee-RWLvpx_Biig" outgoing="_ql-5QAV0Ee-RWLvpx_Biig" inPartition="_GLZdcAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9DwcIAV0Ee-RWLvpx_Biig" name="Prompts Payment options" incoming="_ykpY8AV0Ee-RWLvpx_Biig" outgoing="_Tgg9EAV1Ee-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_dmu_IAV1Ee-RWLvpx_Biig" name="send confirmation email to custoner" incoming="_hoNQgAV1Ee-RWLvpx_Biig" outgoing="_IN_ZkAVtEe-RWLvpx_Biig" inPartition="_EK4XMAVyEe-RWLvpx_Biig"/>
+  </packagedElement>
+</uml:Model>
