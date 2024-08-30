@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include "division.h"
+double divide(int a,int b){
+	if(b !=0){
+		double div = a/b;
+		return div;
+	}else{
+		printf("Error, denominator can't be zero");
+		return 0;
+	}
+	return 0;
+} 

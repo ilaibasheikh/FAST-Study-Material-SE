@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include "addition.h"
+#include "division.h"
+#include "multiplication.h"
+#include "subtraction.h"
+int main(){
+	int a, b;
+	printf("Enter two numbers:\n");
+	scanf("%d" ,&a);
+	scanf("%d" ,&b);
+	printf("\nAddition: %d + %d =", a, b);
+	printf("%d", add(a,b));
+	printf("\nSubtraction: %d - %d =", a, b);
+	printf ("%d", subtract(a,b));
+	printf("\nMultiplication: %d * %d =", a, b);
+	printf ("%d", multiply(  a,b));
+	printf("\nDivision: %d / %d =", a, b);
+	printf("%lf", divide(  a, b));
+	return 0;
+}

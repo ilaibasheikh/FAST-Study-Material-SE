@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(){
+	char fname[30];
+	printf("File name: ");
+	scanf("%s", &fname);
+	FILE *ptr = fopen(fname,"r");
+	if(ptr==NULL){
+		printf("File is empty or file doesn't exist");
+		return 1;
+	}
+	char a =fgetc(ptr);
+	while (a!=EOF){
+		printf("%c", a);
+		a= fgetc(ptr);
+	}
+	fclose(ptr);
+	return 0;
+}

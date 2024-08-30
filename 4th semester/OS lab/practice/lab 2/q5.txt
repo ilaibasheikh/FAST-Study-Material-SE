@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int findmissing(int arr[], int n){
+	int total= (n+1)* (n+2) / 2;
+	for(int i=0;i<n;i++){
+		total-=arr[i];
+	}
+	return total;
+}
+int main(int argc, char *argv[]){
+	int n= argc -1;
+	int *arr=(int*)malloc(n * sizeof(int));
+	if(arr==NULL){
+		printf("Error of memory");
+		return 1;
+	}
+	for(int i=0;i<n;i++){
+		arr[i] = atoi(argv[i+1]);
+	}
+	int missing=findmissing(arr,n);
+	FILE*ptr=fopen("q5.txt", "w");
+	if(ptr == NULL){
+		printf("File is empty\n");
+		free(arr);
+		return 1;
+	}
+	fprintf(ptr,"Missing elements in the series is:%d\n", missing);
+	fclose(ptr);
+	free(arr);
+	printf("Missing element has been written to q5.txt\n");
+	return 0;
+}

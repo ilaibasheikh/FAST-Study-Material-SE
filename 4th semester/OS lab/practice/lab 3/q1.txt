@@ -1,0 +1,67 @@
+#!/bin/bash 
+
+  
+
+# Check if the input log file is provided 
+
+if [ -z "$1" ]; then 
+
+    echo "Usage: $0 <log_file>" 
+
+    exit 1 
+
+fi 
+
+  
+
+# Assign the input log file to a variable 
+
+logfile="$1" 
+
+  
+
+# Count the total number of requests 
+
+total_requests=$(wc -l < "$logfile") 
+
+  
+
+# Determine the number of unique IP addresses 
+
+unique_ips=$(awk '{print $1}' "$logfile" | sort | uniq | wc -l) 
+
+  
+
+# Identify the top 5 most frequent IP addresses and their corresponding request counts 
+
+top_ips=$(awk '{print $1}' "$logfile" | sort | uniq -c | sort -rn | head -n 5) 
+
+  
+
+# Calculate the total size of data transferred 
+
+total_size=$(awk '{sum+=$NF} END {print sum}' "$logfile") 
+
+  
+
+# Generate a summary report 
+
+summary_report="Total requests: $total_requests\n" 
+
+summary_report+="Unique IP addresses: $unique_ips\n" 
+
+summary_report+="Top 5 most frequent IP addresses:\n$top_ips\n" 
+
+summary_report+="Total data transferred (in bytes): $total_size\n" 
+
+  
+
+# Save the summary report to an output file 
+
+output_file="log_summary_report.txt" 
+
+echo -e "$summary_report" > "$output_file" 
+
+  
+
+echo "Summary report generated: $output_file"

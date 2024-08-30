@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <errno.h>
+#include <sys/types.h>
+
+int main(){
+	pid_t pid1, pid2;
+	pid1 = fork();
+	if(pid1<0){
+		fprintf(stderr,"Fork failed for process 1\n");
+		return 1;
+	}
+	if(pid1==0){
+		printf("Process 1 id: %d\n",getpid());
+		return 0;
+	}
+	pid2=fork();
+	if(pid2<0){
+		fprintf(stderr,"Fork failed for process 2\n");
+		return 1;
+	}
+	if(pid2==0){
+		printf("Process 2 id: %d\n",getpid());
+		printf("Parent id: %d\n",getppid());
+		return 0;
+	}
+	
+	wait(NULL);
+	wait(NULL);
+	return 0;
+}

@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Node{
+	int data;
+	struct Node* next;
+	struct Node* prev;
+};
+struct Node* builtNode(int data){
+	struct Node* newNode =(struct Node*)malloc(sizeof(struct Node)); 
+	if (newNode ==NULL){
+		printf("Error");
+		exit(1);
+	}
+	newNode->data = data;
+	newNode->prev=NULL;
+	newNode->next =NULL;
+	return newNode;
+}
+void insertion(struct Node** head,int data){
+	struct Node* newNode=builtNode(data);
+	if(*head == NULL){
+		*head=newNode;
+	}else{
+		struct Node* temp= *head;
+		while(temp->next !=NULL){
+		temp=temp->next;
+		}
+		temp->next=newNode;
+		newNode->prev= temp;
+	}
+}
+void sorting(struct Node* head){
+	if (head == NULL || head->next==NULL){
+		return;
+	}
+	struct Node *current, *position;
+	int temp;
+	for(current = head; current->next !=NULL; current =current->next){
+		for(position=current->next;position !=NULL; position =position->next){
+			if(current->data > position->data){
+				temp=current->data;
+				current->data = position->data;
+				position->data =temp;
+			}
+		}
+	}
+}
+void output(struct Node* head){
+	struct Node* temp=head;
+	while(temp!=NULL){
+		printf("%d ", temp->data);
+		temp=temp->next;
+	}
+	printf("\n");
+}
+int main(){
+	struct Node* head =NULL;
+	int n,num;
+	printf("Size of doubly linked list\n");
+	scanf("%d", &n);
+	printf("\nEnter numbers\n");
+	for(int i=0;i<n; i++){
+		scanf("%d", &num);
+		insertion(&head, num);
+	}
+	printf("Before:");
+	output(head);
+	sorting(head);
+	printf("\nAfter:");
+	output(head);
+	return 0;
+}

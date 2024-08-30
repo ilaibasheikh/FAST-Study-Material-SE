@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[]){
+	if(argc != 11){
+		printf("Print 10 integers");
+		return 1;
+	}
+	int n=10;
+	int integers[n];
+	for(int i =0; i<n;i++){
+		integers[i]= atoi(argv[i+1]);	
+	}
+	for(int i=0; i<n-1;i++){
+		for(int j=0; j<n-1-i;j++){
+			if(integers[j]>integers[j+1]){
+				int temp =  integers[j];
+				integers[j] = integers[j+1];
+				integers[j+1] = temp;
+			}
+		}
+	}
+	FILE *ptr =fopen("q3.txt","w");
+	if(ptr == NULL){
+		printf("File is empty");
+		return 1;
+	}
+	fprintf(ptr, "Sorted integers: \n");
+	for(int i=0;i<n;i++){
+		fprintf(ptr,"%d\n", integers[i]);
+	} 
+	fprintf(ptr, "\n");
+	fclose(ptr);
+	return 0;
+}

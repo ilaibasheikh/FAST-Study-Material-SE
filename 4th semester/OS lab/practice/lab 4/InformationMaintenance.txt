@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+
+
+int main() {
+    // Get and print the process ID (PID) of the current process
+    pid_t pid = getpid();
+    printf("Process ID (PID): %d\n", pid);
+
+
+    // Get and print the parent process ID (PPID) of the current process
+    pid_t ppid = getppid();
+    printf("Parent Process ID (PPID): %d\n", ppid);
+
+
+    // Get and print the user ID (UID) of the current user executing the program
+    uid_t uid = getuid();
+    printf("User ID (UID): %d\n", uid);
+
+
+    return 0;
+}

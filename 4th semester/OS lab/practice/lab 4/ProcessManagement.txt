@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <errno.h>
+
+
+int main() {
+    pid_t child_pid;
+    int status;
+
+
+    // Fork a child process
+    child_pid = fork();
+
+
+    if (child_pid < 0) {
+        perror("fork failed");
+        exit(EXIT_FAILURE);
+    } else if (child_pid == 0) {
+        // This is the child process
+        printf("Child process: PID = %d\n", getpid());
+        printf("Child process: PPID = %d\n", getppid());
+        printf("Child process: Executing ls command...\n");
+        execlp("ls", "ls", "-l", NULL);
+        // execlp() will only return if there's an error
+        perror("execlp failed");
+        exit(EXIT_FAILURE);
+    } else {
+        // This is the parent process
+        printf("Parent process: PID = %d\n", getpid());
+        printf("Parent process: Waiting for child process to terminate...\n");
+        wait(&status);
+        if (WIFEXITED(status)) {
+            printf("Parent process: Child process exited with status %d\n", WEXITSTATUS(status));
+        } else {
+            printf("Parent process: Child process exited abnormally\n");
+        }
+    }
+
+
+    return 0;
+}

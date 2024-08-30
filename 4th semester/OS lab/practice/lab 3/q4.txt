@@ -1,0 +1,147 @@
+#!/bin/bash 
+
+  
+
+# Function to collect CPU usage 
+
+get_cpu_usage() { 
+
+    cpu_usage=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}') 
+
+    echo "CPU Usage: $cpu_usage%" 
+
+} 
+
+  
+
+# Function to collect memory usage 
+
+get_memory_usage() { 
+
+    memory_usage=$(free | grep Mem | awk '{printf "%.2f", $3/$2 * 100}') 
+
+    echo "Memory Usage: $memory_usage%" 
+
+} 
+
+  
+
+# Function to collect disk space 
+
+get_disk_space() { 
+
+    disk_space=$(df -h | awk '$NF=="/"{printf "Disk Usage: %s", $5}') 
+
+    echo "$disk_space" 
+
+} 
+
+  
+
+# Function to collect network traffic 
+
+get_network_traffic() { 
+
+    network_traffic=$(ifstat 1 1 | awk 'NR==3{print "Incoming: " $6 " | Outgoing: " $8}') 
+
+    echo "$network_traffic" 
+
+} 
+
+  
+
+# Function to calculate average values 
+
+calculate_average() { 
+
+    duration=$1 
+
+    # Calculate average CPU usage 
+
+    avg_cpu=$(top -bn$duration -d1 | grep "Cpu(s)" | tail -n$duration | awk '{total += (100 - $8)} END {print total/NR}') 
+
+  
+
+    # Calculate average memory usage 
+
+    avg_memory=$(free -m | awk 'NR==2{total += $3} END {print total/NR}') 
+
+  
+
+    echo "Average CPU Usage (over $duration seconds): $avg_cpu%" 
+
+    echo "Average Memory Usage (over $duration seconds): $avg_memory MB" 
+
+} 
+
+  
+
+# Function to generate report 
+
+generate_report() { 
+
+    report_file="system_report_$(date +'%Y-%m-%d_%H-%M-%S').txt" 
+
+    echo "System Report" > "$report_file" 
+
+    echo "------------------------" >> "$report_file" 
+
+    get_cpu_usage >> "$report_file" 
+
+    get_memory_usage >> "$report_file" 
+
+    get_disk_space >> "$report_file" 
+
+    get_network_traffic >> "$report_file" 
+
+    calculate_average "$1" >> "$report_file" 
+
+    echo "Report generated: $report_file" 
+
+} 
+
+  
+
+# Main script 
+
+echo "System Monitoring Script" 
+
+echo "------------------------" 
+
+echo "1. Generate report" 
+
+echo "2. Exit" 
+
+  
+
+read -p "Enter your choice: " choice 
+
+  
+
+case $choice in 
+
+    1) 
+
+        read -p "Enter duration for average calculation (in seconds): " duration 
+
+        generate_report "$duration" 
+
+        ;; 
+
+    2) 
+
+        echo "Exiting script." 
+
+        exit 0 
+
+        ;; 
+
+    *) 
+
+        echo "Invalid choice. Exiting." 
+
+        exit 1 
+
+        ;; 
+
+esac 

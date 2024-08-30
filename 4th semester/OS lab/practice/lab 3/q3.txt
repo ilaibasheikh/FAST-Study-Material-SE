@@ -1,0 +1,107 @@
+#!/bin/bash 
+
+  
+
+# Function to remove old files 
+
+remove_old_files() { 
+
+    local directory="$1" 
+
+    local days="$2" 
+
+    local count=0 
+
+    while IFS= read -r -d '' file; do 
+
+        if [[ -f "$file" ]]; then 
+
+            if [[ $(($(date +%s) - $(stat -c %Y "$file"))) -gt $((days * 86400)) ]]; then 
+
+                rm "$file" 
+
+                ((count++)) 
+
+            fi 
+
+        fi 
+
+    done < <(find "$directory" -type f -print0) 
+
+    echo "Removed $count files older than $days days." 
+
+} 
+
+  
+
+# Function to remove empty directories recursively 
+
+remove_empty_directories() { 
+
+    local directory="$1" 
+
+    local count=0 
+
+    while IFS= read -r -d '' dir; do 
+
+        if [[ -d "$dir" && -z "$(ls -A "$dir")" ]]; then 
+
+            rmdir "$dir" 
+
+            ((count++)) 
+
+        fi 
+
+    done < <(find "$directory" -type d -print0) 
+
+    echo "Removed $count empty directories." 
+
+} 
+
+  
+
+# Main script 
+
+if [[ $# -ne 1 ]]; then 
+
+    echo "Usage: $0 <directory>" 
+
+    exit 1 
+
+fi 
+
+  
+
+directory="$1" 
+
+  
+
+if [[ ! -d "$directory" ]]; then 
+
+    echo "Error: $directory is not a valid directory." 
+
+    exit 1 
+
+fi 
+
+  
+
+read -p "Enter the number of days to consider as old for files: " days 
+
+  
+
+if [[ ! $days =~ ^[0-9]+$ ]]; then 
+
+    echo "Error: Invalid input for days." 
+
+    exit 1 
+
+fi 
+
+  
+
+remove_old_files "$directory" "$days" 
+
+remove_empty_directories "$directory" 
+
+ 

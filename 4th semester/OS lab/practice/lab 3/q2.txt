@@ -1,0 +1,69 @@
+#!/bin/bash 
+
+  
+
+directory_path="$1" 
+
+new_file_name_pattern="$2" 
+
+  
+
+if [ ! -d "$directory_path" ]; then 
+
+    echo "Error: Directory not found." 
+
+    exit 1 
+
+fi 
+
+  
+
+if [ -z "$(ls -A "$directory_path")" ]; then 
+
+    echo "Error: Directory is empty." 
+
+    exit 1 
+
+fi 
+
+  
+
+if [ -z "$new_file_name_pattern" ]; then 
+
+    echo "Error: Please provide a new file name pattern." 
+
+    exit 1 
+
+fi 
+
+  
+
+counter=1 
+
+  
+
+for file in "$directory_path"/*; do 
+
+    if [ -f "$file" ]; then 
+
+        file_extension="${file##*.}" 
+
+        new_file_name="${new_file_name_pattern}${counter}.${file_extension}" 
+
+        mv "$file" "$directory_path/$new_file_name" 
+
+        if [ $? -eq 0 ]; then 
+
+            echo "Renamed '$file' to '$new_file_name'" 
+
+        else 
+
+            echo "Error: Failed to rename '$file'." 
+
+        fi 
+
+        ((counter++)) 
+
+    fi 
+
+done 

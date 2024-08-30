@@ -1,0 +1,8 @@
+CC=gcc
+CFLAGS=-I.
+calculator: addition.o division.o main.o multiplication.o subtraction.o
+	$(CC) -o calculator addition.o division.o main.o multiplication.o subtraction.o $(CFLAGS)
+%.o: %.c addition.h division.h multiplication.h subtraction.h
+	$(CC) -c -o $@ $< $(CFLAGS)
+clean:
+	rm -f *.o calculator

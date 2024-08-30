@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <signal.h>
+#include <unistd.h>
+
+void alarm_handler(int signum) {
+    printf("Alarm signal received. Exiting.\n");
+    // You can perform cleanup or additional tasks here before exiting
+    exit(0);
+}
+
+int main() {
+    // Registering the alarm_handler function to handle SIGALRM signal
+    signal(SIGALRM, alarm_handler);
+
+    // Set an alarm for 5 seconds
+    alarm(5);
+
+    // Sleep loop with a message printed every second
+    while(1) {
+        printf("Waiting...\n");
+        sleep(1); // Sleep for 1 second
+    }
+
+    return 0;
+}

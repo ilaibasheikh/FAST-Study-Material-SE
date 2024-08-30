@@ -1,0 +1,53 @@
+//ordinary pipe 2 pipes: two way communication
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <string.h>
+#define READ_END 0
+#define WRITE_END 1
+#define BUFFER_SIZE 25
+int main(){
+	char pipe1write_msg[BUFFER_SIZE] ="laiba";
+	char pipe2write_msg[BUFFER_SIZE] ="fatima";
+	char read_msg[BUFFER_SIZE];
+	int fd1[2], fd2[2];
+	pid_t pid;
+	
+	if(pipe(fd1) == -1){
+		fprintf(stderr, "Pipe 1 failed");
+		return 1;
+	}
+	if(pipe(fd2) == -1){
+		fprintf(stderr, "Pipe 2 failed");
+		return 1;
+	}
+	 
+	pid = fork();
+	if(pid<0){
+		fprintf(stderr, "Fork failed");
+		return 1;
+	}
+	if(pid>0){
+		close(fd1[READ_END]);
+		close(fd2[WRITE_END]);
+		printf("Parent writing to pipe 1: %s\n", pipe1write_msg);
+		write(fd1[WRITE_END],pipe1write_msg, strlen(pipe1write_msg) +1);
+		read(fd2[READ_END], read_msg,BUFFER_SIZE);
+		printf("Parent reading from pipe 2: %s\n" , read_msg);
+		close(fd1[WRITE_END]);
+		close(fd2[READ_END]);	
+	}
+	else{
+		close(fd1[WRITE_END]);
+		close(fd2[READ_END]);
+		read(fd1[READ_END], read_msg,BUFFER_SIZE);
+		printf("Child reading from pipe 1: %s\n" , read_msg);
+		printf("Child writing to pipe 2: %s\n", pipe2write_msg);
+		write(fd2[WRITE_END],pipe2write_msg, strlen(pipe2write_msg) +1);
+		close(fd1[READ_END]);
+		close(fd2[WRITE_END]);	
+	
+	}
+	return 0;
+}

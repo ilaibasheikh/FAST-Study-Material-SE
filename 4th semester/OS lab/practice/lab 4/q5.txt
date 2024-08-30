@@ -1,0 +1,17 @@
+#include <stdlib.h>
+
+int main() {
+    // Example usage of cp command
+    system("cp source_file destination_file");
+
+    // Example usage of mkdir command
+    system("mkdir new_directory");
+
+    // Example usage of rmdir command
+    system("rmdir empty_directory");
+
+    // Example usage of mv command
+    system("mv source destination");
+
+    return 0;
+}
