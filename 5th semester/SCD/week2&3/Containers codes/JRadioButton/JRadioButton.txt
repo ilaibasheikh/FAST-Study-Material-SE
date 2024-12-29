@@ -1,0 +1,49 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JRadioButtonExample extends JFrame {
+
+    public JRadioButtonExample() {
+        setTitle("JRadioButton Example");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+
+        // Create JRadioButtons
+        JRadioButton radioButton1 = new JRadioButton("Option 1");
+        JRadioButton radioButton2 = new JRadioButton("Option 2");
+        JRadioButton radioButton3 = new JRadioButton("Option 3");
+
+        // Add ActionListener to handle button selections
+        ActionListener radioButtonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JRadioButton selectedButton = (JRadioButton) e.getSource();
+                System.out.println(selectedButton.getText() + " selected");
+            }
+        };
+
+        radioButton1.addActionListener(radioButtonListener);
+        radioButton2.addActionListener(radioButtonListener);
+        radioButton3.addActionListener(radioButtonListener);
+
+        // Group radio buttons
+        ButtonGroup group = new ButtonGroup();
+        group.add(radioButton1);
+        group.add(radioButton2);
+        group.add(radioButton3);
+
+        // Add radio buttons to the frame
+        add(radioButton1);
+        add(radioButton2);
+        add(radioButton3);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new JRadioButtonExample();
+    }
+}

@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+public class JOptionPaneOptionExample {
+
+    public static void main(String[] args) {
+        Object[] options = {"Option 1", "Option 2", "Option 3"};
+
+        int choice = JOptionPane.showOptionDialog(
+            null,
+            "Choose an option:",
+            "Options",
+            JOptionPane.DEFAULT_OPTION,
+            JOptionPane.INFORMATION_MESSAGE,
+            null,
+            options,
+            options[0]
+        );
+
+        System.out.println("User selected option index: " + choice);
+    }
+}

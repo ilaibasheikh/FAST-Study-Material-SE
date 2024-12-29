@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JToggleButtonExample extends JFrame {
+
+    public JToggleButtonExample() {
+        setTitle("JToggleButton Example");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+
+        // Create a JToggleButton with text
+        JToggleButton toggleButton1 = new JToggleButton("Toggle Me");
+
+        // Add an ActionListener to handle state changes
+        toggleButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (toggleButton1.isSelected()) {
+                    System.out.println("Button is selected");
+                } else {
+                    System.out.println("Button is not selected");
+                }
+            }
+        });
+
+        // Create a JToggleButton with an icon
+        ImageIcon icon = new ImageIcon("path/to/your/icon.png");
+        JToggleButton toggleButton2 = new JToggleButton(icon);
+
+        // Create a JToggleButton with both text and icon
+        JToggleButton toggleButton3 = new JToggleButton("Text and Icon", icon);
+
+        // Customize the appearance of the toggle buttons
+        toggleButton1.setFont(new Font("Arial", Font.BOLD, 16));
+        toggleButton2.setBackground(Color.CYAN);
+        toggleButton3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+
+        // Add the toggle buttons to the frame
+        add(toggleButton1);
+        add(toggleButton2);
+        add(toggleButton3);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new JToggleButtonExample();
+    }
+}

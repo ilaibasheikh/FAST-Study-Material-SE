@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JColorChooserExample extends JFrame {
+
+    private JLabel colorLabel;
+
+    public JColorChooserExample() {
+        setTitle("JColorChooser Example");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Create a label to display the selected color
+        colorLabel = new JLabel("Select a Color", SwingConstants.CENTER);
+        colorLabel.setOpaque(true); // Make sure the label is opaque to show the background color
+        colorLabel.setBackground(Color.WHITE); // Default background color
+
+        // Create a button to open the color chooser
+        JButton chooseColorButton = new JButton("Choose Color");
+        chooseColorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Open the color chooser dialog
+                Color selectedColor = JColorChooser.showDialog(
+                    JColorChooserExample.this,
+                    "Choose a Color",
+                    colorLabel.getBackground()
+                );
+
+                // Check if a color was selected (i.e., the user did not cancel)
+                if (selectedColor != null) {
+                    colorLabel.setBackground(selectedColor);
+                    colorLabel.setText("Selected Color: " + String.format("#%06X", (0xFFFFFF & selectedColor.getRGB())));
+                }
+            }
+        });
+
+        // Add components to the frame
+        add(colorLabel, BorderLayout.CENTER);
+        add(chooseColorButton, BorderLayout.SOUTH);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(JColorChooserExample::new);
+    }
+}

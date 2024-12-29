@@ -1,0 +1,58 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class InputDialogExample extends JFrame {
+
+    public InputDialogExample() {
+        setTitle("Input Dialog Example");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        JButton openDialogButton = new JButton("Open Input Dialog");
+        openDialogButton.addActionListener(e -> openInputDialog());
+
+        add(openDialogButton, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    private void openInputDialog() {
+        JDialog dialog = new JDialog(this, "Input Dialog", true);
+        dialog.setSize(300, 150);
+        dialog.setLayout(new GridLayout(3, 2));
+
+        JLabel nameLabel = new JLabel("Name:");
+        JTextField nameField = new JTextField();
+        JLabel ageLabel = new JLabel("Age:");
+        JTextField ageField = new JTextField();
+        
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(e -> {
+            String name = nameField.getText();
+            String age = ageField.getText();
+            System.out.println("Name: " + name);
+            System.out.println("Age: " + age);
+            dialog.dispose();
+        });
+
+        JButton cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(e -> dialog.dispose());
+
+        dialog.add(nameLabel);
+        dialog.add(nameField);
+        dialog.add(ageLabel);
+        dialog.add(ageField);
+        dialog.add(submitButton);
+        dialog.add(cancelButton);
+
+        dialog.setLocationRelativeTo(this);
+        dialog.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(InputDialogExample::new);
+    }
+}

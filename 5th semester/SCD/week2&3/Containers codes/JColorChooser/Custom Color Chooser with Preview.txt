@@ -1,0 +1,49 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CustomColorChooserExample extends JFrame {
+
+    private JLabel colorLabel;
+
+    public CustomColorChooserExample() {
+        setTitle("Custom Color Chooser Example");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        colorLabel = new JLabel("Select a Color", SwingConstants.CENTER);
+        colorLabel.setOpaque(true);
+        colorLabel.setBackground(Color.WHITE);
+
+        JButton chooseColorButton = new JButton("Choose Color");
+        chooseColorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JColorChooser colorChooser = new JColorChooser();
+                colorChooser.setPreviewPanel(new JPanel()); // Add a custom preview panel if needed
+
+                Color selectedColor = JColorChooser.showDialog(
+                    CustomColorChooserExample.this,
+                    "Choose a Color",
+                    colorLabel.getBackground()
+                );
+
+                if (selectedColor != null) {
+                    colorLabel.setBackground(selectedColor);
+                    colorLabel.setText("Selected Color: " + String.format("#%06X", (0xFFFFFF & selectedColor.getRGB())));
+                }
+            }
+        });
+
+        add(colorLabel, BorderLayout.CENTER);
+        add(chooseColorButton, BorderLayout.SOUTH);
+
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(CustomColorChooserExample::new);
+    }
+}

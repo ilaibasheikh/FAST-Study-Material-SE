@@ -1,0 +1,70 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CustomJListExample extends JFrame {
+
+    public CustomJListExample() {
+        setTitle("Custom JList Example");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Create a list of options
+        String[] options = {"Red", "Green", "Blue", "Yellow"};
+
+        // Create a DefaultListModel to manage the list items
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        for (String option : options) {
+            listModel.addElement(option);
+        }
+
+        // Create a JList with the DefaultListModel
+        JList<String> list = new JList<>(listModel);
+
+        // Set the selection mode to multiple selections
+        list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+
+        // Customize the appearance of list items
+        list.setCellRenderer(new DefaultListCellRenderer() {
+            @Override
+            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+                if (isSelected) {
+                    label.setBackground(Color.LIGHT_GRAY);
+                    label.setOpaque(true);
+                } else {
+                    label.setBackground(Color.WHITE);
+                    label.setOpaque(false);
+                }
+                label.setFont(new Font("Arial", Font.BOLD, 14));
+                return label;
+            }
+        });
+
+        // Add a scroll pane for the list
+        JScrollPane scrollPane = new JScrollPane(list);
+
+        // Add the scroll pane to the frame
+        add(scrollPane, BorderLayout.CENTER);
+
+        // Add a button to print selected items
+        JButton printButton = new JButton("Print Selected");
+        printButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<String> selectedValues = list.getSelectedValuesList();
+                System.out.println("Selected items: " + selectedValues);
+            }
+        });
+        add(printButton, BorderLayout.SOUTH);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new CustomJListExample();
+    }
+}

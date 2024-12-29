@@ -1,0 +1,58 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JButtonExample extends JFrame {
+
+    public JButtonExample() {
+        // Set the title of the JFrame
+        setTitle("JButton Example");
+
+        // Set the size of the JFrame
+        setSize(300, 200);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the layout of the JFrame
+        setLayout(new FlowLayout());
+
+        // Create a JButton with text
+        JButton button1 = new JButton("Click Me!");
+
+        // Add an ActionListener to handle button clicks
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Button Clicked!");
+            }
+        });
+
+        // Create a JButton with an icon
+        ImageIcon icon = new ImageIcon("path/to/your/icon.png");
+        JButton button2 = new JButton("Icon Button", icon);
+
+        // Create a JButton with text and an icon
+        JButton button3 = new JButton("Text and Icon", icon);
+
+        // Customize the appearance of the buttons
+        button1.setFont(new Font("Arial", Font.BOLD, 16));
+        button2.setBackground(Color.CYAN);
+        button2.setForeground(Color.BLACK);
+        button3.setFont(new Font("Serif", Font.ITALIC, 14));
+        button3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+
+        // Add the buttons to the JFrame
+        add(button1);
+        add(button2);
+        add(button3);
+
+        // Make the JFrame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of JButtonExample
+        new JButtonExample();
+    }
+}

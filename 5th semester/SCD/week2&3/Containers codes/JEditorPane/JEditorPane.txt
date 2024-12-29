@@ -1,0 +1,31 @@
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+
+public class JEditorPaneExample extends JFrame {
+
+    public JEditorPaneExample() {
+        setTitle("JEditorPane Example");
+        setSize(600, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Create a JEditorPane
+        JEditorPane editorPane = new JEditorPane();
+        editorPane.setContentType("text/html");
+        editorPane.setText("<html><body><h1>Welcome to JEditorPane</h1><p>This is a <b>bold</b> and <i>italic</i> text example.</p></body></html>");
+
+        // Add editorPane to a JScrollPane to handle long content
+        JScrollPane scrollPane = new JScrollPane(editorPane);
+        
+        // Add JScrollPane to the frame
+        add(scrollPane, BorderLayout.CENTER);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(JEditorPaneExample::new);
+    }
+}

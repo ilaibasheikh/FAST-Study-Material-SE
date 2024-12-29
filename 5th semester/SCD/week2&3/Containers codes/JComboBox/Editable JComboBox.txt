@@ -1,0 +1,39 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class EditableJComboBoxExample extends JFrame {
+
+    public EditableJComboBoxExample() {
+        setTitle("Editable JComboBox Example");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+
+        // Create an array of options
+        String[] options = {"Option 1", "Option 2", "Option 3"};
+
+        // Create an editable JComboBox with the options
+        JComboBox<String> comboBox = new JComboBox<>(options);
+        comboBox.setEditable(true);
+
+        // Add an ActionListener to handle selections and text entry
+        comboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedOption = (String) comboBox.getSelectedItem();
+                System.out.println("Selected or entered: " + selectedOption);
+            }
+        });
+
+        // Add the JComboBox to the frame
+        add(comboBox);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new EditableJComboBoxExample();
+    }
+}

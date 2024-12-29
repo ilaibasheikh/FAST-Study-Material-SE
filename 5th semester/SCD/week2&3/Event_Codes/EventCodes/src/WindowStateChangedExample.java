@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class WindowStateChangedExample extends JFrame{
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Window State Changed Example");
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowStateChanged(WindowEvent e) {
+                int newState = e.getNewState();
+                if ((newState & Frame.MAXIMIZED_BOTH) == Frame.MAXIMIZED_BOTH) {
+                    System.out.println("Window maximized.");
+                } else if ((newState & Frame.ICONIFIED) == Frame.ICONIFIED) {
+                    System.out.println("Window minimized.");
+                } else {
+                    System.out.println("Window restored.");
+                }
+            }
+        });
+
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

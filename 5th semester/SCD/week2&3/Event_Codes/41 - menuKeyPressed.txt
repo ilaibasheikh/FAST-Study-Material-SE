@@ -1,0 +1,36 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MenuKeyPressedExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Menu Key Pressed Example");
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("File");
+        JMenuItem menuItem = new JMenuItem("Open");
+
+        menu.add(menuItem);
+        menuBar.add(menu);
+        frame.setJMenuBar(menuBar);
+
+        menuBar.addMenuKeyListener(new MenuKeyListener() {
+            @Override
+            public void menuKeyPressed(MenuKeyEvent e) {
+                System.out.println("Menu key pressed: " + e.getKeyCode());
+            }
+
+            @Override
+            public void menuKeyReleased(MenuKeyEvent e) {
+                // Not used in this example
+            }
+
+            @Override
+            public void menuKeyTyped(MenuKeyEvent e) {
+                // Not used in this example
+            }
+        });
+
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

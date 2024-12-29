@@ -1,0 +1,56 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JCheckBoxExample extends JFrame {
+
+    public JCheckBoxExample() {
+        setTitle("JCheckBox Example");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+
+        // Create JCheckBoxes
+        JCheckBox checkBox1 = new JCheckBox("Option 1");
+        JCheckBox checkBox2 = new JCheckBox("Option 2");
+        JCheckBox checkBox3 = new JCheckBox("Option 3");
+
+        // Add ActionListener to checkBox1
+        checkBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (checkBox1.isSelected()) {
+                    System.out.println("Option 1 selected");
+                } else {
+                    System.out.println("Option 1 deselected");
+                }
+            }
+        });
+
+        // Create a JCheckBox with a tooltip
+        JCheckBox checkBox4 = new JCheckBox("Option with Tooltip");
+        checkBox4.setToolTipText("This is a tooltip for Option with Tooltip");
+
+        // Create a JCheckBox with an initial state (selected)
+        JCheckBox checkBox5 = new JCheckBox("Pre-selected Option", true);
+
+        // Customize the appearance
+        checkBox1.setFont(new Font("Arial", Font.BOLD, 14));
+        checkBox2.setBackground(Color.LIGHT_GRAY);
+        checkBox3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+
+        // Add check boxes to the frame
+        add(checkBox1);
+        add(checkBox2);
+        add(checkBox3);
+        add(checkBox4);
+        add(checkBox5);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new JCheckBoxExample();
+    }
+}

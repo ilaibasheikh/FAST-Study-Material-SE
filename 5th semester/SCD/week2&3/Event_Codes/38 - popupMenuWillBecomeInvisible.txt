@@ -1,0 +1,39 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class PopupMenuWillBecomeInvisibleExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Popup Menu Will Become Invisible Example");
+        JPopupMenu popupMenu = new JPopupMenu("Options");
+        JMenuItem item = new JMenuItem("Item 1");
+        popupMenu.add(item);
+
+        frame.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                popupMenu.show(e.getComponent(), e.getX(), e.getY());
+            }
+        });
+
+        popupMenu.addPopupMenuListener(new PopupMenuListener() {
+            @Override
+            public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
+                System.out.println("Popup menu will become invisible.");
+            }
+
+            @Override
+            public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
+                // Not used in this example
+            }
+
+            @Override
+            public void popupMenuCanceled(PopupMenuEvent e) {
+                // Not used in this example
+            }
+        });
+
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

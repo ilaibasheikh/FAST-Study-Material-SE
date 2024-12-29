@@ -1,0 +1,43 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JListExample extends JFrame {
+
+    public JListExample() {
+        setTitle("JList Example");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+
+        // Create a list of options
+        String[] options = {"Item 1", "Item 2", "Item 3", "Item 4"};
+
+        // Create a JList with the options
+        JList<String> list = new JList<>(options);
+
+        // Set the selection mode (single or multiple)
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        // Add a scroll pane for the list
+        JScrollPane scrollPane = new JScrollPane(list);
+
+        // Add an ActionListener to handle list selection
+        list.addListSelectionListener(e -> {
+            if (!e.getValueIsAdjusting()) {
+                String selectedValue = list.getSelectedValue();
+                System.out.println("Selected: " + selectedValue);
+            }
+        });
+
+        // Add the scroll pane to the frame
+        add(scrollPane);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new JListExample();
+    }
+}

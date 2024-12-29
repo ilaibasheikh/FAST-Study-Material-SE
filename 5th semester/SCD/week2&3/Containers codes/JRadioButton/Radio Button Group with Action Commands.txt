@@ -1,0 +1,64 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class JRadioButtonActionCommandExample extends JFrame {
+
+    public JRadioButtonActionCommandExample() {
+        setTitle("JRadioButton Action Command Example");
+        setSize(400, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+
+        // Create JRadioButtons
+        JRadioButton radioButton1 = new JRadioButton("Option 1");
+        JRadioButton radioButton2 = new JRadioButton("Option 2");
+        JRadioButton radioButton3 = new JRadioButton("Option 3");
+
+        // Set action commands
+        radioButton1.setActionCommand("option1");
+        radioButton2.setActionCommand("option2");
+        radioButton3.setActionCommand("option3");
+
+        // Add ActionListener to handle selections
+        ActionListener radioButtonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                switch (command) {
+                    case "option1":
+                        System.out.println("Option 1 selected");
+                        break;
+                    case "option2":
+                        System.out.println("Option 2 selected");
+                        break;
+                    case "option3":
+                        System.out.println("Option 3 selected");
+                        break;
+                }
+            }
+        };
+
+        radioButton1.addActionListener(radioButtonListener);
+        radioButton2.addActionListener(radioButtonListener);
+        radioButton3.addActionListener(radioButtonListener);
+
+        // Group radio buttons
+        ButtonGroup group = new ButtonGroup();
+        group.add(radioButton1);
+        group.add(radioButton2);
+        group.add(radioButton3);
+
+        // Add radio buttons to the frame
+        add(radioButton1);
+        add(radioButton2);
+        add(radioButton3);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new JRadioButtonActionCommandExample();
+    }
+}

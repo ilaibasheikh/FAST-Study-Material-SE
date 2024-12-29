@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class JLabelExample extends JFrame {
+
+    public JLabelExample() {
+        // Set the title of the JFrame
+        setTitle("JLabel Example");
+
+        // Set the size of the JFrame
+        setSize(400, 300);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the layout to FlowLayout
+        setLayout(new FlowLayout());
+
+        // Create a JLabel with text
+        JLabel label1 = new JLabel("Hello, World!");
+
+        // Customize the font, color, and alignment of the text
+        label1.setFont(new Font("Arial", Font.BOLD, 24));
+        label1.setForeground(Color.BLUE);
+        label1.setHorizontalAlignment(SwingConstants.CENTER);
+
+        // Create an ImageIcon
+        ImageIcon icon = new ImageIcon("path/to/your/image.png");
+
+        // Create a JLabel with text and an icon
+        JLabel label2 = new JLabel("This is an image label", icon, JLabel.CENTER);
+
+        // Customize the layout and appearance of label2
+        label2.setHorizontalTextPosition(JLabel.CENTER);
+        label2.setVerticalTextPosition(JLabel.BOTTOM);
+        label2.setFont(new Font("Serif", Font.ITALIC, 18));
+
+        // Add the labels to the frame
+        add(label1);
+        add(label2);
+
+        // Make the frame visible
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of JLabelExample
+        new JLabelExample();
+    }
+}

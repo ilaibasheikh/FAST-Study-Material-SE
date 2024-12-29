@@ -1,0 +1,51 @@
+import javax.swing.*;
+
+public class Statistics extends JFrame {
+    private JPanel Statistics;
+    private JTextField a0TextField;
+    private JButton MCButton;
+    private JButton MRButton;
+    private JButton MSButton;
+    private JButton mButton;
+    private JButton mButton1;
+    private JButton button1;
+    private JButton CADButton;
+    private JButton cButton;
+    private JButton fEButton;
+    private JButton expButton;
+    private JButton a7Button;
+    private JButton a8Button;
+    private JButton a9Button;
+    private JButton χ̅Button;
+    private JButton χ̅Button2;
+    private JButton a4Button;
+    private JButton a5Button;
+    private JButton a6Button;
+    private JButton χButton;
+    private JButton χButton1;
+    private JButton a1Button1;
+    private JButton a2Button;
+    private JButton a3Button;
+    private JButton σₓButton1;
+    private JButton a0Button;
+    private JButton button2;
+    private JButton button3;
+    private JButton addButton;
+    private JButton σₓButton;
+    private JButton button4;
+    private JButton button5;
+
+    public Statistics(Calculator cal){
+        JMenuBar menuBar = cal.createMenu();
+        setJMenuBar(menuBar);
+        setTitle("Calculator");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(400, 300);
+        ImageIcon logoIcon = new ImageIcon("C:\\Users\\Hp\\Desktop\\5 semester\\SCD\\Calculator\\src\\WhatsApp Image 2024-09-28 at 12.21.51_bd9d5d60.jpg");
+        setIconImage(logoIcon.getImage());
+        setContentPane(Statistics);
+        a0TextField.setText("0");
+        pack();
+        setVisible(true);
+    }
+}
