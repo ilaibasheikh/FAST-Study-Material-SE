@@ -1,0 +1,137 @@
+task 9:
+
+
+INSERT INTO Job_History1 (Employee_ID, Start_Date, End_Date, Job_ID, Department_ID)
+VALUES (250, TO_DATE('15-JUL-2011', 'DD-MON-YYYY'), TO_DATE('14-JUL-2016', 'DD-MON-YYYY'), 'MK_REP', 40);
+
+INSERT INTO Job_History1 (Employee_ID, Start_Date, End_Date, Job_ID, Department_ID)
+VALUES (251, TO_DATE('10-AUG-2012', 'DD-MON-YYYY'), TO_DATE('09-AUG-2017', 'DD-MON-YYYY'), 'IT_CONSULT', 55);
+
+INSERT INTO Job_History1 (Employee_ID, Start_Date, End_Date, Job_ID, Department_ID)
+VALUES (252, TO_DATE('20-SEP-2013', 'DD-MON-YYYY'), TO_DATE('19-SEP-2018', 'DD-MON-YYYY'), 'FN_ANALYST', 25);
+
+INSERT INTO Job_History1 (Employee_ID, Start_Date, End_Date, Job_ID, Department_ID)
+VALUES (253, TO_DATE('05-OCT-2011', 'DD-MON-YYYY'), TO_DATE('04-OCT-2016', 'DD-MON-YYYY'), 'AC_MGR', 15);
+
+INSERT INTO Job_History1 (Employee_ID, Start_Date, End_Date, Job_ID, Department_ID)
+VALUES (254, TO_DATE('12-NOV-2012', 'DD-MON-YYYY'), TO_DATE('11-NOV-2017', 'DD-MON-YYYY'), 'HR_MGR', 65);
+
+DELETE FROM Job_History1 WHERE Job_ID = 'AC_MGR';
+
+task 10:
+DELETE FROM hr.Job_History
+WHERE Department_ID IN (
+    SELECT Department_ID
+    FROM COMPANY_DEPARTMENTS
+    WHERE Department_Name = 'IT'
+);
+--task 11
+SELECT e.First_Name, e.Salary
+FROM Employees e
+JOIN (
+    SELECT Department_ID, AVG(Salary) AS Avg_Salary
+    FROM Employees
+    GROUP BY Department_ID
+) avg_dept
+ON e.Department_ID = avg_dept.Department_ID
+WHERE e.Salary > avg_dept.Avg_Salary;
+--TASK 12
+SELECT Job_ID, MIN(Salary) AS Min_Salary
+FROM Employees
+GROUP BY Job_ID
+HAVING MIN(Salary) >= 1000
+ORDER BY Min_Salary ASC;
+--TASK 13
+SELECT e.First_Name, e.Department_ID
+FROM Employees e
+WHERE e.Department_ID = (
+    SELECT Department_ID
+    FROM Employees
+    WHERE Employee_ID = 140
+);
+--TASK 14
+SELECT First_Name, (
+    SELECT Job_Title
+    FROM Jobs
+    WHERE Job_ID = (
+        SELECT Job_ID
+        FROM Employees
+        WHERE Employee_ID = e.Employee_ID
+    )
+) AS Job_Title, Salary
+FROM Employees e
+WHERE (
+    SELECT Job_Title
+    FROM Jobs
+    WHERE Job_ID = (
+        SELECT Job_ID
+        FROM Employees
+        WHERE Employee_ID = 147
+    )
+) = (
+    SELECT Job_Title
+    FROM Jobs
+    WHERE Job_ID = e.Job_ID
+) AND Salary > (
+    SELECT Salary
+    FROM Employees
+    WHERE Employee_ID = 136
+);
+--TASK 15
+CREATE TABLE Employees_Replica AS 
+SELECT * 
+FROM Employees;
+UPDATE Employees_Replica
+SET Salary = Salary * 1.12
+WHERE Salary >= 5000 AND Salary <= 10000;
+--TASK 16
+SELECT First_Name, Salary
+FROM (
+    SELECT First_Name, Salary
+    FROM Employees
+    ORDER BY Salary DESC
+)
+WHERE ROWNUM <= (SELECT ROUND(COUNT(*) * 0.1) FROM Employees);
+--TASK 17
+SELECT Location_ID, COUNT(*) AS Number_of_Departments
+FROM COMPANY_DEPARTMENTS
+GROUP BY Location_ID
+HAVING COUNT(*) > 0;
+--TASK 18
+SELECT Job_ID, Salary
+FROM Employees
+WHERE (Job_ID, Salary) IN (
+    SELECT Job_ID, MIN(Salary)
+    FROM Employees
+    WHERE Job_ID IS NOT NULL
+    GROUP BY Job_ID
+    HAVING MIN(Salary) >= 1500
+)
+ORDER BY Salary DESC;
+--TASK 19
+SELECT First_Name, Department_ID
+FROM Employees
+WHERE Department_ID = (
+    SELECT Department_ID
+    FROM Employees
+    WHERE Employee_ID = 130
+);
+--TASK 20
+SELECT First_Name, Salary
+FROM Employees
+WHERE Department_ID != 30
+AND Salary > ALL (
+    SELECT Salary
+    FROM Employees
+    WHERE Department_ID = 30
+);
+--TASK 21
+SELECT Department_Name, Location_ID FROM Departments WHERE (SELECT AVG(Salary)
+    FROM Employees WHERE Department_ID = Departments.Department_ID) > (SELECT AVG(Salary) FROM Employees e WHERE e.Department_ID IN (
+    SELECT Department_ID FROM Departments WHERE Location_ID = (SELECT Location_ID FROM Locations WHERE City = 'New York')));
+
+task 22:
+CREATE TABLE employees_BKP AS SELECT * FROM employees WHERE 1 = 0;
+INSERT INTO employees_BKP SELECT * FROM employees WHERE Hire_Date = TO_DATE('10-MAR-03', 'DD-MON-YY');
+select * from employees_BKP;
+

@@ -1,0 +1,122 @@
+select employees.first_name, jobs.job_title, departments.department_name, employees.salary from employees inner join jobs on employees.job_id =jobs.job_id
+inner join departments on employees.department_id = departments.department_id order by departments.department_id;
+
+select department_name from departments inner join employees on departments.department_id = employees.department_id 
+group by departments.department_id, department_name having count(employee_id) >=2;
+
+
+SELECT e1.* FROM employees e1 JOIN employees e2 ON e1.salary = e2.salary where e1.salary<e2.salary;
+
+
+select employees.first_name, jobs.job_title, employees.salary * 12 as "annual salary", departments.department_name , locations.city from employees 
+inner join jobs on employees.job_id = jobs.job_id inner join departments on DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID 
+inner join locations on departments.location_id = locations.location_id where employees.salary *12 >=60000 and jobs.job_title <> 'Analyst';
+
+SELECT DISTINCT e1.* FROM employees e1 JOIN employees e2 ON e1.employee_id = e2.manager_id WHERE e2.manager_id IS NOT NULL;
+
+
+select departments.department_id , department_name from departments left join employees on departments.department_id=employees.department_id
+group by departments.department_id , department_name having count(employees.employee_id)=0;
+
+select first_name, salary, department_name from employees left join departments on EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID;
+
+select employees.first_name, jobs.job_title, departments.department_name , locations.city from employees 
+inner join jobs on employees.job_id = jobs.job_id inner join departments on DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID 
+inner join locations on departments.location_id = locations.location_id where locations.state_province is null ;
+
+SELECT e.* FROM employees e LEFT JOIN departments d ON e.department_id = d.department_id WHERE d.department_id IS NULL;
+
+
+select * from employees inner join departments on employees.department_id = departments.department_id 
+inner join locations on departments.location_id = locations.location_id where country_id = 'US' and state_province <> 'Washington';
+
+select employees.first_name, jobs.job_title, departments.department_name , locations.city from employees 
+inner join jobs on employees.job_id = jobs.job_id inner join departments on DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID 
+inner join locations on departments.location_id = locations.location_id 
+where employees.salary > (select avg(e2.salary) from employees e2  where employees.department_id = e2.department_id ) ;
+
+
+select employees.employee_id, first_name from employees 
+inner join job_history on employees.employee_id = JOB_HISTORY.EMPLOYEE_ID 
+inner join jobs on job_history.job_id = jobs.job_id
+GROUP BY employees.employee_id, first_name
+HAVING COUNT(DISTINCT jobs.job_title) > 1;
+
+SELECT e1.employee_id
+FROM employees e1
+INNER JOIN employees e2 ON e1.manager_id = e2.employee_id
+WHERE e1.department_id = e2.department_id;
+
+select employees.first_name,  departments.department_name , locations.city from employees
+inner join departments on DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID 
+inner join locations on departments.location_id = locations.location_id ;
+
+SELECT e.first_name
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.department_id
+WHERE d.department_id IN (
+    SELECT department_id
+    FROM employees
+    GROUP BY department_id
+    HAVING COUNT(employee_id) > 5
+);
+
+
+select e.first_name as "employee_name", e2.first_name as "manager_name" from employees e 
+inner join employees e2 ON e.manager_id = e2.employee_id;
+
+select employees.first_name,  departments.department_name from employees
+inner join departments on DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID 
+inner join locations on departments.location_id = locations.location_id
+where locations.location_id <> departments.location_id;
+
+SELECT e.first_name FROM employees e INNER JOIN employees e2 ON e.department_id = e2.department_id
+GROUP BY e.first_name, e.salary
+HAVING e.salary > AVG(e2.salary) AND e.salary < (SELECT MAX(salary) FROM employees);
+
+
+SELECT e.employee_id, e.first_name
+FROM job_history jh
+INNER JOIN employees e ON jh.employee_id = e.employee_id
+GROUP BY e.employee_id, e.first_name
+HAVING COUNT(DISTINCT jh.department_id) > 1;
+
+SELECT e.employee_id, e.first_name
+FROM job_history jh
+INNER JOIN employees e ON jh.employee_id = e.employee_id
+INNER JOIN departments d ON jh.department_id = d.department_id
+INNER JOIN locations l ON d.location_id = l.location_id
+INNER JOIN countries c ON l.country_id = c.country_id
+INNER JOIN regions r ON c.region_id = r.region_id
+GROUP BY e.employee_id, e.first_name
+HAVING COUNT(DISTINCT r.region_id) > 1;
+
+
+SELECT e.employee_id, e.first_name, r.region_name
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.department_id
+INNER JOIN locations l ON d.location_id = l.location_id
+INNER JOIN countries c ON l.country_id = c.country_id
+INNER JOIN regions r ON c.region_id = r.region_id;
+
+select e1.employee_id, e1.first_name, e1.last_name from employees e1 
+join employees e2 on  e1.last_name = e2.last_name
+where  e1.department_id <>  e2.department_id AND e1.employee_id <> e2.employee_id;
+
+
+select employees.employee_id, first_name from employees 
+inner join job_history on employees.employee_id = JOB_HISTORY.EMPLOYEE_ID 
+inner join jobs on job_history.job_id = jobs.job_id
+GROUP BY employees.employee_id, first_name
+HAVING COUNT(DISTINCT jobs.job_title) > 2;
+
+select job_title from jobs
+left join employees on jobs.job_id = employees.job_id
+WHERE employees.job_id IS NULL;
+
+
+
+SELECT e1.employee_id, e1.first_name, e1.salary, e1.department_id FROM employees e1
+LEFT JOIN employees e2 ON e1.department_id = e2.department_id AND e1.salary < e2.salary
+GROUP BY e1.employee_id, e1.first_name, e1.salary, e1.department_id
+HAVING COUNT(e2.employee_id) < 3;

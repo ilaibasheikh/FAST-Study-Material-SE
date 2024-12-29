@@ -1,0 +1,270 @@
+1
+SET SERVEROUTPUT ON;
+DECLARE
+emp_id EMPLOYEES.EMPLOYEE_ID%TYPE ; emp_salary EMPLOYEES.SALARY%TYPE; bonus_amount REAL;
+BEGIN
+emp_id := 101 ;
+SELECT SALARY INTO emp_salary FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_id;
+ IF emp_salary IS NULL THEN  bonus_amount := 0;
+ELSIF emp_salary < 1000 THEN bonus_amount := emp_salary * 0.1;
+  ELSIF emp_salary >= 1000 AND emp_salary <= 1500 THEN  bonus_amount := emp_salary * 0.15;
+  ELSIF emp_salary > 1500 THEN bonus_amount := emp_salary * 0.2;
+  END IF;
+DBMS_OUTPUT.PUT_LINE('Bonus Amount: ' || bonus_amount);
+EXCEPTION
+WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE('No employee found with ID:' || emp_id);
+WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
+END;
+-----------------------------------------------
+SET SERVEROUTPUT ON;
+DECLARE
+emp_id EMPLOYEES.EMPLOYEE_ID%TYPE ; emp_salary EMPLOYEES.SALARY%TYPE; bonus_amount REAL;
+BEGIN
+emp_id := &emp_id ;
+SELECT SALARY INTO emp_salary FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_id;
+ IF emp_salary IS NULL THEN  bonus_amount := 0;
+ELSIF emp_salary < 1000 THEN bonus_amount := emp_salary * 0.1;
+  ELSIF emp_salary >= 1000 AND emp_salary <= 1500 THEN  bonus_amount := emp_salary * 0.15;
+  ELSIF emp_salary > 1500 THEN bonus_amount := emp_salary * 0.2;
+  END IF;
+DBMS_OUTPUT.PUT_LINE('Bonus Amount: ' || bonus_amount);
+EXCEPTION
+WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE('No employee found with ID:' || emp_id);
+WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
+END;
+
+2
+Declare
+emp_id EMPLOYEES.EMPLOYEE_ID%type;
+emp_com EMPLOYEES.COMMISSION_PCT%type;
+emp_salary EMPLOYEES.SALARY%type;
+BEGIN
+emp_id := 101;
+SELECT SALARY, COMMISSION_PCT INTO emp_salary, emp_com FROM EMPLOYEES
+WHERE EMPLOYEE_ID = emp_id;
+if emp_com is null THEN
+Update Employees set Salary = emp_salary + emp_com where Employee_id = emp_id;
+END IF;
+dbms_output.put_line('Salary Updated');
+End;
+--------------------------------------------
+Declare
+emp_id EMPLOYEES.EMPLOYEE_ID%type;
+emp_com EMPLOYEES.COMMISSION_PCT%type;
+emp_salary EMPLOYEES.SALARY%type;
+BEGIN
+emp_id := &emp_id;
+SELECT SALARY, COMMISSION_PCT INTO emp_salary, emp_com FROM EMPLOYEES
+WHERE EMPLOYEE_ID = emp_id;
+if emp_com is null THEN
+Update Employees set Salary = emp_salary + emp_com where Employee_id = emp_id;
+END IF;
+dbms_output.put_line('Salary Updated');
+End;
+
+3
+Declare
+dep_name departments.department_name%type;
+dep_id DEPARTMENTS.DEPARTMENT_ID%type := 30;
+BEGIN
+Select Distinct D.DEPARTMENT_NAME INTO dep_Name 
+From Employees E, Departments D
+where (D.DEPARTMENT_ID = E.DEPARTMENT_ID) and (D.DEPARTMENT_ID = dep_id);
+dbms_output.put_line('Department Name : ' || dep_name);
+End;
+----------------------
+Declare
+dep_name departments.department_name%type;
+BEGIN
+Select DEPARTMENT_NAME INTO dep_Name 
+From  Departments where department_id =30;
+dbms_output.put_line('Department Name : ' || dep_name);
+End;
+
+4
+Declare
+dep_id DEPARTMENTS.DEPARTMENT_ID%type := 20;
+job_nature Jobs.job_title%type;
+BEGIN
+for c in (SELECT J.JOB_TITLE
+  FROM EMPLOYEES E
+  JOIN JOBS J ON E.JOB_ID = J.JOB_ID
+  JOIN DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+  WHERE D.DEPARTMENT_ID = dep_id)
+LOOP 
+dbms_output.put_line('Job Nature : ' || c.job_title);
+End loop;
+End;
+
+5
+Declare
+dep_id DEPARTMENTS.DEPARTMENT_ID%type := 20;
+e_salary employees.salary%type;
+BEGIN
+for c in (SELECT salary
+  FROM EMPLOYEES 
+  WHERE DEPARTMENT_ID = dep_id)
+LOOP 
+dbms_output.put_line('Employee Salary : ' || c.salary);
+End loop;
+End;
+
+6
+CREATE OR REPLACE PROCEDURE UPDATE_SALARY (emp_no in NUMBER)
+IS
+emp_salary EMPLOYEES.SALARY%TYPE;
+BEGIN
+SELECT SALARY INTO emp_salary from Employees where employee_id = emp_no;
+UPDATE EMPLOYEES SET SALARY = emp_salary*1.1 WHERE EMPLOYEE_ID = emp_no;
+dbms_output.put_line('Salary of the employee ' || emp_no || ' updated!');
+END;
+EXEC UPDATE_SALARY(101);
+
+7
+CREATE OR REPLACE PROCEDURE ADD_SALARY (DEP_NO IN NUMBER)
+IS
+  emp_salary EMPLOYEES.SALARY%TYPE;
+BEGIN
+  FOR c IN (SELECT EMPLOYEE_ID, SALARY FROM EMPLOYEES WHERE DEPARTMENT_ID = dep_no)
+  LOOP 
+    IF (c.salary > 5000) THEN 
+      UPDATE EMPLOYEES 
+      SET SALARY = c.SALARY + 1000 
+      WHERE EMPLOYEE_ID = c.EMPLOYEE_ID;
+      DBMS_OUTPUT.PUT_LINE('Salary of the employee ' || c.EMPLOYEE_ID || ' updated!');
+    END IF;
+  END LOOP;
+END;
+Exec add_salary(20);
+
+8
+a
+
+CREATE OR REPLACE VIEW EMP_DESIGNATION(JOB_ID, COUNT_EMPLOYEES) as
+SELECT JOB_ID, COUNT(*) AS COUNT_EMPLOYEES FROM EMPLOYEES GROUP BY JOB_ID;
+SELECT * FROM EMP_DESIGNATION; 
+
+b
+CREATE OR REPLACE VIEW DISPLAY_EMPLOYEE(EMPLOYEE_ID, EMPLOYEE_NAME, DEPARTMENT_ID, DEPARTMENT_NAME)
+AS SELECT E.EMPLOYEE_ID, E.FIRST_NAME, E.DEPARTMENT_ID, D.DEPARTMENT_NAME
+FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND lower(E.FIRST_NAME) <> 'king';
+SELECT * FROM DISPLAY_EMPLOYEE;
+
+c
+CREATE OR REPLACE VIEW  DISPLAY_EMPLOYEES(EMPLOYEE_ID, EMPLOYEE_NAME, DEPARTMENT_ID, DEPARTMENT_NAME)
+AS SELECT E.EMPLOYEE_ID, E.FIRST_NAME , E.DEPARTMENT_ID, D.DEPARTMENT_NAME
+FROM EMPLOYEES E, DEPARTMENTS D WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID;
+SELECT * FROM DISPLAY_EMPLOYEES;
+
+9
+DECLARE
+N1 INTEGER;
+N2 INTEGER;
+N3 INTEGER;
+BEGIN
+N1 := &N1;
+N2 := &N2;
+N3 := N1 + N2;
+dbms_output.put_line('Total Sum: ' || N3);
+END;
+
+10
+DECLARE
+N1 INTEGER;
+N2 INTEGER;
+TOTAL INTEGER:=0;
+BEGIN 
+N1:=&N1;
+N2:=&N2;
+FOR C IN N1 .. N2
+LOOP
+TOTAL:=TOTAL+C;
+END LOOP;
+dbms_output.put_line('Total Sum: ' || TOTAL);
+END;
+
+11
+DECLARE
+    employee_no EMPLOYEES.EMPLOYEE_ID%TYPE;
+    employee_name EMPLOYEES.FIRST_NAME%TYPE;
+    employee_hire_date EMPLOYEES.HIRE_DATE%TYPE;
+    employee_department_name DEPARTMENTS.DEPARTMENT_NAME%TYPE;
+BEGIN
+    employee_no := &employee_no;
+    SELECT E.EMPLOYEE_ID, E.FIRST_NAME , E.HIRE_DATE, D.DEPARTMENT_NAME 
+    INTO employee_no, employee_name, employee_hire_date, employee_department_name
+    FROM EMPLOYEES E, DEPARTMENTS D 
+    WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID AND E.EMPLOYEE_ID = employee_no;
+    
+    DBMS_OUTPUT.PUT_LINE('Employee Id: ' || employee_no || ' , Employee Name: ' || employee_name || ' , Hire Date: ' || employee_hire_date || ' , Department Name: ' || employee_department_name);
+END;
+
+12
+DECLARE
+PALINDROMECHECK VARCHAR(20);
+REVERSE_NUMBER VARCHAR(20);
+BEGIN 
+PALINDROMECHECK := &PALINDROMECHECK;
+SELECT REVERSE(PALINDROMECHECK) INTO REVERSE_NUMBER FROM DUAL;
+IF(PALINDROMECHECK = REVERSE_NUMBER) THEN
+dbms_output.put_line('The number ' ||PALINDROMECHECK|| ' is palindrome.');
+ELSE
+ dbms_output.put_line('The number ' ||PALINDROMECHECK|| ' is not palindrome.');
+END IF;
+END;
+
+13
+DECLARE
+    emp_id EMPLOYEES.EMPLOYEE_ID%type := 1000;
+    emp_first EMPLOYEES.FIRST_NAME%type := 'Laiba';
+    emp_last EMPLOYEES.LAST_NAME%type := 'Fatima'; 
+    emp_email EMPLOYEES.EMAIL%type := 'laiba@gmail.com';
+    emp_hire EMPLOYEES.HIRE_DATE%type := SYSDATE;
+    emp_job_id EMPLOYEES.JOB_ID%type := 'IT_PROG';
+    emp_salary EMPLOYEES.SALARY%type := 1000;
+    emp_depno EMPLOYEES.DEPARTMENT_ID%type := 1000;
+    emp_depart_name DEPARTMENTS.DEPARTMENT_NAME%type := 'SE';
+BEGIN
+   INSERT INTO DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME)
+   VALUES (emp_depno, emp_depart_name);
+   
+   INSERT INTO EMPLOYEES (employee_id, first_name, last_name, email, hire_date, job_id, salary, department_id)
+   VALUES (emp_id, emp_first, emp_last, emp_email, emp_hire, emp_job_id, emp_salary, emp_depno);
+
+   dbms_output.put_line('Record for Employee # : ' || emp_id || ' entered!');
+END;
+
+
+14
+DECLARE
+    emp_salary EMPLOYEES.SALARY%type := 0;
+    emp_first_name EMPLOYEES.FIRST_NAME%type;
+    emp_last_name EMPLOYEES.LAST_NAME%type;
+    emp_employee_id EMPLOYEES.EMPLOYEE_ID%type := 101;
+    emp_manager_id EMPLOYEES.MANAGER_ID%type ;
+BEGIN
+    SELECT MANAGER_ID INTO emp_manager_id FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_employee_id;
+    WHILE(emp_salary <= 2500)
+    LOOP
+        SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY INTO emp_employee_id, emp_first_name, emp_last_name, emp_salary
+        FROM EMPLOYEES WHERE EMPLOYEE_ID = emp_employee_id;
+    END LOOP;
+    dbms_output.put_line('The employee who is higher in chain of command: ' || emp_first_name || ' ' || emp_last_name || ' with salary: ' || emp_salary);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        dbms_output.put_line('Record with employee id: ' || emp_employee_id || ' does not exist.');
+END;
+
+
+15
+DECLARE
+i NUMBER := 1;
+j NUMBER := 100;
+total NUMBER := 0;
+BEGIN
+FOR c IN i .. j
+LOOP
+total := total + c;
+END LOOP;
+dbms_output.put_line('Total Sum: ' || total);
+END;

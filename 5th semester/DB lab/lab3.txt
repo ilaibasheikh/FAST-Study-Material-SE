@@ -1,0 +1,87 @@
+CREATE TABLE Employees (Employee_id number , FIRST_NAME varchar(15) ,LAST_NAME varchar (15) ,EMAIL varchar (35),PHONE_NUMBER varchar(15),
+HIRE_DATE date,JOB_ID varchar(15),SALARY number,COMMISSION_PCT number,MANAGER_ID number PRIMARY KEY,DEPARTMENT_ID number);
+CREATE TABLE Departments(Department_ID number Primary Key, Department_Name varchar(15) NOT NULL Unique,  Location_ID number ,
+Manager_ID number, Foreign Key (Manager_ID) references Employees (MANAGER_ID));
+select * from DEPARTMENTS;
+ALTER TABLE DEPARTMENTS ADD (Established_date date default current_date);
+select * from DEPARTMENTS;
+ALTER TABLE departments RENAME TO company_departments;
+select * from COMPANY_DEPARTMENTS;
+select * from user_constraints where table_name = 'company_departments';
+drop table company_departments;
+select * from COMPANY_DEPARTMENTS;
+
+create table Project_Allocation(Employee_Id number , START_DATE date,END_DATE date,JOB_ID varchar(15), DEPARTMENT_ID number );
+select *  from project_allocation;
+INSERT INTO Project_allocation (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID ) VALUES (1, '19-Aug-2003', '21-Jan-2010','IT_PROG' , 123);
+INSERT INTO Project_allocation (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID ) VALUES (2, '10-Aug-2003', '22-Jan-2010','IT_PROG' , 124);
+INSERT INTO Project_allocation (EMPLOYEE_ID, START_DATE, END_DATE, JOB_ID, DEPARTMENT_ID ) VALUES (1, '22-Aug-2003', '11-Jan-2010','IT_PROG' , 125);
+select *  from project_allocation;
+Truncate table Project_allocation;
+select *  from project_allocation;
+
+create table parent(parentid number primary key );
+create table child(childid number primary key, parentid number,
+constraint cp_fk foreign key(parentid) references parent(parentid) initially deferred deferrable);
+INSERT INTO Child(Childid, Parentid)VALUES (1, 100);
+select * from child;
+INSERT INTO Parent (Parentid) VALUES (100);
+select * from parent;
+commit;
+
+ALTER TABLE employees ADD UNIQUE (email);
+select * from employees;
+
+create table employee_salaries(Employee_ID number primary key, Salary number CHECK(salary>3000 and salary <10000) );
+select * from employee_salaries;
+
+insert into employees(Employee_id  , FIRST_NAME ,LAST_NAME ,EMAIL,PHONE_NUMBER, HIRE_DATE ,JOB_ID ,SALARY ,COMMISSION_PCT ,MANAGER_ID ,DEPARTMENT_ID ) 
+VALUES (106, 'laiba', 'fatima', 'laiba@gmail.com' , '5195', sysdate, 'IT_PROG', 30000,1, 23,123);
+select * from employees;
+Update employees set salary = 8500 where employee_id =106;
+select * from employees;
+
+create table jobs (JOB_ID varchar(15) primary key, JOB_TITLE varchar(15), MIN_SALARY number , MAX_SALARY number); 
+select * from jobs;
+create table job_history(Employee_Id number , START_DATE date,END_DATE date,JOB_ID varchar(15), DEPARTMENT_ID number );
+select * from job_history;
+ALTER TABLE Jobs MODIFY job_ID NUMBER;
+ALTER TABLE Job_history MODIFY job_ID NUMBER;
+ALTER TABLE job_history ADD FOREIGN KEY (job_id) REFERENCES jobs (job_id);
+INSERT INTO Jobs (job_ID, job_title, min_salary, max_salary) VALUES (103, 'SE', 500, 800);
+select * from jobs;
+INSERT INTO job_History (Employee_Id, Start_Date, End_Date,  job_ID, DEPARTMENT_ID)VALUES (123, SYSDATE, NULL, 103, 126);  
+select * from job_history;
+ALTER TABLE jobs add(job_nature varchar(15));
+select * from jobs;
+
+Create table employees_replica as SELECT * from employees;
+select * from employees_replica;
+
+alter table job_history add foreign key(employee_id) references employees(employee_id);
+
+alter table jobs drop column job_nature;
+select * from jobs;
+
+UPDATE employees SET first_name = UPPER(first_name);
+ALTER TABLE employees ADD CONSTRAINT chk_first_name CHECK (first_name = UPPER(first_name));
+select * from employees;
+ALTER TABLE employees ADD CONSTRAINT chk_salary UNIQUE(salary);
+ALTER TABLE employees modify (phone_number not null);
+
+insert into employees(Employee_id  , FIRST_NAME ,LAST_NAME ,EMAIL,PHONE_NUMBER, HIRE_DATE ,JOB_ID ,SALARY ,COMMISSION_PCT ,MANAGER_ID ,DEPARTMENT_ID ) 
+VALUES (117, 'ASMA', 'nizam', 'asma@gmail.com' , '2000', sysdate, 'IT_PROG', 15000 ,2, 25,127);
+select * from employees;
+insert into employees(Employee_id  , FIRST_NAME ,LAST_NAME ,EMAIL,PHONE_NUMBER, HIRE_DATE ,JOB_ID ,SALARY ,COMMISSION_PCT ,MANAGER_ID ,DEPARTMENT_ID ) 
+VALUES (105, 'MUSTAFA', 'siddiqui', 'mustafa@gmail.com' , '4818', sysdate, 'IT_PROG', 5000 ,5, 55,327);
+select * from employees;
+update employees set salary = 8000 where employee_id =105 and salary<10000;
+select * from employees;
+ALTER TABLE Employees ADD CONSTRAINT cp_pk PRIMARY KEY  (Employee_ID, Job_ID);
+
+CREATE INDEX indx_job_id ON job_history (job_id);
+
+select * from user_constraints where table_name = 'employees';
+drop table employees;
+
+

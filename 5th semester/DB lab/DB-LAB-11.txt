@@ -1,0 +1,125 @@
+1) 
+
+CREATE TABLE product_inventory (
+    product_id NUMBER PRIMARY KEY,
+    product_name VARCHAR2(100),
+    stock NUMBER,
+    price NUMBER
+);
+
+INSERT INTO product_inventory (product_id, product_name, stock, price) VALUES (1, 'Shampoo', 100, 50);
+INSERT INTO product_inventory (product_id, product_name, stock, price) VALUES (2, 'Soup', 200, 30);
+INSERT INTO product_inventory (product_id, product_name, stock, price) VALUES (3, 'Face Wash', 150, 40);
+
+UPDATE product_inventory
+SET stock = stock - 10
+WHERE product_id = 1;
+
+SAVEPOINT stock_update;
+
+2)
+
+CREATE TABLE employee (
+    employee_id NUMBER PRIMARY KEY,       
+    employee_name VARCHAR2(100),          
+    salary NUMBER(10, 2),                 
+    hire_date DATE DEFAULT SYSDATE       
+);
+
+INSERT INTO employee (employee_id, employee_name, salary) VALUES (1, 'Mustafa', 35000);
+
+UPDATE employee
+SET salary = salary * 1.10
+WHERE employee_id = 1;
+
+SAVEPOINT salary_increase;
+
+UPDATE employee
+SET salary = salary * 1.05
+WHERE employee_id = 1;
+
+SELECT salary FROM employee WHERE employee_id = 1;
+
+ROLLBACK TO salary_increase;
+
+3)
+
+CREATE TABLE customer (
+    customer_id NUMBER PRIMARY KEY,       
+    customer_name VARCHAR2(100),          
+    contact_info VARCHAR2(100),           
+    registration_date DATE DEFAULT SYSDATE 
+);
+
+CREATE TABLE orders (
+    order_id NUMBER PRIMARY KEY,          
+    customer_id NUMBER,                   
+    order_date DATE DEFAULT SYSDATE,      
+    amount NUMBER(10, 2),                 
+    CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+);
+
+INSERT INTO customer (customer_id, customer_name) VALUES (1, 'Mustafa');
+
+INSERT INTO orders (order_id, customer_id, order_date) VALUES (1, 1, SYSDATE);
+
+BEGIN
+    INSERT INTO customer (customer_id, customer_name) VALUES (1, 'Mustafa');
+    INSERT INTO orders (order_id, customer_id, order_date) VALUES (1, 1, SYSDATE);
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+END;
+
+4)
+
+CREATE TABLE sales (
+    sales_id NUMBER PRIMARY KEY,          
+    customer_id NUMBER,                   
+    amount NUMBER(10, 2),                 
+    sales_date DATE DEFAULT SYSDATE,      
+    CONSTRAINT fk_sales_customer FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+);
+
+INSERT INTO sales (sales_id, customer_id, amount) VALUES (1, 1, 2500);
+
+SELECT * FROM sales;
+
+5)
+
+CREATE TABLE transactions (
+    transaction_id NUMBER PRIMARY KEY,    
+    account_id NUMBER,                    
+    transaction_type VARCHAR2(10),        
+    amount NUMBER(10, 2),                 
+    balance NUMBER(10, 2),                
+    transaction_date DATE DEFAULT SYSDATE 
+);
+
+INSERT INTO transactions (transaction_id, account_id, transaction_type, amount, balance, transaction_date) 
+VALUES (1, 1, 'debit', 100, 400, SYSDATE);
+INSERT INTO transactions (transaction_id, account_id, transaction_type, amount, balance, transaction_date) 
+VALUES (2, 2, 'credit', 200, 600, SYSDATE);
+
+UPDATE transactions
+SET balance = balance - 100
+WHERE account_id = 1;
+
+SAVEPOINT debit_1;
+
+UPDATE transactions
+SET balance = balance + 200
+WHERE account_id = 2;
+
+SAVEPOINT credit_1;
+
+UPDATE transactions
+SET balance = balance - 50
+WHERE account_id = 1;
+
+SAVEPOINT debit_2;
+SELECT * FROM transactions;
+
+ROLLBACK TO debit_1;
+SELECT * FROM transactions;
