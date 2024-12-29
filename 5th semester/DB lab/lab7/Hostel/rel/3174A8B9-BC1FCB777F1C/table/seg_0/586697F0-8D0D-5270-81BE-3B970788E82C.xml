@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="586697F0-8D0D-5270-81BE-3B970788E82C" name="residents">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>1C2AF9BE-E26C-AF6A-1BD1-F561B1AF1C6E</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="resident_id" id="EE911A92-E9FB-A1D2-9F77-A3A9AA20A412">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>F94DA7AF-0BCF-C7E1-1980-7706E34DB41B</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="meal_plan_id" id="AFC73C91-A410-C693-526F-92509EEB8382">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>82C9C57F-63D6-1F08-AE7C-072EF95DB3A1</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8B58BC2C-0CBD-80AE-2E2B-0592E959266D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="116C5369-3D1F-9082-DE16-41ECE0C29504">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>EA8D6A40-0E4C-2A2B-3B74-D0E38AB85F46</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hostel_id" id="94977207-8033-E65F-7D21-B0998ABD0098">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>BBBA2142-5602-4C07-D048-FE667803BF2F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D5C2E331-40F4-3B60-2F9C-2E2BD59C193E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="room_number" id="FCE4E6B4-A182-2AE1-AE64-8A8FE272CE3C">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>A957EB32-8705-9963-49A0-0C4C861AEC49</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="4750A24E-34FB-34A4-79B2-867302512CFD">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>81BD7C78-DF9B-2A5A-6647-C26654BD0D82</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hostels_hostel_id" id="A649354B-B28D-3001-945D-14FE628B788B">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>D4C97D8B-E1B7-6662-51CF-7D3BFB64FA36</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D5C2E331-40F4-3B60-2F9C-2E2BD59C193E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B0CBA772-099C-8277-F549-328CAC10F158" referredColumn="C5BC5785-7497-9483-B83E-4C6016D978A1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F42190C4-7387-C1F3-7BCB-4B195036AE23" name="residents_PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>440D761C-D059-B90F-4FAB-817894940A20</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE911A92-E9FB-A1D2-9F77-A3A9AA20A412"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01606DEF-A846-7F14-735F-2CDF8304C470" name="residents_hostels_FK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>C37FC459-F212-DC67-9D8A-E4ACB67433B8</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A649354B-B28D-3001-945D-14FE628B788B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

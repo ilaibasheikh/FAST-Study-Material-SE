@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8877F4F0-DF62-8ED1-C246-F2D7B369526C" name="billing">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:32:57 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="bill_id" id="6862776C-DA36-BC78-49A1-2EAEC17738A8">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:33:08 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BDAF7138-FA69-E3A1-736F-1DB4E6A81790</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id" id="684AD095-46DF-27BA-F3A0-AFB54D6178DC">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:33:16 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bill_date" id="4B8CB53D-BB64-41E1-CFDB-C3A8BE9C01A9">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:34:07 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bill_due" id="168AF750-7A28-F8A8-D648-005FA561EC95">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:34:18 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="billing_cycle" id="A4BFB88E-8CC7-7DD8-AD7C-DC5E152BD556">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:35:05 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id1" id="C3D5AA87-B15F-E630-34E0-29B6F8650991">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:58:42 UTC</createdTime>
+<generatorID>B1E543B6-43B1-503A-B314-DE3FFA3C7D8C</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>F94DA7AF-0BCF-C7E1-1980-7706E34DB41B</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6471F154-201C-6CBD-450B-FC9A6E6B9317" name="billing PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:33:14 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6862776C-DA36-BC78-49A1-2EAEC17738A8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7B6F0850-00F2-1BAE-2F45-64D3882A9244" name="feedbacks">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:43:58 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="feedback_id" id="C170991F-61BC-7176-1FDD-9C3759F9CCA4">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:44:04 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB2871A3-64D8-6456-2025-C906F09E9ED9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id" id="DFB37C56-2004-0B6D-FE53-696CFC71F75E">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:44:20 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="E8C8899C-91BC-F92E-86A2-79EE46647AB9">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:44:39 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="DF8B1198-FDE6-92CF-D319-71A2F221D1F1">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:44:52 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id1" id="6BF4304D-FD2D-34CC-5B4A-6173EC556F36">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:59:13 UTC</createdTime>
+<generatorID>0DE6A572-07D9-92BA-EBFD-751EA4DB5A8F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>F94DA7AF-0BCF-C7E1-1980-7706E34DB41B</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFA2F20D-5946-CA89-3538-83C0F17603D3" name="meal_plans">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>EE3A709E-0511-6222-2D51-93603C3934C2</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="meal_plan_id" id="AB3C909A-B960-3A60-F4A3-B9ACB908C207">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>09903271-B92D-B757-085B-A22142C46372</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8B58BC2C-0CBD-80AE-2E2B-0592E959266D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="options" id="2896DD7B-F6AB-FCED-C7F1-D3B616E3BBD1">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>4C89ADA5-85E2-B6D4-42FA-1A085259BF3F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="preferences" id="51D6D632-105A-B8B4-477C-AD281D89FA6B">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>6B4AB8CD-B243-D3CE-BB49-CC8C162F8C3B</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="residents_resident_id" id="08E4915E-A935-0A76-E81B-EF73FF923928">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>E4AF5D92-6F11-E9BA-33F6-B336CEBF3520</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="99DB7442-8621-0069-1467-4AEDFAAF4F31" referredColumn="EE911A92-E9FB-A1D2-9F77-A3A9AA20A412"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B177FAAD-4390-EFDC-5D35-26CD1BEA57B6" name="meal_plans_PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>97D36605-5620-E29B-1BD9-DA17DD96022E</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB3C909A-B960-3A60-F4A3-B9ACB908C207"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C16295B-11DB-0B52-7DC7-CF2A4C66CDD3" name="meal_plans_residents_FK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:53 UTC</createdTime>
+<generatorID>1A9AEBB1-44BF-9A35-AA34-359305FE6C03</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08E4915E-A935-0A76-E81B-EF73FF923928"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

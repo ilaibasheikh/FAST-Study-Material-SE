@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7DDA467-66BD-EE64-CE3D-02AAE23279DE" name="mess_operations">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>A0518755-358A-35B1-E6C3-2077C5071D27</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="operation_id" id="80321D34-1E75-6F36-FA70-93A85B6B682D">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>01B4375E-B56B-C7CE-1225-88E6F4BD7AB4</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>00A5D8C4-1758-6E3D-A3D2-0A8FA1762FA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="timing" id="2D8C95EC-0EEF-F0EB-C860-279A0C4451C3">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>F894BC74-E01C-81CD-5413-A2F26C2F1D5F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dining_area" id="F6C12F7A-1253-6FAD-4857-E0313A9CF163">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>0DA969A2-D698-79B9-52B5-D42888C11434</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inventory_id" id="D1899E31-2E7C-099A-6D3A-022433A00066">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>725FC4A3-AD69-F529-B82E-37776F8E779B</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C728E796-8B10-6822-83E0-3897DBFDEC84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FAAB5EF1-A1BE-A787-C6A6-EB1DE5A64C98" name="mess_operations_PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>C194ECD8-4777-6034-EE05-88CC0FD3823D</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80321D34-1E75-6F36-FA70-93A85B6B682D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

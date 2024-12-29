@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C2AF9BE-E26C-AF6A-1BD1-F561B1AF1C6E" name="residents">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:19:26 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="resident_id" id="F94DA7AF-0BCF-C7E1-1980-7706E34DB41B">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:19:32 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="meal_plan_id" id="82C9C57F-63D6-1F08-AE7C-072EF95DB3A1">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:20:01 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8B58BC2C-0CBD-80AE-2E2B-0592E959266D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="EA8D6A40-0E4C-2A2B-3B74-D0E38AB85F46">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:20:25 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hostel_id" id="BBBA2142-5602-4C07-D048-FE667803BF2F">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:21:36 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D5C2E331-40F4-3B60-2F9C-2E2BD59C193E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="room_number" id="A957EB32-8705-9963-49A0-0C4C861AEC49">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:21:55 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="81BD7C78-DF9B-2A5A-6647-C26654BD0D82">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:22:27 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hostel_id1" id="D4C97D8B-E1B7-6662-51CF-7D3BFB64FA36">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:55:53 UTC</createdTime>
+<generatorID>C37FC459-F212-DC67-9D8A-E4ACB67433B8</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>F57310BE-F5C1-E8A2-0F34-B6AB04D5B6B9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D5C2E331-40F4-3B60-2F9C-2E2BD59C193E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="440D761C-D059-B90F-4FAB-817894940A20" name="residents PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:19:59 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F94DA7AF-0BCF-C7E1-1980-7706E34DB41B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

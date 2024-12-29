@@ -1,0 +1,186 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86D6F262-C870-4F81-6170-D1EC0DA8EE18" name="meal_bookings">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:36:42 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="booking_id" id="7AC78FD2-0C3A-B3FB-B820-24C3BA76A735">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:36:49 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>099A6564-45E8-A881-E839-123656C86F4A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id" id="A6946216-1265-88C1-9A20-77DEF6691D19">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:36:57 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="meal_plan_id" id="08C996B4-2629-77D6-960D-51A0ADEB25DA">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:37:34 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8B58BC2C-0CBD-80AE-2E2B-0592E959266D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="preference" id="88CF567B-2A10-20A7-5861-E89299A90BBB">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:37:43 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="restriction" id="55A63E8D-76FE-6C7D-718E-108B2AD8A34B">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:38:07 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="allergy" id="C89BFD86-223D-0912-8C6F-BBB0EE89A72A">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:38:25 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="meal_date" id="14D44B0D-32B0-02B2-9EE1-4F6BC10707CD">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:39:01 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="guest_meals" id="78D75205-090F-67C5-907E-E6BDDCBA6E14">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:39:17 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="booking_status" id="C528FB86-04FF-B5AA-EB89-8266DF4583B2">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:39:31 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="meal_plan_id1" id="0EEA7817-3E0B-1E40-A8CD-74922DE78FC2">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:57:48 UTC</createdTime>
+<generatorID>D0D60498-713D-0A9D-604C-F15956F0B719</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>09903271-B92D-B757-085B-A22142C46372</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8B58BC2C-0CBD-80AE-2E2B-0592E959266D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resident_id1" id="EAAF69C5-2633-BFC8-B33A-C8A0FC4B9B22">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:58:00 UTC</createdTime>
+<generatorID>1BFAF22A-5924-3792-FFE2-8F7E32094B3B</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>F94DA7AF-0BCF-C7E1-1980-7706E34DB41B</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="operation_id" id="E3783EE5-B6E0-A9C1-4C6C-48847D9F5442">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:58:22 UTC</createdTime>
+<generatorID>621F9209-1FFE-D4E8-90A7-95B52180A64F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<referedAttribute>01B4375E-B56B-C7CE-1225-88E6F4BD7AB4</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>00A5D8C4-1758-6E3D-A3D2-0A8FA1762FA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6921B834-580B-4F0E-C79D-FBAE46F16F70" name="meal_bookings PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 11:36:56 UTC</createdTime>
+<ownerDesignName>Hostel</ownerDesignName>
+<engineerTo>
+<item key="3174A8B9-F138-2F2E-C5E7-BC1FCB777F1C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7AC78FD2-0C3A-B3FB-B820-24C3BA76A735</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

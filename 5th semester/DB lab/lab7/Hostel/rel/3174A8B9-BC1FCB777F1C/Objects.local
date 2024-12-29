@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="76400639-4A35-8C18-9938-A5CBF010B271" name="billing" seqName="seg_0"/>
+   <object objectType="Table" objectID="09A962F2-A80F-0A18-441D-5E0FC0911CFC" name="feedbacks" seqName="seg_0"/>
+   <object objectType="Table" objectID="5D0CF53A-956B-3C40-5D22-AFDA75FF4E90" name="hostels" seqName="seg_0"/>
+   <object objectType="Table" objectID="8350EE34-377C-5CB7-CA8C-A6E4CA091545" name="inventory" seqName="seg_0"/>
+   <object objectType="Table" objectID="8482C23E-1D02-BC48-A4C6-BE2FCD24B7D9" name="meal_bookings" seqName="seg_0"/>
+   <object objectType="Table" objectID="EFA2F20D-5946-CA89-3538-83C0F17603D3" name="meal_plans" seqName="seg_0"/>
+   <object objectType="Table" objectID="B7DDA467-66BD-EE64-CE3D-02AAE23279DE" name="mess_operations" seqName="seg_0"/>
+   <object objectType="Table" objectID="586697F0-8D0D-5270-81BE-3B970788E82C" name="residents" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="84962004-9C95-7EFF-B69D-EBDF6D2F8A7C" name="billing_residents_FK" seqName="seg_0" containerID="76400639-4A35-8C18-9938-A5CBF010B271" refContainerID="586697F0-8D0D-5270-81BE-3B970788E82C"/>
+   <object objectType="FKIndexAssociation" objectID="428652DF-A4EA-7755-A366-850F1749971D" name="feedbacks_residents_FK" seqName="seg_0" containerID="09A962F2-A80F-0A18-441D-5E0FC0911CFC" refContainerID="586697F0-8D0D-5270-81BE-3B970788E82C"/>
+   <object objectType="FKIndexAssociation" objectID="25CFFDB2-9568-BD3B-A2CB-D30C430248F2" name="inventory_mess_operations_FK" seqName="seg_0" containerID="8350EE34-377C-5CB7-CA8C-A6E4CA091545" refContainerID="B7DDA467-66BD-EE64-CE3D-02AAE23279DE"/>
+   <object objectType="FKIndexAssociation" objectID="5C92014F-CF50-F0D3-5EA5-8FC1D6CCCE14" name="meal_bookings_meal_plans_FK" seqName="seg_0" containerID="8482C23E-1D02-BC48-A4C6-BE2FCD24B7D9" refContainerID="EFA2F20D-5946-CA89-3538-83C0F17603D3"/>
+   <object objectType="FKIndexAssociation" objectID="8F0E5378-E5B0-A981-DCE6-462658031074" name="meal_bookings_mess_operations_FK" seqName="seg_0" containerID="8482C23E-1D02-BC48-A4C6-BE2FCD24B7D9" refContainerID="B7DDA467-66BD-EE64-CE3D-02AAE23279DE"/>
+   <object objectType="FKIndexAssociation" objectID="D775E651-E4FF-7FD1-0315-0AF22655859A" name="meal_bookings_residents_FK" seqName="seg_0" containerID="8482C23E-1D02-BC48-A4C6-BE2FCD24B7D9" refContainerID="586697F0-8D0D-5270-81BE-3B970788E82C"/>
+   <object objectType="FKIndexAssociation" objectID="99DB7442-8621-0069-1467-4AEDFAAF4F31" name="meal_plans_residents_FK" seqName="seg_0" containerID="EFA2F20D-5946-CA89-3538-83C0F17603D3" refContainerID="586697F0-8D0D-5270-81BE-3B970788E82C"/>
+   <object objectType="FKIndexAssociation" objectID="B0CBA772-099C-8277-F549-328CAC10F158" name="residents_hostels_FK" seqName="seg_0" containerID="586697F0-8D0D-5270-81BE-3B970788E82C" refContainerID="5D0CF53A-956B-3C40-5D22-AFDA75FF4E90"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

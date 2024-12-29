@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="8877F4F0-DF62-8ED1-C246-F2D7B369526C" name="billing" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7B6F0850-00F2-1BAE-2F45-64D3882A9244" name="feedbacks" seqName="seg_0"/>
+   <object objectType="Entity" objectID="2DD1832F-BF42-A2C6-2857-601A735A34AD" name="hostels" seqName="seg_0"/>
+   <object objectType="Entity" objectID="60375603-AF5F-88B5-DBFD-3E3161D24AF0" name="inventory" seqName="seg_0"/>
+   <object objectType="Entity" objectID="86D6F262-C870-4F81-6170-D1EC0DA8EE18" name="meal_bookings" seqName="seg_0"/>
+   <object objectType="Entity" objectID="EE3A709E-0511-6222-2D51-93603C3934C2" name="meal_plans" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A0518755-358A-35B1-E6C3-2077C5071D27" name="mess_operations" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1C2AF9BE-E26C-AF6A-1BD1-F561B1AF1C6E" name="residents" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C37FC459-F212-DC67-9D8A-E4ACB67433B8" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1A9AEBB1-44BF-9A35-AA34-359305FE6C03" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D0D60498-713D-0A9D-604C-F15956F0B719" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1BFAF22A-5924-3792-FFE2-8F7E32094B3B" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="621F9209-1FFE-D4E8-90A7-95B52180A64F" name="Relation_6" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B1E543B6-43B1-503A-B314-DE3FFA3C7D8C" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0DE6A572-07D9-92BA-EBFD-751EA4DB5A8F" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1DB481E1-FE99-E661-AE67-3A881E4E3A59" name="Relation_9" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

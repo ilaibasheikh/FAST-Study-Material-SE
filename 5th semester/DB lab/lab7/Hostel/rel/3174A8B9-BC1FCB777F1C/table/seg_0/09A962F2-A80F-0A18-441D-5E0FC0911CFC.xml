@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09A962F2-A80F-0A18-441D-5E0FC0911CFC" name="feedbacks">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>7B6F0850-00F2-1BAE-2F45-64D3882A9244</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="feedback_id" id="D791D36F-26EE-FE90-5E90-FA7BAA69401A">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>C170991F-61BC-7176-1FDD-9C3759F9CCA4</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>CB2871A3-64D8-6456-2025-C906F09E9ED9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resident_id" id="2A23ED4B-A620-1CE8-336D-F2F717F99DDE">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>DFB37C56-2004-0B6D-FE53-696CFC71F75E</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comments" id="FCD9D25F-838A-F043-4144-D348C6BD6F11">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>E8C8899C-91BC-F92E-86A2-79EE46647AB9</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date" id="93FA0B1C-868D-FFFE-47E0-A9A285A51066">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>DF8B1198-FDE6-92CF-D319-71A2F221D1F1</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="residents_resident_id" id="D62B575E-D9D1-945B-6AD7-EF91B8D9BC6E">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>6BF4304D-FD2D-34CC-5B4A-6173EC556F36</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="428652DF-A4EA-7755-A366-850F1749971D" referredColumn="EE911A92-E9FB-A1D2-9F77-A3A9AA20A412"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FBA844A5-31D1-250C-6441-84BF0624D792" name="feedbacks_residents_FK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:53 UTC</createdTime>
+<generatorID>0DE6A572-07D9-92BA-EBFD-751EA4DB5A8F</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D62B575E-D9D1-945B-6AD7-EF91B8D9BC6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76400639-4A35-8C18-9938-A5CBF010B271" name="billing">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>8877F4F0-DF62-8ED1-C246-F2D7B369526C</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bill_id" id="61C2D2C5-AAB7-89BD-95CF-CED8700A4437">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>6862776C-DA36-BC78-49A1-2EAEC17738A8</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>BDAF7138-FA69-E3A1-736F-1DB4E6A81790</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resident_id" id="351BF34F-C96A-5217-5EE4-233AB936CDDB">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>684AD095-46DF-27BA-F3A0-AFB54D6178DC</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bill_date" id="0A6EA490-8696-A722-3E78-31C66389F89C">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>4B8CB53D-BB64-41E1-CFDB-C3A8BE9C01A9</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bill_due" id="4614542A-49FA-D575-7AB2-2C08A67F5B89">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>168AF750-7A28-F8A8-D648-005FA561EC95</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="billing_cycle" id="3C5FA488-AF79-3FDF-3D3D-B76A1BD8F24A">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>A4BFB88E-8CC7-7DD8-AD7C-DC5E152BD556</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="residents_resident_id" id="96E51027-4526-D9B0-AB3A-64328069CA2A">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>C3D5AA87-B15F-E630-34E0-29B6F8650991</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AA16F3C4-4B13-936B-23BA-640A5999623F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84962004-9C95-7EFF-B69D-EBDF6D2F8A7C" referredColumn="EE911A92-E9FB-A1D2-9F77-A3A9AA20A412"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4721D091-B8AB-CEBA-E66F-AD83EBEB07D1" name="billing_PK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:52 UTC</createdTime>
+<generatorID>6471F154-201C-6CBD-450B-FC9A6E6B9317</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61C2D2C5-AAB7-89BD-95CF-CED8700A4437"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F35E988E-B7B1-DAE3-507A-791FA9D1876F" name="billing_residents_FK">
+<createdBy>Hp</createdBy>
+<createdTime>2024-10-06 12:01:53 UTC</createdTime>
+<generatorID>B1E543B6-43B1-503A-B314-DE3FFA3C7D8C</generatorID>
+<ownerDesignName>Hostel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96E51027-4526-D9B0-AB3A-64328069CA2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

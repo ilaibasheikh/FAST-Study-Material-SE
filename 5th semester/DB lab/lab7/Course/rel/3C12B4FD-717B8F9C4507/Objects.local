@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="1DD668BF-169D-A964-49A9-31ABE28DAD8B" name="courses" seqName="seg_0"/>
+   <object objectType="Table" objectID="3CD864E5-6BDD-EC46-F9B6-C737F8F6781F" name="exam_enrollments" seqName="seg_0"/>
+   <object objectType="Table" objectID="66CF4043-91F1-2EEA-FCAF-877AA7DF508B" name="exams" seqName="seg_0"/>
+   <object objectType="Table" objectID="910D35B5-387A-581A-1328-6D9447C0367D" name="instructors" seqName="seg_0"/>
+   <object objectType="Table" objectID="BD2E02C3-A765-1433-183C-93AF0F5F8791" name="make_up_exams" seqName="seg_0"/>
+   <object objectType="Table" objectID="8131981E-1B0F-0956-716F-45D1DEA923D2" name="registrations" seqName="seg_0"/>
+   <object objectType="Table" objectID="13951AF9-97A5-B80C-9D05-A15362C27F83" name="students" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B88D700A-9477-1F75-3A5C-1126DFA4EBC2" name="courses_instructors_FK" seqName="seg_0" containerID="1DD668BF-169D-A964-49A9-31ABE28DAD8B" refContainerID="910D35B5-387A-581A-1328-6D9447C0367D"/>
+   <object objectType="FKIndexAssociation" objectID="39195329-01DA-A818-48B5-B52063E27327" name="exam_enrollments_exams_FK" seqName="seg_0" containerID="3CD864E5-6BDD-EC46-F9B6-C737F8F6781F" refContainerID="66CF4043-91F1-2EEA-FCAF-877AA7DF508B"/>
+   <object objectType="FKIndexAssociation" objectID="73728ACE-D03E-B6DE-A21B-59D346ED263B" name="exam_enrollments_students_FK" seqName="seg_0" containerID="3CD864E5-6BDD-EC46-F9B6-C737F8F6781F" refContainerID="13951AF9-97A5-B80C-9D05-A15362C27F83"/>
+   <object objectType="FKIndexAssociation" objectID="5B8A7870-88CD-4F3F-4778-D92D91F79D00" name="exams_courses_FK" seqName="seg_0" containerID="66CF4043-91F1-2EEA-FCAF-877AA7DF508B" refContainerID="1DD668BF-169D-A964-49A9-31ABE28DAD8B"/>
+   <object objectType="FKIndexAssociation" objectID="60A1783D-243F-960F-0BB6-A7491D376A86" name="make_up_exams_exams_FK" seqName="seg_0" containerID="BD2E02C3-A765-1433-183C-93AF0F5F8791" refContainerID="66CF4043-91F1-2EEA-FCAF-877AA7DF508B"/>
+   <object objectType="FKIndexAssociation" objectID="FB93397F-C0FF-5E0D-F428-C6E70347528A" name="make_up_exams_students_FK" seqName="seg_0" containerID="BD2E02C3-A765-1433-183C-93AF0F5F8791" refContainerID="13951AF9-97A5-B80C-9D05-A15362C27F83"/>
+   <object objectType="FKIndexAssociation" objectID="4BE13B5B-02B9-C7F4-4728-7B9E28954857" name="registrations_courses_FK" seqName="seg_0" containerID="8131981E-1B0F-0956-716F-45D1DEA923D2" refContainerID="1DD668BF-169D-A964-49A9-31ABE28DAD8B"/>
+   <object objectType="FKIndexAssociation" objectID="EB25C98D-9EE7-124A-F38B-52CBEDA60955" name="registrations_students_FK" seqName="seg_0" containerID="8131981E-1B0F-0956-716F-45D1DEA923D2" refContainerID="13951AF9-97A5-B80C-9D05-A15362C27F83"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
