@@ -1,0 +1,122 @@
+Q1.
+a)Entities 
+7 entities(tables): 
+BOOK, BOOK_AUTHORS, PUBLISHER, BOOK_COIPES, BOOK_LOANS, LIBRARY_BRANCH, BORROWER
+
+b) Primary keys:
+BOOK: BookId
+BOOK_AUTHORS: AuthorName
+PUBLISHER: Name
+LIBRARY_BRANCH: BranchId
+BORROWER: CardNo
+
+c) Foreign keys:
+BOOK: PublisherName, references PUBLISHER(Name) to link publishers to books
+BOOK_AUTHORS: BookId, references BOOK(BookId) to link book authors to books
+BOOK_COPIES: BookId, references BOOK(BookId) to link book copies to books
+	+ BranchId, references LIBRARY_BRANCH(BranchId) to link book copies to library
+BOOK_LOANS: BookId, references BOOK(BookId) to link book loans to books
+	+ BranchId, references LIBRARY_BRANCH(BranchId) to link book loans to library
+	+ CardNo, references BORROWER(CardNo) to link book loans to borrowers
+
+d) Domain:
+BOOK:- BookId: NUMBER PRIMARY KEY, Title: VARCHAR(50), PublisherName: VARCHAR(50) FOREIGN KEY
+BOOK_AUTHORS:-  BookId: NUMBER FOREIGN KEY, AuthorName: VARCHAR(50) PRIMARY KEY
+PUBLISHER:- Name: VARCHAR(50) PRIMARY KEY, Address: VARCHAR(100), Phone: NUMBER(11)
+BOOK_COPIES: BookId: NUMBER FOREIGN KEY, BranchId: NUMBER FOREIGN KEY, No_Of_Copies: NUMBER
+BOOK_LOANS: BookId: NUMBER FOREIGN KEY, BranchId: NUMBER FOREIGN KEY, CardNo NUMBER FOREIGN KEY, DateOut DATE, DueDate DATE
+LIBRARY_BRANCH: BranchId NUMBER PRIMARY KEY, BranchName: VARCHAR(50), Address: VARCHAR(100)
+BORROWER: CardNo NUMBER PRIMARY KEY, Name: VARCHAR(50), Address: VARCHAR(100), Phone: NUMBER(11)
+
+e)There is a One-to-many relationship between BOOK and BOOK_AUTHORS. BOOK is referencing BOOK_AUTHORS with BookId foreign key. One author who has written multiple books, the AuthorName will be repeated in BOOK since author is the same hence one.
+
+Q2.
+a) SELECT d_name FROM Doctor WHERE d_id IN (SELECT d_id FROM Operation_Room Where room = 'R-11');
+
+b)SELECT p_name FROM Patient WHERE age>15 AND h_id IN (SELECT h_id FROM Hospital WHERE h_name = 'AKU');
+
+c) SELECT COUNT(p_num) FROM Patient WHERE h_id in (SELECT h_id FROM Hospital WHERE h_name = 'AKU');
+
+d) SELECT d_name FROM Doctor WHERE  d_id IN ( SELECT d_id FROM Operation_Room GROUP BY d_id HAVING COUNT(DISTINCT room)>1);
+
+e) SELECT h.h_name, (SELECT COUNT(*) FROM Patient p WHERE p.h_id = h.h_id) AS PatientCount FROM Hospital h ORDER BY PatientCount DESC;
+
+f)SELECT p_name FROM Patient WHERE h_id NOT IN (SELECT h_id FROM Hospital WHERE h_name = 'AKU');
+
+g) SELECT p_name FROM Patient WHERE h_id IN (SELECT h_id FROM Hospital WHERE h_name = 'Liaquat' and location = 'Lahore');
+
+h) SELECT p_num, p_name FROM Patient WHERE p_num IN (SELECT p_num FROM Surgery_Details WHERE o_name IN (SELECT o_name FROM Operation_Room WHERE d_id = (SELECT d_id FROM Doctor WHERE d_name = 'Dr Muhammad Rafi'))) AND p_num NOT IN (SELECT p_num FROM Surgery_Details WHERE o_name IN ( SELECT o_name FROM Operation_Room WHERE d_id IN ( SELECT d_id FROM Doctor WHERE d_name <> 'Dr Muhammad Rafi' ) ));
+
+i) SELECT d_name FROM Doctor WHERE d_id NOT IN (SELECT d_id FROM Operation_Room Where room = 'R-109');
+
+j) SELECT p_name FROM Patient WHERE p_num = (SELECT p_num FROM (SELECT p_num FROM Surgery_Details GROUP BY p_num ORDER BY COUNT(p_num) DESC) WHERE ROWNUM = 1);
+
+Q3.
+
+a) SELECT title FROM Books WHERE book_id IN (SELECT book_id FROM Reviews GROUP BY book_id HAVING MIN(rating) = 5 AND MAX(rating)=5);
+
+b) SELECT author_name FROM Authors WHERE author_id IN (SELECT author_id FROM Books WHERE genre = 'Science Fiction' GROUP BY author_id HAVING  COUNT(book_id) >3  ));
+
+c) SELECT customer_name FROM Customers WHERE customer_id IN (SELECT customer_id FROM Orders WHERE EXTRACT(YEAR_MONTH FROM order_date) IN (SELECT EXTRACT(YEAR_MONTH from order_date) FROM Orders GROUP BY customer_id, EXTRACT(YEAR_MONTH FROM order_date) HAVING SUM(total_amount)>500));
+
+d) SELECT b1.title FROM Books b1 b1.price < (SELECT AVG(b2.price) FROM Books b2 WHERE b2.author_id=b1.author_id);
+
+e) SELECT title FROM Books WHERE book_id NOT IN (SELECT book_id FROM OrderDetails);
+
+f) SELECT customer_name FROM Customers WHERE customer_id IN (SELECT customer_id FROM Reviews WHERE rating <3);
+
+g) SELECT a.author_name, COUNT(b.book_id) AS "Total Books" FROM Authors a LEFT JOIN Books b ON a.author_id = b.author_id GROUP BY a.author_name;
+
+h) SELECT customer_name FROM Customers where EXTRACT(YEAR_MONTH FROM join_date)=(SELECT EXTRACT(YEAR_MONTH FROM join_date) FROM Customers WHERE customer_id= (SELECT customer_id FROM Orders WHERE total_amount=(SELECT MAX(total_amount) FROM Orders)));
+
+i) SELECT genre FROM Books WHERE book_id IN (SELECT book_id FROM Inventory WHERE stock_quantity<reorder_level) GROUP BY genre;
+
+j) SELECT author_name FROM Authors WHERE author_id IN (SELECT author_id FROM Books WHERE  book_id NOT IN (SELECT book_id FROM Reviews));
+
+Q4.
+
+1)
+a) Referential integrity constraint will make the related tables consistent.It guarantees that a foreign key in one table must match a primary key in another table or be null.
+
+b)
+Foreign key can be null when database is designed to allow optional relationships between tables.
+Eg 1: In a company, employees may be assigned to project or not. So in this case, project_id foreign key in employees table can be null for employees not assigned to any project
+
++------------+        +--------------+
+| Projects   |        | Employees    |
++------------+        +--------------+
+| project_id | <----- | project_id   |
+|            |        |              |
+|            |        |              |
++------------+        |              |
+                      +--------------+
+
+
+Eg 2: In a school, students may be enrolled in a course or not. So, the course_id foreign key in the Students table can be NULL for students not currently enrolled in any course.
+
++------------+        +------------+
+| Courses    |        | Students   |
++------------+        +------------+
+| course_id  | <----- | course_id  |
+|            |        |            |
+|            |        |            |
++------------+        |            |
+                      +------------+
+
+c)When the record in the first table ( primary key) is updated/deleted, these actions can occur:
+CASCADE: automatically updates/deletes the foreign key in the second table.
+SET NULL: automatically sets the foreign key in the second table to NULL.
+SET DEFAULT: automatically sets the foreign key in the child table to its default value.
+NO ACTION: enforces the constraint and does nothing if the constraint is violated.
+RESTRICT: prevents the updating/deletion of a record in the first table if it is referenced by any records in the second table.
+
+2)
+Inherent Model-Based Constraints: enforced by the DBMS itself, ensuring data integrity rules like primary keys(no duplicate entries) and foreign keys(maintains data consistency).
+Schema-Based Constraints: constraints are defined within the database schema, such as CHECK(data meets condition), UNIQUE (vlaues aredifferent), and DEFAULT(default value for a column) constraints, NOT NULL Constraints(no empty values).
+Application-Based Constraints: implemented through application logic, access rights(only admin can retrieve certain data) enforcing business rules and validation beyond what is covered by schema constraints.
+
+3) 
+A superkey is any set of attributes that can uniquely identify a row in a table, but it may contain extra attributes. 
+Eg: Superkey: (emp_id, emp_name) It can uniquely identify rows but includes unnecessary email.
+Key: (emp_id) It can uniquely identifies rows).
+Every key is a superkey, but not all superkeys are keys.
