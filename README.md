@@ -40,6 +40,15 @@ This repository contains course materials for the FAST-NUCES 22k batch (2022-202
   - Lab
 - **Psychology**
 
+### 5th Semester
+- **Software Construction and Development**
+  - Lab
+- **Database Systems**
+  - Lab
+- **Design and Analysis of Algorithms**
+- **Software Quality Engineering**
+- **Technical and Business Writing**
+
 ## Usage
 
 You can find the materials organized by semester and course. Each course folder contains:
