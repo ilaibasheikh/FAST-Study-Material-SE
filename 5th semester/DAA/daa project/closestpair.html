@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closest Pair of Points</title>
+    <link rel="stylesheet" href="styles/style2.css">
+    <script src="https://kit.fontawesome.com/6c6d99698e.js" crossorigin="anonymous"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+</head>
+<body>
+    <div class="home">
+        <h1>Closest Pair of Points</h1>
+    </div>
+
+    <section id="animation">
+        <p class="data" id="coord"></p>
+        <div class="animation__canvas">
+            <canvas id="canvas"></canvas>
+            <div class="info">
+                <span class="steps"><i class="fa-solid fa-circle-info"></i>
+                    <ol class="instructions">
+                        <li>Click anywhere inside the canvas to draw a point,
+                            or you can press random points ( <i class="fa-solid fa-shuffle"></i> )
+                        </li>
+                        <li>Click "Brute Force" to see the brute force solution
+                            ( <i class="fa-solid fa-play"></i> )
+                        </li>
+                        <li>Click "Divide & Conquer" to see the optimized solution (
+                            <i class="fa-solid fa-crown"></i> )
+                        </li>
+                        <li>Click "Random Points" to generate random points on canvas (
+                            <i class="fa-solid fa-shuffle"></i> )
+                        </li>
+                        <li>Click "Upload Points" to upload points file (
+                            <i class="fa-solid fa-upload"></i> )
+                        </li>
+                        <li>Click "Clear" to restart the animation
+                            ( <i class="fa-solid fa-rotate"></i> )
+                        </li>
+                    </ol>
+                </span>
+                <span class="items"><i class="fa-solid fa-bag-shopping"></i>
+                    <div class="points">
+                        <p id="p-add">Added Points</p>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <!-- Button Section -->
+        <div class="animation__buttons">
+            <button id="start_BF">Brute Force</button>
+            <button id="start_DyC">Divide & Conquer</button>
+            <button id="random">Random Points</button>
+            <button id="upload">Upload Points</button> <!-- Upload Button -->
+            <button id="restart">Clear</button>
+        </div>
+        <div class="animation__buttons-mobile">
+            <button id="start_BFM"><i class="fa-solid fa-play"></i></button>
+            <button id="start_DyCM"><i class="fa-solid fa-crown"></i></button>
+            <button id="randomM"><i class="fa-solid fa-shuffle"></i></button>
+            <button id="uploadM"><i class="fa-solid fa-upload"></i></button> <!-- Mobile Upload Button -->
+            <button id="restartM"><i class="fa-solid fa-rotate"></i></button>
+        </div>
+    </section>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="fileInput" style="display: none;" />
+</body>
+</html>

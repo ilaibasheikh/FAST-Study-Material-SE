@@ -1,0 +1,220 @@
+:root{
+    --main-color: #4b70b1;
+    --secondary-color: #4a80af;
+    --third-color: #69d2cd;
+    --fourth-color: #b9f1d6;
+    --fifth-color: #f1f6ce;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'QuickSand SemiBold', 'Courier New', Courier, monospace;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Welcome Secction styles */
+
+.home{
+    background: linear-gradient(to bottom, var(--main-color) 55%, var(--secondary-color));
+    text-align: center;
+    line-height: 3rem;
+}
+
+.home h1{
+    position: relative;
+    top: 35%;
+    padding: 0px 30px;
+}
+
+@keyframes borderSecuence {
+    0%{       
+        border: 2px solid transparent;
+        box-shadow: 0 0 35px 0 #777;
+    }
+
+    10%{
+        border-right: 2px solid #fff;
+        box-shadow: 0 0 35px 0 #777;
+    }
+
+    25%{
+        border-bottom: 2px solid #fff;
+        box-shadow: 0 0 35px 0 #888;
+    }
+
+    50%{
+        border-left: 2px solid #fff;
+        box-shadow: 0 0 35px 0 #999;
+    }
+
+    75%{
+        border-top: 2px solid #fff;
+        box-shadow: 0 0 35px 0 #aaa;
+    }
+
+    100%{
+        box-shadow: 0 0 35px 0 #bbb;
+    }
+}
+
+
+/* End of styles of Welcome secction  */
+
+/* Styles of canvas section */
+
+#animation{
+    height: 100vh;
+    background: var(--secondary-color);
+    position: relative;
+}
+
+.data{
+    position: absolute;
+    left: 8.5vw;
+    top: -30px;
+    font-size: 0.8em;
+}
+
+.animation__canvas{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#canvas{
+    height: 80vh;
+    width: 80vw;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background: #000;
+    cursor: crosshair;
+}
+
+/* Buttons menu on desktop */
+.animation__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.animation__buttons button{
+    margin-top: 20px;
+    background: var(--fifth-color);
+    color: #000;
+    font-size: 1.2em;
+    padding: 12px 12px;
+    border-radius: 30px;
+    border: none;
+}
+
+.animation__buttons button:hover{
+    box-shadow: 0 0 15px 0 #999;;
+}
+/* End of buttons menu on desktop */
+
+/* Buttons menu on mobile */
+.animation__buttons-mobile{
+    display: none;
+}
+
+.animation__buttons-mobile button{
+    background: var(--fifth-color);
+    padding: 15px 15px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.animation__buttons-mobile i{
+    color: #000;
+}
+
+.info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    left: calc(100% - 10vw + 15px);
+    top: 5px;
+}
+
+
+/* End of button menu on mobile */
+
+.instructions{
+    position: absolute;
+    width: 400px;
+    right: 250%;
+    top: 10px;
+    text-align: justify;
+    display: none;
+    background: #000;
+}
+
+.steps:hover > .instructions{
+        display: grid;
+}
+
+.instructions li{
+    padding: 5px 0;
+}
+
+p{
+    padding: 10px;
+}
+
+.points{
+    display: none;
+    background: #000;
+    border-top: 3px solid #fff;
+}
+
+.items:hover > .points{
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    width: 1050px;
+    right: 300%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+.points p:first-child{
+    grid-column: span 15;
+
+}
+
+.points p{
+    border-bottom: 2px solid #fff;
+    justify-self: center;
+    font-size: 10px;
+}
+
+#p-add {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .home h1{
+        top: 25%;
+    }
+
+    .animation__buttons-mobile{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .animation__buttons{
+        display: none;
+    }
+
+    #canvas {
+        height: 75vh;
+    }
+}

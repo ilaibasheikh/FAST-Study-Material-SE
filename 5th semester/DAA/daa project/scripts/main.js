@@ -1,0 +1,1 @@
+import {start_BF, restart, randomPoints, start_DyC} from "./draw.js";

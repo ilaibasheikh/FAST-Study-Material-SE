@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a1b9a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+select {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+#tree-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#tree {
+    position: relative;
+    min-width: 7000px;
+    min-height: 1200px;
+}
+
+/* Tree nodes */
+.node {
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #e0e0f8;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+
+.line {
+    position: absolute;
+    background-color: #aaa;
+    transform-origin: left center;
+    height: 2px;
+    
+}
+
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #6a1b9a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.5);
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+#file-content {
+    margin-top: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+#file-content h2 {
+    text-align: left;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}

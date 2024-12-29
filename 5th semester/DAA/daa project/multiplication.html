@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style1.css">
+    <title>Integer Multiplication Visualization</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Integer Multiplication Visualization</h1>
+        
+        <label for="data-source">Choose Data Source:</label>
+        <select id="data-source">
+            <option value="random">Random Numbers</option>
+            <option value="file">Upload File</option>
+        </select>
+        <br>
+
+        <div id="random-inputs">
+            <label for="file-length">Length of File:</label>
+            <input type="number" id="file-length" placeholder="Enter file length (e.g. 10)" />
+            <br>
+            <label for="number-length">Length of Number:</label>
+            <input type="number" id="number-length" placeholder="Enter the length of number" />
+            <br>
+        </div>
+
+        <div id="file-input" style="display:none;">
+            <label for="file-upload">Upload a File:</label>
+            <input type="file" id="file-upload" />
+        </div>
+
+        <div id="file-selection" style="display:none;">
+            <label for="file-select">Select File:</label>
+            <select id="file-select">
+                <option value="file1.txt">File 1</option>
+                <option value="file2.txt">File 2</option>
+                <option value="file3.txt">File 3</option>
+                <option value="file4.txt">File 4</option>
+                <option value="file5.txt">File 5</option>
+                <option value="file6.txt">File 6</option>
+                <option value="file7.txt">File 7</option>
+                <option value="file8.txt">File 8</option>
+                <option value="file9.txt">File 9</option>
+                <option value="file10.txt">File 10</option>
+            </select>
+        </div>
+
+        <button id="start-btn">Start</button>
+    </div>
+
+    <div class="container" id="file-content">
+        <h2>File Content</h2>
+    </div>
+
+    <div class="container">
+        <h2>Visualization</h2>
+        <div id="tree-container">
+            <div id="tree"></div>
+        </div>
+    </div>
+
+    <script src="scripts/karatsuba.js"></script>
+</body>
+</html>
