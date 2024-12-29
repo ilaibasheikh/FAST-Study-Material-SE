@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management</title>
+</head>
+<body>
+
+<h1>Item Management</h1>
+
+<!-- Create Item -->
+<h2>Create New Item</h2>
+<form action="/items" method="POST">
+    <label for="create-name">Item Name:</label>
+    <input type="text" id="create-name" name="name" required><br><br>
+
+    <label for="create-price">Item Price:</label>
+    <input type="number" id="create-price" name="price" step="0.01" required><br><br>
+
+    <input type="submit" value="Create Item">
+</form>
+
+<hr>
+
+<!-- Update Item -->
+<h2>Update Item</h2>
+<form action="/items/{id}" method="POST">
+    <label for="update-id">Item ID:</label>
+    <input type="number" id="update-id" name="id" required><br><br>
+
+    <label for="update-name">New Item Name:</label>
+    <input type="text" id="update-name" name="name" required><br><br>
+
+    <label for="update-price">New Item Price:</label>
+    <input type="number" id="update-price" name="price" step="0.01" required><br><br>
+
+    <input type="submit" value="Update Item">
+    <input type="hidden" name="_method" value="PUT">
+</form>
+
+<hr>
+
+<!-- Delete Item -->
+<h2>Delete Item</h2>
+<form action="/items/{id}" method="POST">
+    <label for="delete-id">Item ID:</label>
+    <input type="number" id="delete-id" name="id" required><br><br>
+
+    <input type="submit" value="Delete Item">
+    <input type="hidden" name="_method" value="DELETE">
+</form>
+
+<hr>
+
+<!-- View All Items -->
+<h2>View All Items</h2>
+<form action="/items" method="GET">
+    <input type="submit" value="Get All Items">
+</form>
+
+<hr>
+
+<!-- Display All Items -->
+<div id="items-list">
+    <!-- The items will be listed here after clicking "Get All Items". This requires server-side rendering. -->
+</div>
+
+</body>
+</html>

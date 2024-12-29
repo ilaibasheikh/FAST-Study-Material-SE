@@ -1,0 +1,53 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <!-- task1 Servlet -->
+  <servlet>
+    <servlet-name>task1</servlet-name>
+    <servlet-class>com.example.servlet.task1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>task1</servlet-name>
+    <url-pattern>/Calculator</url-pattern>
+  </servlet-mapping>
+
+  <!-- task2 Servlet -->
+  <servlet>
+    <servlet-name>task2</servlet-name>
+    <servlet-class>com.example.servlet.task2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>task2</servlet-name>
+    <url-pattern>/task2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>task3</servlet-name>
+    <servlet-class>com.example.servlet.task3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>task3</servlet-name>
+    <url-pattern>/task3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>task4</servlet-name>
+    <servlet-class>com.example.servlet.task4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>task4</servlet-name>
+    <url-pattern>/task4</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>task5</servlet-name>
+    <servlet-class>com.example.servlet.task5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>task5</servlet-name>
+    <url-pattern>/task5</url-pattern>
+  </servlet-mapping>
+
+</web-app>

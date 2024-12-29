@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot Login and Registration Form</title>
+</head>
+<body>
+<h2>Login or Register</h2>
+
+<!-- Login Form -->
+<form action="/task2login" method="post">
+    <label for="username">Username (Login):</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+</form>
+
+<br>
+
+<!-- Registration Form -->
+<form action="/task2register" method="post">
+    <label for="regUsername">Username (Register):</label>
+    <input type="text" id="regUsername" name="username" required>
+    <br>
+    <label for="regPassword">Password:</label>
+    <input type="password" id="regPassword" name="password" required>
+    <br>
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>

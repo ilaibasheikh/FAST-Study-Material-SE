@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot Form</title>
+</head>
+<body>
+<h2>Submit Data</h2>
+<form action="/api/submit" method="get">
+    <label for="name">Name (GET request):</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit (GET)</button>
+</form>
+<br>
+<form action="/api/submit" method="post">
+    <label for="data">Data (POST request):</label>
+    <input type="text" id="data" name="data" required>
+    <button type="submit">Submit (POST)</button>
+</form>
+</body>
+</html>
