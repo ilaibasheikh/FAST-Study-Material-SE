@@ -49,6 +49,15 @@ This repository contains course materials for the FAST-NUCES 22k batch (2022-202
 - **Software Quality Engineering**
 - **Technical and Business Writing**
 
+### 6th Semester
+- **Web Engineering**
+  - Lab
+- **Computer Networks**
+  - Lab
+- **Business Process Engineering**
+- **Applied Artifical Intelligence**
+- **Simulation and Modelling**
+  
 ## Usage
 
 You can find the materials organized by semester and course. Each course folder contains:
