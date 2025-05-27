@@ -1,0 +1,37 @@
+Regex:
+email:
+let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let mail = "test@example.com";
+if (regex.test(mail)) {
+console.log("Valid email address");
+} else {
+console.log("Invalid email address");
+}
+
+Phone:
+let regex = /^\d{10}$/;
+let phone = "1234567890";
+if (regex.test(phone)) {
+    console.log("Valid phone number");
+} else {
+    console.log("Invalid phone number");
+}
+
+Password:
+let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+let pass = "Password123";
+if (regex.test(pass)) {
+    console.log("Valid password");
+} else {
+    console.log("Invalid password");
+}
+
+
+Username:
+let regex = /^[a-zA-Z][a-zA-Z0-9_]{5,19}$/;
+let uName = "user_123";
+if (regex.test(uName)) {
+    console.log("Valid username");
+} else {
+    console.log("Invalid username");
+}
