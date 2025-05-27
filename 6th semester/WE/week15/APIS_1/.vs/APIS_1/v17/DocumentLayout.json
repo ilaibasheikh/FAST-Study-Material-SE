@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\apis_1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|solutionrelative:apis_1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week15\\apis_1\\apis_1\\controllers\\home1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|solutionrelative:apis_1\\controllers\\home1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\apis_1\\views\\home1\\getweatherfromsoap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|solutionrelative:apis_1\\views\\home1\\getweatherfromsoap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\apis_1\\views\\home\\getweather.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|solutionrelative:apis_1\\views\\home\\getweather.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\apis_1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08CF365E-900E-4747-A477-E6EE9B17D3A4}|APIS_1\\APIS_1.csproj|solutionrelative:apis_1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 278,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "APIS_1\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "APIS_1\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T17:05:55.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetWeatherFromSoap.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Views\\Home1\\GetWeatherFromSoap.cshtml",
+              "RelativeDocumentMoniker": "APIS_1\\Views\\Home1\\GetWeatherFromSoap.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Views\\Home1\\GetWeatherFromSoap.cshtml",
+              "RelativeToolTip": "APIS_1\\Views\\Home1\\GetWeatherFromSoap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T17:05:51.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetWeather.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Views\\Home\\GetWeather.cshtml",
+              "RelativeDocumentMoniker": "APIS_1\\Views\\Home\\GetWeather.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Views\\Home\\GetWeather.cshtml",
+              "RelativeToolTip": "APIS_1\\Views\\Home\\GetWeather.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T17:05:46.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "APIS_1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "APIS_1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T17:05:25.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home1Controller.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Controllers\\Home1Controller.cs",
+              "RelativeDocumentMoniker": "APIS_1\\Controllers\\Home1Controller.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week15\\APIS_1\\APIS_1\\Controllers\\Home1Controller.cs",
+              "RelativeToolTip": "APIS_1\\Controllers\\Home1Controller.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T17:05:18.958Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 122,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

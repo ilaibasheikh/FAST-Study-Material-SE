@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Weather App";
+}
+
+<h2>Weather Checker</h2>
+
+<form method="post" action="/Home/GetWeather">
+    <input type="text" name="city" placeholder="Enter city name" required />
+    <button type="submit">Get Weather</button>
+</form>
+
+@if (ViewBag.City != null)
+{
+    <h3>City: @ViewBag.City</h3>
+    <p>Temperature: @ViewBag.Temp</p>
+    <p>Wind: @ViewBag.Wind</p>
+    <p>Description: @ViewBag.Description</p>
+}

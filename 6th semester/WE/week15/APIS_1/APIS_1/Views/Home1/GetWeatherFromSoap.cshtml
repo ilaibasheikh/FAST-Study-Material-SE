@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Weather App (SOAP)";
+}
+
+<h2>Weather Checker (Using SOAP + REST)</h2>
+
+<form method="post" action="/Home1/GetWeatherFromSoap">
+    <input type="text" name="city" placeholder="Enter city name" required />
+    <button type="submit">Get Weather</button>
+</form>
+
+@if (ViewBag.City != null)
+{
+    <h3>City: @ViewBag.City</h3>
+    <p>Temperature: @ViewBag.Temp</p>
+    <p>Wind: @ViewBag.Wind</p>
+    <p>Description: @ViewBag.Description</p>
+}

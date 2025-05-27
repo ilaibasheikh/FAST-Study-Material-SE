@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .box {
+            border: 2px solid blue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            margin-top: 1px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 box ">
+                A
+            </div>
+            <div class="col-6  ">
+                <div class="row">
+                    <div class="col-6 box">
+                        B
+                    </div>
+                    <div class="col-6 box">
+                        C
+                    </div>
+                    <div class="row">
+                        <div class="col-6 box">
+                            D
+                        </div>
+                        <div class="col-6 box">
+                            E
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9 ">
+                <div class="row">
+                    <div class="col-4 box"> F</div>
+                    <div class="col-8 box"> G</div>
+                </div>
+                <div class="row">
+                    <div class="col-8 box"> I</div>
+                    <div class="col-4 box"> J</div>
+                </div>
+            </div>
+            <div class="col-3 box"> H</div>
+        </div>
+    </div>
+</body>
+
+</html>

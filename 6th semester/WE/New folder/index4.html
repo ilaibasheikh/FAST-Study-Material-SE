@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <title>Bootstrap</title>
+	
+	<style>
+	.container{ border: 5px solid #000; }
+
+.row{ border: 3px solid red; } 
+
+.col{ border: 3px solid green; }
+
+.container{ border: 0px solid #000; }
+    .row{ border: 0px solid red; } 
+
+    .col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8
+    ,.col-9,.col-10,.col-11,.col-12{
+        border: 0px solid green;
+    }
+    body{
+        background: grey;
+    }
+
+    #header{
+        background: orange;
+        padding: 10px 0 10px 10px;
+    }
+    #menu{
+        background: pink;
+        padding: 3px 0;
+    }
+    #menu ul{
+        list-style: none;
+        margin: 0;
+    }
+    #menu ul li{
+        display: inline-block;
+    }
+    #content{
+        background: white;
+    }
+    #sidebar{
+        background: lightblue;
+    }
+    #footer{
+        background: orange;
+    } 
+	
+	
+	</style>
+</head>
+<body>
+   <div class="container">
+        
+       <div class="row">
+            <div class="col-12" id="header">
+                <h1>Website Name</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="menu">
+               <ul>
+                   <li><a href="">Home</a></li>
+                   <li><a href="">About</a></li>
+                   <li><a href="">Gallery</a></li>
+                   <li><a href="">Products</a></li>
+                   <li><a href="">Contact Us</a></li>
+               </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8" id="content">
+                <h2>Sub Heading</h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec tortor efficitur dolor fringilla maximus ut vel lectus.
+                    Aliquam erat volutpat. Ut non velit malesuada, blandit tortor at, tempus est. Suspendisse feugiat, arcu vitae fringilla blandit,
+                    eros ligula feugiat ex, ac facilisis odio orci id tortor. Quisque nulla leo, commodo ac vestibulum quis, aliquet vel risus.
+                    Vivamus in venenatis quam, vitae pretium justo. Fusce condimentum scelerisque lacus sit amet hendrerit. Mauris posuere dictum
+                    tempor. Praesent id enim non lorem commodo tempus id dictum massa. Maecenas cursus mauris sit amet convallis auctor. Nunc
+                    ultricies in mi eget semper. Sed vehicula pharetra porta. Donec eget interdum orci. Nulla a eros ultricies, elementum ipsum
+                    sit amet, placerat nisi. Proin eleifend varius elit et imperdiet. Nunc at purus eu risus vestibulum pulvinar. Donec pellentesque
+                    a velit eu varius. Maecenas at consectetur lorem. Quisque nec feugiat odio.
+                </p>
+            </div>
+            <div class="col-md-4" id="sidebar">
+                 <ul>
+                   <li><a href="">Home</a></li>
+                   <li><a href="">About</a></li>
+                   <li><a href="">Gallery</a></li>
+                   <li><a href="">Products</a></li>
+                   <li><a href="">Contact Us</a></li>
+               </ul>
+            </div>
+        </div>
+        <div class="row" id="footer">
+            <div class="col-12">
+                @copyright 2020.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
