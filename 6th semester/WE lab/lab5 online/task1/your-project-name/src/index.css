@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Home Page */
+.home-page {
+  padding: 20px;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  width: 30%;
+  background: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.blog-card h3 {
+  color: #333;
+}
+
+.blog-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background-color: #282c34;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.blog-card a:hover {
+  background-color: #555;
+}
+
+/* Blog Post Page */
+.blog-post {
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.blog-post p {
+  color: #555;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

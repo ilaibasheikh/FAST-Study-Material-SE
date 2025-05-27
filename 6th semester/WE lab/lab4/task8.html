@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        #slider {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+        #slider img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <div id="slider">
+        <img src="https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGh0bWx8ZW58MHx8MHx8fDA%3D" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGh0bWx8ZW58MHx8MHx8fDA%3D" alt="Image 3">
+    </div>
+
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#slider img');
+        const totalImages = images.length;
+
+
+        function moveSlider() {
+            images.forEach((img, index) => {
+                img.style.display = 'none';
+            });
+
+
+            images[currentIndex].style.display = 'block';
+
+
+            currentIndex = (currentIndex + 1) % totalImages;
+        }
+
+
+        setInterval(moveSlider, 3000);
+        moveSlider();
+    </script>
+</body>
+</html>

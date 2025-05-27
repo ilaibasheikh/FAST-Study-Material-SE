@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-700">
+    <!--NavBar-->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md py-4 z-10">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold text-gray-800">My Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form for dynamic content update -->
+    <section class="fixed top-20 left-0 w-full bg-white py-4 shadow-md z-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-gray-800 text-center">Update Portfolio</h2>
+            <form id="updateForm" class="mt-4 flex flex-col md:flex-row items-center justify-center space-x-4">
+                <input id="nameInput" type="text" placeholder="Enter your name"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="professionInput" type="text" placeholder="Enter your profession"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="linkedinInput" type="text" placeholder="LinkedIn URL"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="githubInput" type="text" placeholder="GitHub URL"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="emailInput" type="text" placeholder="Email" class="border border-gray-400 p-2 rounded-lg">
+                <button id="updateButton" type="button"
+                    class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                    Update
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section
+        class="h-screen flex items-center justify-center text-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white mt-24">
+        <div>
+            <h2 class="text-5xl font-bold">Hi, I'm <span id="userName" class="text-yellow-300">Mahnoor</span></h2>
+            <p class="text-lg mt-4">A <span id="userProfession">Passionate Web Developer</span></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-rose-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800">Contact Me</h2>
+            <p class="mt-4 text-yellow-600">LinkedIn: <a id="userLinkedIn" href="#"
+                    class="hover:text-rose-500">https://www.linkedin.com/hom</a></p>
+            <p class="mt-4 text-yellow-600">GitHub: <a id="userGithub" href="#"
+                    class="hover:text-rose-500">https://www.github.com/hom</a></p>
+            <p class="mt-4 text-yellow-600">Email: <a id="userEmail" href="#"
+                    class="hover:text-rose-500">abc@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- JavaScript for Dynamic Update -->
+    <script>
+        document.getElementById("updateButton").addEventListener("click", function () {
+            //variable storage
+            const name = document.getElementById("nameInput").value.trim();
+            const profession = document.getElementById("professionInput").value.trim();
+            const linkedin = document.getElementById("linkedinInput").value.trim();
+            const github = document.getElementById("githubInput").value.trim();
+            const email = document.getElementById("emailInput").value.trim();
+
+            if (name) {
+                document.getElementById("userName").textContent = name;
+                console.log("Updated Name: ", name);
+            }
+            if (profession) {
+                document.getElementById("userProfession").textContent = profession;
+                console.log("Updated Profession: ", profession);
+            }
+            if (linkedin) {
+                document.getElementById("userLinkedIn").href = linkedin;
+                document.getElementById("userLinkedIn").textContent = linkedin;
+                console.log("Updated LinkedIn: ", linkedin);
+            }
+            if (github) {
+                document.getElementById("userGithub").href = github;
+                document.getElementById("userGithub").textContent = github;
+                console.log("Updated GitHub: ", github);
+            }
+            if (email) {
+                document.getElementById("userEmail").href = `mailto:${email}`;
+                document.getElementById("userEmail").textContent = email;
+                console.log("Updated Email: ", email);
+            }
+        });
+    </script>
+</body>
+
+</html>

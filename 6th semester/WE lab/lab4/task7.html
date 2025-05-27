@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form with Validation</title>
+</head>
+<body>
+    <h1>Sign-Up Form with Validation</h1>
+    <form id="signupForm">
+        <label for="username">Username (min 5 characters):</label>
+        <input type="text" id="username" required><br><br>
+
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required><br><br>
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+
+        <label for="password">Password (min 8 characters):</label>
+        <input type="password" id="password" required><br><br>
+
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female<br><br>
+
+
+        <label for="terms">Agree to Terms:</label>
+        <input type="checkbox" id="terms" required> I agree to the terms<br><br>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <h2>Entered Information:</h2>
+    <p id="displayUsername"></p>
+    <p id="displayContact"></p>
+    <p id="displayEmail"></p>
+    <p id="displayPassword"></p>
+    <p id="displayGender"></p>
+    <p id="displayTerms"></p>
+
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const displayUsername = document.getElementById('displayUsername');
+        const displayContact = document.getElementById('displayContact');
+        const displayEmail = document.getElementById('displayEmail');
+        const displayPassword = document.getElementById('displayPassword');
+        const displayGender = document.getElementById('displayGender');
+        const displayTerms = document.getElementById('displayTerms');
+
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+
+            const username = document.getElementById('username').value;
+            const contact = document.getElementById('contact').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const terms = document.getElementById('terms').checked;
+
+
+            const usernameRegex = /^[a-zA-Z0-9]{5,}$/; 
+            const contactRegex = /^[0-9]{10}$/; 
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+
+
+            if (!usernameRegex.test(username)) {
+                alert('Username must be at least 5 characters long and contain only letters and numbers.');
+                return;
+            }
+            if (!contactRegex.test(contact)) {
+                alert('Please enter a valid 10-digit contact number.');
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            if (!passwordRegex.test(password)) {
+                alert('Password must be at least 8 characters long, with at least one letter and one number.');
+                return;
+            }
+            if (!gender) {
+                alert('Please select your gender.');
+                return;
+            }
+            if (!terms) {
+                alert('You must agree to the terms and conditions.');
+                return;
+            }
+
+
+            displayUsername.textContent = "Username: " + username;
+            displayContact.textContent = "Contact: " + contact;
+            displayEmail.textContent = "Email: " + email;
+            displayPassword.textContent = "Password: " + password;
+            displayGender.textContent = "Gender: " + gender.value;
+            displayTerms.textContent = "Agreed to Terms: " + (terms ? 'Yes' : 'No');
+        });
+    </script>
+</body>
+</html>

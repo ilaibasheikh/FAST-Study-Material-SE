@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <h1>Sign-Up Form</h1>
+    <form id="signupForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+
+    <h2>Entered Information:</h2>
+    <p id="displayUsername"></p>
+    <p id="displayEmail"></p>
+    <p id="displayPassword"></p>
+
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const displayUsername = document.getElementById('displayUsername');
+        const displayEmail = document.getElementById('displayEmail');
+        const displayPassword = document.getElementById('displayPassword');
+
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            displayUsername.textContent = "Username: " + username;
+            displayEmail.textContent = "Email: " + email;
+            displayPassword.textContent = "Password: " + password;
+        });
+    </script>
+
+
+<!-- <script>
+    const form = document.getElementById('signupForm');
+    const displayUsername = document.getElementById('displayUsername');
+    const displayEmail = document.getElementById('displayEmail');
+    const displayPassword = document.getElementById('displayPassword');
+const button=document.getElementById('submit');
+
+    button.addEventListener('click', addDetails);
+
+    function addDetails(){
+
+        
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        
+        displayUsername.textContent = "Username: " + username;
+        displayEmail.textContent = "Email: " + email;
+        displayPassword.textContent = "Password: " + password;
+        
+    }
+</script> -->
+</body>
+</html>

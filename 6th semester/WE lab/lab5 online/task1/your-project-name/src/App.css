@@ -1,0 +1,67 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #333;
+}
+
+
+profilecard.js :
+// ProfileCard.js
+import React from 'react';
+import './ProfileCard.css';  // We will style this component separately
+
+// ProfileCard component that accepts props
+const ProfileCard = ({ name, email, phone }) => {
+  return (
+    <div className="profile-card">
+      <h2 className="profile-name">{name}</h2>
+      <p className="profile-email">Email: {email}</p>
+      <p className="profile-phone">Phone: {phone}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+
+css:
+/* ProfileCard.css */
+.profile-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile-email,
+  .profile-phone {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .profile-email {
+    color: #007bff;
+  }
+  
+  .profile-phone {
+    color: #28a745;
+  }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-gray-800 text-white fixed w-full z-10 top-0 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-bold text-blue-500">Your Portfolio</a>
+            <ul class="flex space-x-8">
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+                <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="fixed top-20 left-0 w-full bg-white py-4 shadow-md z-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-gray-800 text-center">Update Portfolio</h2>
+            <form id="updateForm" class="mt-4 flex flex-col md:flex-row items-center justify-center space-x-4">
+                <input id="nameInput" type="text" placeholder="Enter your name"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="professionInput" type="text" placeholder="Enter your profession"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="linkedinInput" type="text" placeholder="LinkedIn URL"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="githubInput" type="text" placeholder="GitHub URL"
+                    class="border border-gray-400 p-2 rounded-lg">
+                <input id="emailInput" type="text" placeholder="Email" class="border border-gray-400 p-2 rounded-lg">
+                <button id="updateButton" type="button"
+                    class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                    Update
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="hero" class="h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex justify-center items-center text-center">
+        <div class="max-w-2xl mx-auto px-6 py-12">
+            <h1 class="text-5xl font-bold mb-4">Hello, I'm <span id="userName">Laiba Fatima</span></h1>
+            <p class="text-lg mb-6">A <span id="userProfession">passionate web developer</span>, creating stunning websites and web apps.</p>
+            <a href="#about" class="bg-blue-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">About Me</h2>
+            <p class="text-lg text-gray-600 mb-6">I am a front-end developer with a passion for building interactive and user-friendly websites. I specialize in HTML, CSS, JavaScript, and React.</p>
+            <img src="pic.jpeg" alt="Your pic" class="mx-auto rounded-full mb-6">
+            <p class="text-lg text-gray-600">I enjoy solving problems and creating unique digital experiences. Let's work together to bring your ideas to life!</p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-gray-100">
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="netflix.png" alt="Netflix CLone" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Netflix Clone</h3>
+                    <p class="text-gray-600">Built with HTML, CSS, and JavaScript.</p>
+                    <a href="#" class="text-blue-500 mt-4 inline-block">View Project</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="ecommerce.jpg" alt="Project 2" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">E-commerce Website</h3>
+                    <p class="text-gray-600">Built using React and Node.js.</p>
+                    <a href="#" class="text-blue-500 mt-4 inline-block">View Project</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <img src="tic.png" alt="Tic Tac Toe" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Tic Tac Toe</h3>
+                    <p class="text-gray-600">Built using Javascript.</p>
+                    <a href="#" class="text-blue-500 mt-4 inline-block">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-white">
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
+                <div class="text-center">
+                    <img src="html.png" alt="HTML" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800">HTML</h3>
+                </div>
+                <div class="text-center">
+                    <img src="css.png" alt="CSS" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800">CSS</h3>
+                </div>
+                <div class="text-center">
+                    <img src="js.png" alt="JavaScript" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800">JavaScript</h3>
+                </div>
+                <div class="text-center">
+                    <img src="react.png" alt="React" class="mx-auto mb-4">
+                    <h3 class="font-semibold text-lg text-gray-800">React</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-100">
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Contact Me</h2>
+            <p class="text-lg text-gray-600 mb-6">If you'd like to collaborate or have any questions, feel free to reach out!</p>
+            <p class="text-lg text-gray-600">LinkedIn: <a id="userLinkedIn" href="#" class="text-blue-500 hover:text-blue-600">https://www.linkedin.com/in/laibafatima</a></p>
+            <p class="text-lg text-gray-600">GitHub: <a id="userGithub" href="#" class="text-blue-500 hover:text-blue-600">https://www.github.com/laibafatima</a></p>
+            <p class="text-lg text-gray-600">Email: <a id="userEmail" href="mailto:k225195@nu.edu.com" class="text-blue-500 hover:text-blue-600">k225195@nu.edu.com</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>&copy; 2025 <span id="footerName">Laiba Fatima</span>. All rights reserved.</p>
+    </footer>
+
+    
+    <script>
+        document.getElementById("updateButton").addEventListener("click", function () {
+            
+            const name = document.getElementById("nameInput").value.trim();
+            const profession = document.getElementById("professionInput").value.trim();
+            const linkedin = document.getElementById("linkedinInput").value.trim();
+            const github = document.getElementById("githubInput").value.trim();
+            const email = document.getElementById("emailInput").value.trim();
+
+            if (name) {
+                document.getElementById("userName").textContent = name;
+                document.getElementById("footerName").textContent = name; 
+                console.log("Updated Name: ", name);
+            }
+            if (profession) {
+                document.getElementById("userProfession").textContent = profession;
+                console.log("Updated Profession: ", profession);
+            }
+            if (linkedin) {
+                document.getElementById("userLinkedIn").href = linkedin;
+                document.getElementById("userLinkedIn").textContent = linkedin;
+                console.log("Updated LinkedIn: ", linkedin);
+            }
+            if (github) {
+                document.getElementById("userGithub").href = github;
+                document.getElementById("userGithub").textContent = github;
+                console.log("Updated GitHub: ", github);
+            }
+            if (email) {
+                document.getElementById("userEmail").href = `mailto:${email}`;
+                document.getElementById("userEmail").textContent = email;
+                console.log("Updated Email: ", email);
+            }
+        });
+    </script>
+</body>
+
+</html>
