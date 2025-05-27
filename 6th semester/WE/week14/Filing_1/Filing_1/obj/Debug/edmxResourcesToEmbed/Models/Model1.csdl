@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_FileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="OrderItemId" />
+    </Key>
+    <Property Name="OrderItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FilePath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OrderItem__Order__164452B1" FromRole="OrderItems" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderItems" Relationship="Self.FK__OrderItem__Order__164452B1" FromRole="Orders" ToRole="OrderItems" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserId__1367E606" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserId__1367E606" FromRole="Users" ToRole="Orders" />
+  </EntityType>
+  <Association Name="FK__OrderItem__Order__164452B1">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__UserId__1367E606">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_FileEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItem" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__OrderItem__Order__164452B1" Association="Self.FK__OrderItem__Order__164452B1">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__UserId__1367E606" Association="Self.FK__Orders__UserId__1367E606">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

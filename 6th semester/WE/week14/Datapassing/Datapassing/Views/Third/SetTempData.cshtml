@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "SetTempData";
+}
+
+<h2>SetTempData</h2>
+
+<h2>DisplayTempData</h2>
+<h1>TempData Example</h1>
+@if (TempData["Message"] != null)
+{
+    <p>@TempData["Message"]</p>
+}
+else
+{
+    <p>No TempData available.</p>
+}

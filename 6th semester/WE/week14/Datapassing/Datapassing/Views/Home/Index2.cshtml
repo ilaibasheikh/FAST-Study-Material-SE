@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h1>Product Details</h1>
+<p><strong>Product Name:</strong> @ViewData["ProductName"]</p>
+<p><strong>Price:</strong> $@ViewData["Price"]</p>
+<p>
+    <strong>Availability:</strong>
+  @{
+    var isAvailable = ViewData["IsAvailable"] != null && (bool)ViewData["IsAvailable"];
+}
+
+@if (isAvailable)
+{
+    <span>In Stock</span>
+}
+else
+{
+    <span>Out of Stock</span>
+}
+</p>
+
+

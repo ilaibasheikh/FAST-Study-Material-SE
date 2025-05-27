@@ -1,0 +1,13 @@
+﻿@{
+    var order = TempData["OrderDetails"] as Dictionary<string, object>;
+}
+
+@if (order != null)
+{
+    <p>Order ID: @order["OrderId"]</p>
+    <p>Status: @order["Status"]</p>
+}
+else
+{
+    <p>No order details available.</p>
+}

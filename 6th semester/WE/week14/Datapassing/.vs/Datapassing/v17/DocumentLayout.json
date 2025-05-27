@@ -1,0 +1,289 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\second\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\second\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\second\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\second\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\order\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\order\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\order\\ordersummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\order\\ordersummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\home\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\home\\index2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\cart\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\cart\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\views\\account\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\views\\account\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\thirdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\thirdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\secondcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\secondcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1329,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index2.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Second\\Index2.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Second\\Index2.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Second\\Index2.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Second\\Index2.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:57.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Second\\Index.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Second\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Second\\Index.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Second\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:55.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlaceOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Order\\PlaceOrder.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Order\\PlaceOrder.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Order\\PlaceOrder.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Order\\PlaceOrder.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:51.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderSummary.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Order\\OrderSummary.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Order\\OrderSummary.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Order\\OrderSummary.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Order\\OrderSummary.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:48.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index2.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Home\\Index2.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Home\\Index2.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Home\\Index2.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Home\\Index2.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:45.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:43.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ViewCart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Cart\\ViewCart.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Cart\\ViewCart.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Cart\\ViewCart.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Cart\\ViewCart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:19.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:14.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:22:08.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Datapassing\\Views\\Account\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Views\\Account\\Dashboard.cshtml",
+              "RelativeToolTip": "Datapassing\\Views\\Account\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-22T18:21:53.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ThirdController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\ThirdController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\ThirdController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\ThirdController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\ThirdController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:21:49.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SecondController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\SecondController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\SecondController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\SecondController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\SecondController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:21:42.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:21:40.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:21:33.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:20:21.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_FileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OrderItems">
+    <Key>
+      <PropertyRef Name="OrderItemId" />
+    </Key>
+    <Property Name="OrderItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="FilePath" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__OrderItem__Order__164452B1">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__UserId__1367E606">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_FileModelStoreContainer">
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__OrderItem__Order__164452B1" Association="Self.FK__OrderItem__Order__164452B1">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__UserId__1367E606" Association="Self.FK__Orders__UserId__1367E606">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+<h1>Product Details</h1>
+<p><strong>Product Name:</strong> @ViewBag.ProductName</p>
+<p><strong>Price:</strong> $@ViewBag.Price</p>
+<h3>Features:</h3>
+<ul>
+    @foreach (var feature in ViewBag.Features)
+    {
+        <li>@feature</li>
+    }
+</ul>
+
+
+
+

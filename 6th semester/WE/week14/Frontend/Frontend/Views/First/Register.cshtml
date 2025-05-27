@@ -1,0 +1,37 @@
+﻿@model Frontend.Models.Student
+
+@{
+    ViewBag.Title = "Student Registration";
+}
+
+<h2>Student Registration</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div>
+        @Html.Label("Gender")
+        @Html.RadioButton("Gender", "Male") Male
+        @Html.RadioButton("Gender", "Female") Female
+    </div>
+
+    <div>
+        @Html.CheckBoxFor(m => m.IsEnrolled)
+        @Html.LabelFor(m => m.IsEnrolled, "Already Enrolled?")
+    </div>
+
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+}

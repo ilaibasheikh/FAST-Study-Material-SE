@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework</id>
+    <version>6.5.1</version>
+    <title>EntityFramework</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>https://www.nuget.org/packages/EntityFramework/6.5.1/license</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkID=263480</projectUrl>
+    <iconUrl>https://api.nuget.org/v3-flatcontainer/entityframework/6.5.1/icon</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Entity Framework 6 (EF6) is a tried and tested object-relational mapper for .NET with many years of feature development and stabilization.</description>
+    <summary />
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>Microsoft EntityFramework EF Database Data O/RM ADO.NET</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework="Unsupported0.0">
+        <dependency id="Microsoft.CSharp" version="4.7.0" />
+        <dependency id="System.CodeDom" version="6.0.0" />
+        <dependency id="System.ComponentModel.Annotations" version="5.0.0" />
+        <dependency id="System.Configuration.ConfigurationManager" version="6.0.1" />
+        <dependency id="System.Data.SqlClient" version="4.8.6" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework=".NETFramework4.0.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

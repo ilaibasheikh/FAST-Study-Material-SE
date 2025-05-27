@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ShowNotification";
+}
+
+<h2>ShowNotification</h2>
+<h1>Notification</h1>
+@if (TempData["Notification"] != null)
+{
+    <p>@TempData["Notification"]</p>
+    <a href="@Url.Action("ConfirmNotification", "Product")">Confirm</a>
+}
+
+
+
+

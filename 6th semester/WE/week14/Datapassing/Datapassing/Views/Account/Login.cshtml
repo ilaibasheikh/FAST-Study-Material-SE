@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<h1>Login</h1>
+<form action="@Url.Action("Login", "Account")" method="post">
+    <button type="submit">Log In</button>
+</form>
+@if (Session["UserName"] == null)
+{
+    <p>You are logged out.</p>
+}

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Filing_1.Models.OrderDetailViewModel>
+
+<h2>Order Details</h2>
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>File</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Username</td>
+            <td>@item.Email</td>
+            <td>@item.ProductName</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
+            <td>@item.Status</td>
+            <td>@item.OrderDate</td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.FilePath))
+                {
+                    <a href="@Url.Content(item.FilePath)" target="_blank">Download</a>
+                }
+            </td>
+        </tr>
+    }
+</table>

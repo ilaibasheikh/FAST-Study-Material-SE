@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "HTML Helper Demo";
+}
+
+<h2>HTML Helpers (No Model)</h2>
+
+@using (Html.BeginForm("SubmitForm", "First", FormMethod.Post))
+{
+    <div>
+        @Html.Label("name", "Full Name:")
+        @Html.TextBox("name", null, new { @class = "form-control", placeholder = "Enter name" })
+    </div>
+
+    <div>
+        @Html.Label("email", "Email Address:")
+        @Html.TextBox("email", null, new { type = "email", @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.Label("password", "Password:")
+        @Html.Password("password", null, new { @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.Label("gender", "Gender:")
+        <br />
+        @Html.RadioButton("gender", "Male") Male
+        @Html.RadioButton("gender", "Female") Female
+    </div>
+
+    <div>
+        @Html.Label("course", "Select Course:")
+        @Html.DropDownList("course", new SelectList(
+            new List<string> { "C#", "Java", "Python" }
+        ), "-- Select --", new { @class = "form-control" })
+    </div>
+
+    <div>
+        @Html.CheckBox("agree") I agree to terms
+    </div>
+
+    <div>
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+}

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+<h1>Welcome to the Dashboard</h1>
+@if (Session["IsLoggedIn"] != null && (bool)Session["IsLoggedIn"])
+{
+    <p>Hello, @Session["UserName"]!</p>
+}
+else
+{
+    <p>Please log in to access the dashboard.</p>
+}
+
+
+
+

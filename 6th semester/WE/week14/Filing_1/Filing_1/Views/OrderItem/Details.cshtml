@@ -1,0 +1,65 @@
+﻿@model Filing_1.Models.OrderItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderItem</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.FilePath))
+            {
+                <a href="@Url.Content(Model.FilePath)" target="_blank">Download File</a>
+            }
+            else
+            {
+                <span>No file uploaded</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderItemId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

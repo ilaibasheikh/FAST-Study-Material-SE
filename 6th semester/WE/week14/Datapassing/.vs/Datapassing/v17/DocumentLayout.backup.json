@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|c:\\users\\hp\\desktop\\6th semester\\we\\week14\\datapassing\\datapassing\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D59AC5A-D7D2-42C2-898C-70474BDC008E}|Datapassing\\Datapassing.csproj|solutionrelative:datapassing\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1329,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Datapassing\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\6th semester\\WE\\week14\\Datapassing\\Datapassing\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Datapassing\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T18:20:21.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

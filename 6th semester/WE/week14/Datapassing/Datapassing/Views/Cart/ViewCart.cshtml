@@ -1,0 +1,17 @@
+﻿@{
+    var cartItems = Session["CartItems"] as List<string>;
+}
+
+<ul>
+    @if (cartItems != null && cartItems.Count > 0)
+    {
+        foreach (var item in cartItems)
+        {
+            <li>@item</li>
+        }
+    }
+    else
+    {
+        <li>Your cart is empty.</li>
+    }
+</ul>

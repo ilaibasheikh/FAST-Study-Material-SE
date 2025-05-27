@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Status";
+}
+
+
+
+<h1>Account Status</h1>
+@if (ViewBag.IsLoggedIn)
+{
+    <p>Welcome, @ViewBag.UserName!</p>
+}
+else
+{
+    <p>Please log in to access your account.</p>
+}
