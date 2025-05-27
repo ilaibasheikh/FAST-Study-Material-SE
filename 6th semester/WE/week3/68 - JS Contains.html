@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        h2{ margin: 0 0 10px; }
+        #test{
+            background: #ffff00;
+            width: 800px;
+            min-height: 250px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <h2>Yahoo Baba : JavaScript Contains Method</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo corporis adipisci alias cupiditate officiis consequatur, fuga, amet quos numquam perferendis saepe labore dolorem reiciendis reprehenderit facilis repudiandae praesentium quis delectus voluptates, repellendus recusandae. Itaque consequuntur, corrupti quasi illum iusto perferendis autem blanditiis magni eum, repellendus architecto ratione ipsum molestiae laboriosam.
+        </p>
+        <div> 
+            <p id="abc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni vel inventore    illum facere tenetur eveniet quam ex nemo eum. Dolorum suscipit corrupti asperiores dicta inventore debitis facilis amet totam neque reprehenderit minima ratione corporis quasi aperiam iusto consectetur nostrum enim optio, quas rerum doloribus nesciunt dolor deleniti. Ea, minima.
+            </p>
+        </div>
+    </div>
+    <script>
+        
+        /* JavaScript Contains Method*/
+
+var parentElement = document.getElementById("test");
+
+var target = document.getElementById("abc");
+
+var find = parentElement.contains(target);
+
+console.log(find);
+
+    </script>
+</body>
+</html>

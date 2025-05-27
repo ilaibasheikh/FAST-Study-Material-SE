@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript Animation</title>
+	<style>
+		#test{
+			width:150px;
+			height:150px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="test"></div>
+	<script>
+		var a = 0;
+var id = setInterval(Anim,500);
+
+function Anim(){
+	a = a + 10;
+	if(a == 200){
+		clearInterval(id);
+	}else{
+		var target = document.getElementById("test");
+		//target.style.marginLeft = a + 'px';
+		target.style.width = a + 'px';
+	}
+}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+----library. Js File ------
+let message = "ES6 Modules";
+function user(name){
+return 'Hello ${name}`;
+}
+
+
+class test{
+constructor(){
+console.log("Constructor Method");
+}
+}
+
+
+----Main. Js File ------
+export { message, user, test }
+import message, user, test } from "./library.js";
+console.log(message);
+console.log(user("Yahoo Baba"));
+let a new test();
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advance JS</title>
+<script type="module" src="./main.js"></script>
+</head>
+<body>
+</body>
+</html>

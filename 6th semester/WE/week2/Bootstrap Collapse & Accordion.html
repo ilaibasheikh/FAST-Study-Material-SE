@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+	.accordion .btn{
+    background: green;
+    color: white;
+}
+.accordion .btn.collapsed{
+    background: red;
+}
+	</style>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#newBtn').click(function () {
+                $('#newCollapse').collapse('toggle');
+            })
+
+            $('#closeBtn').click(function () {
+                $('#newCollapse').collapse('hide');
+            })
+
+            $('#newCollapse').on('show.bs.collapse', function () {
+                alert("Show");
+            })
+
+            $('#newCollapse').on('hide.bs.collapse', function () {
+                alert("Hide");
+            })
+
+            $('#newCollapse').on('hidden.bs.collapse', function () {
+                alert("Hidden");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Collapse & Accordion</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-7 py-3">
+                <button id="newBtn" class="btn btn-primary">Open</button>
+                <button id="closeBtn" class="btn btn-primary">Close</button>
+
+                <div id="newCollapse" class="collapse">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsa accusantium officiis quos ratione quam dolor atque
+                        odit animi itaque.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn btn-link btn-block text-left" data-toggle="collapse" data-target="#collapseOne">Heading Number One</button>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsa accusantium officiis quos ratione quam dolor atque
+                                odit animi itaque.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapseTwo">Heading Number Two</button>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsa accusantium officiis quos ratione quam dolor atque
+                                odit animi itaque.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" data-target="#collapseThree">Heading Number Three</button>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsa accusantium officiis quos ratione quam dolor atque
+                                odit animi itaque.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

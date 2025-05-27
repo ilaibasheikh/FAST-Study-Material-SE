@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            /*$('#showBtn').click(function(){
+                $('#myModal').modal('show');
+            })
+
+            $('#closeModal').click(function(){
+                $('#myModal').modal('hide');
+            })
+
+            $('#myModal').on('shown.bs.modal',function(){
+                alert('Shown');
+            })
+
+            $('#myModal').on('hide.bs.modal',function(){
+                alert('Hide');
+            })
+
+            $('#myModal').on('hidePrevented.bs.modal',function(){
+                alert('Prevented');
+            })*/
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Modal</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-3">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch Modal</button>
+                <button id="showBtn" class="btn btn-success">Click</button>
+                <div class="modal fade" id="myModal" tabindex="-1" data-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal Title</h5>
+                                <button class="close" id="closeModal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6">Col A</div>
+                                        <div class="col-md-6">Col B</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, delectus.</div>
+                                        <div class="col-md-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, est.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

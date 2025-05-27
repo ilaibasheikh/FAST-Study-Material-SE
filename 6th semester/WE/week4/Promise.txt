@@ -1,0 +1,75 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advance JS</title>
+<script>
+let complete = true;
+let prom = new Promise(function(resolve, reject){ 
+	if(complete){
+		resolve("I am successfull.");
+	}
+	else{
+		reject("I am failed.");
+	}
+});
+console.log(prom);
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advance JS</title>
+<script>
+function prom(complete){
+return new Promise(function(resolve, reject){ 
+	if(complete){
+		resolve("I am successfull.");
+	}
+	else{
+		reject("I am failed.");
+	}
+});
+
+}
+
+
+console.log(prom(false));
+
+
+
+</script>
+</head>
+<body>
+</body>
+
+
+function prom (complete) {
+return new Promise(function(resolve, reject){
+if(complete) {
+resolve("I am successfull.");
+}else{
+reject("I am failed.");
+}
+});
+let onfulfilment = (result) => { console.log(result);
+}
+let onRejection = (error) => { console.log(error);
+}
+prom(true).then (onfulfilment);
+prom(true).then(onRejection);
+
+
+
+
+Promise.all([p1, p2,p3]).then((result) =>{
+console.log(Results: ${result}`);
+}).catch((error) => {
+console.log("Error: ${error}`);
+});

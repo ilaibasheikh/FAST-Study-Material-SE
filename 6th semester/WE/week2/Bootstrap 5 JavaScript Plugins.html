@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap 5</h2>
+        <div class="row py-5">
+            <div class="col">
+                <div id="myCarousel" class="carousel slide carousel-fade mb-3">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/1.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/2.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/3.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var myCarousel = document.querySelector('#myCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 2000,
+            wrap: false
+        })
+
+        myCarousel.addEventListener('slide.bs.carousel', function () {
+            alert(1);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#myToast").toast({
+                autohide: false,
+                animation: false
+            });
+
+            $("#myToast").on('shown.bs.toast', function () {
+                alert('Shown');
+            });
+
+            $("#myToast").on('hidden.bs.toast', function () {
+                alert('Hidden');
+            });
+
+            $('#showBtn').click(function () {
+                $("#myToast").toast('show');
+            });
+
+            $('#hideBtn').click(function () {
+                $('#myToast').toast('hide');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Toasts</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-4">
+                <button id="showBtn" class="btn btn-primary">Show</button>
+                <button id="hideBtn" class="btn btn-danger">Hide</button>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute;top:20px;right:20px;">
+        <div class="toast mb-3" id="myToast">
+            <div class="toast-header">
+                <img class="rounded mr-2" src="images/bootstrap-logo.svg" width="20px" alt="">
+                <b class="mr-auto">Bootstrap Toast</b>
+                <small class="text-muted">1 Sec ago</small>
+                <button class="close ml-2" data-dismiss="toast">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, voluptatem.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

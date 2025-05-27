@@ -1,0 +1,78 @@
+<!DOCTYPE HTML!>
+<html>
+<head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+  theme: {
+	 screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
+	
+    extend: {
+       screens: {
+        'xs': { 'min': '320px','max':'576px'},
+        // => @media (min-height: 800px) { ... }
+      },
+	  colors: {
+        'regalblue': '#FF5733',
+		 'regalkchb': '#FFBE33 ',
+      },
+	  
+    }
+  }
+}
+  
+  </script>
+</head>
+
+
+
+</head>
+
+<body>
+
+
+<p class="text-blue-100">The quick brown fox...</p>
+<p class="text-blue-600/[.06]">The quick brown fox...</p>
+
+<p class="text-regalblue">
+sdasdasd
+</p>
+<h1 class="text-regalkchb  md:text-center py-10 xs:text-center">
+sdasdasd
+</h1>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

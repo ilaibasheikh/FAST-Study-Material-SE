@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#closeBtn").click(function () {
+                $("#redbox").alert('close');
+            })
+
+            $("#redbox").on("close.bs.alert", function () {
+                alert("Close");
+            })
+
+            $("#redbox").on("closed.bs.alert", function () {
+                alert("Closed");
+            })
+        });
+    </script>
+		<style>
+	.container{ border: 5px solid #000; }
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Alert</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-7">
+                <div class="alert alert-primary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, debitis.
+                    <button class="close" data-dismiss="alert">
+                        <span>&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="alert alert-success">
+                    Lorem ipsum dolor
+                    <a class="alert-link" href="">sit amet, consectetur</a> adipisicing elit. Laborum, debitis.
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div id="redbox" class="alert alert-danger">
+                    <h3 class="alert-heading">Heading Goes Here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem omnis aut accusamus delectus molestiae
+                        distinctio culpa optio provident blanditiis quae fuga, non dolorem necessitatibus, nihil similique
+                        neque? Rerum eos fuga enim sunt dolor quibusdam cum laborum, nesciunt molestias, repellendus at repudiandae,
+                        optio laudantium dolore, magnam itaque tempore. Aliquid hic veritatis iure cumque qui illum, quasi
+                        repudiandae, voluptates aspernatur quis unde sed aliquam repellat magnam adipisci placeat sunt, doloremque
+                        molestias ipsum tempore dignissimos quidem saepe, nemo! Eum tempore velit consectetur cumque ipsum,
+                        ullam natus. Eius harum consequatur corporis possimus, a nobis voluptas natus optio eligendi ex,
+                        vitae porro cum veritatis fugit?</p>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque dolorum libero aliquam necessitatibus
+                        eos voluptatem nihil alias consequatur voluptas deleniti!
+                    </p>
+                </div>
+                <button class="btn btn-danger" id="closeBtn">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

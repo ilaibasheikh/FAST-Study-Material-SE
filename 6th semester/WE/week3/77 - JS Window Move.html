@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="openWindow()">Open Window</button>	
+ 	<button onclick="moveWindow()">Move Window</button>
+ 	<script>
+ 		/* JavaScript MoveBy And MoveTo Window Method */
+ 		var myWindow;
+ 		function openWindow(){
+ 			myWindow = window.open("","","width=500px,height=200px,left=100px,top=100px");
+ 			myWindow.document.write("<p>This is my Window.</p>")
+ 		}
+
+ 		/*function moveWindow(){
+			myWindow.moveTo(200,200);
+			myWindow.focus();
+ 		}*/
+
+ 		function moveWindow(){
+			myWindow.moveBy(200,200);
+			myWindow.focus();
+ 		}
+ 	</script>
+</body>
+</html>

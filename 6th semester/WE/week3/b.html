@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic CSS and Classes</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px;
+      display: inline-block;
+      text-align: center;
+      line-height: 200px;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+    .highlight {
+      background-color: yellow;
+      border: 2px solid red;
+    }
+    .large-text {
+      font-size: 30px;
+    }
+    .resizable {
+      resize: both;
+      overflow: auto;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic CSS and Classes</h1>
+
+  <!-- Box for class and CSS manipulation -->
+  <div id="box1" class="box">Box 1</div>
+  <div id="box2" class="box">Box 2</div>
+
+  <!-- Buttons for applying classes and CSS -->
+  <button id="addClassBtn">Add Highlight Class</button>
+  <button id="removeClassBtn">Remove Highlight Class</button>
+  <button id="toggleClassBtn">Toggle Large Text Class</button>
+  <button id="changeColorBtn">Change Background Color</button>
+  <button id="resizeBtn">Toggle Resizable Box</button>
+
+  <script>
+    // Get references to elements
+    const box1 = document.getElementById('box1');
+    const box2 = document.getElementById('box2');
+    const addClassBtn = document.getElementById('addClassBtn');
+    const removeClassBtn = document.getElementById('removeClassBtn');
+    const toggleClassBtn = document.getElementById('toggleClassBtn');
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const resizeBtn = document.getElementById('resizeBtn');
+
+    // Add class on button click
+    addClassBtn.addEventListener('click', () => {
+      box1.classList.add('highlight');
+    });
+
+    // Remove class on button click
+    removeClassBtn.addEventListener('click', () => {
+      box1.classList.remove('highlight');
+    });
+
+    // Toggle class on button click
+    toggleClassBtn.addEventListener('click', () => {
+      box1.classList.toggle('large-text');
+    });
+
+    // Change CSS property on button click
+    changeColorBtn.addEventListener('click', () => {
+      box2.style.backgroundColor = 'lightgreen';
+      box2.style.color = 'darkblue';
+    });
+
+    // Toggle resizable div on button click
+    resizeBtn.addEventListener('click', () => {
+      box2.classList.toggle('resizable');
+    });
+
+    // Add hover effect using JavaScript
+    box1.addEventListener('mouseenter', () => {
+      box1.style.transform = 'scale(1.1)';
+    });
+    box1.addEventListener('mouseleave', () => {
+      box1.style.transform = 'scale(1)';
+    });
+  </script>
+</body>
+</html>

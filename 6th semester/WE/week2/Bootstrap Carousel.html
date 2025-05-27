@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+	.carousel-inner h5,
+.carousel-inner p{
+    color: #000;
+    background: #fff;
+}
+	</style>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('.carousel').carousel({
+                interval: 2000
+            });
+
+            $('#nextBtn').click(function () {
+                $('#myCarousel').carousel('next');
+            })
+
+            $('#prevBtn').click(function () {
+                $('#myCarousel').carousel('prev');
+            })
+
+            $('#pauseBtn').click(function () {
+                $('#myCarousel').carousel('pause');
+            })
+
+            $('#cycleBtn').click(function () {
+                $('#myCarousel').carousel('cycle');
+            })
+
+            $('#oneBtn').click(function () {
+                $('#myCarousel').carousel(0);
+            })
+            
+            $('#twoBtn').click(function () {
+                $('#myCarousel').carousel(1);
+            })
+            $('#threeBtn').click(function () {
+                $('#myCarousel').carousel(2);
+            })
+
+            /*$('#myCarousel').on('slid.bs.carousel',function(){
+             alert(1);
+            })*/
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Carousel</h2>
+        <div class="row py-3">
+            <div class="col">
+                <div id="myCarousel" class="carousel slide carousel-fade mb-3">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/1.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/2.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/3.jpg" class="d-block w-100" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third Slide Label</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <button id="prevBtn">Prev</button>
+                <button id="nextBtn">Next</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="cycleBtn">Cycle</button>
+                <button id="oneBtn">1</button>
+                <button id="twoBtn">2</button>
+                <button id="threeBtn">3</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript</title>
+  <script>
+    var a = {
+            fname : 'Yahoo',
+            lname : 'Baba',
+            age : 25,
+            email: 'hello@yahoobaba.net',
+            favMovies: ['Dhoom', 'Sholay', 'Hum'],
+            living : {
+                'city' : 'Chandigarh',
+                'country' : 'India'
+            },
+            salary : function(){
+                return 25000;
+            },
+            fullname : function(){
+                return this.fname + " " + this.lname;
+            }
+        }
+   
+        document.write(a.fname + "<br>");
+        document.write(a.lname + "<br>");
+        document.write(a.age + "<br>");
+        document.write(a.email + "<br>");
+        document.write(a.favMovies + "<br>");
+        document.write(a.favMovies[0] + "<br>");
+        document.write(a.favMovies[1] + "<br>");
+        document.write(a.favMovies[2] + "<br>");
+        document.write(a.living.city + "<br>");
+        document.write(a.salary() + "<br>");
+        document.write(a.fullname() + "<br>");
+  </script>
+</head>
+<body>
+</body>
+</html>
+

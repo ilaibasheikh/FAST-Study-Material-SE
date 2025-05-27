@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+        button { padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Order Form</h2>
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="orderBody">
+            <!-- Rows will be added here dynamically -->
+        </tbody>
+    </table>
+    
+    <button onclick="addRow()">+ Add Row</button>
+    <h3>Total Order Sum: <span id="totalSum">0</span></h3>
+
+    <script>
+        function addRow() {
+            let table = document.getElementById("orderBody");
+            let row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td><input type="text" placeholder="Product Name"></td>
+                <td><input type="number" class="price" value="0" min="0" oninput="calculateRowTotal(this)"></td>
+                <td><input type="number" class="qty" value="1" min="1" oninput="calculateRowTotal(this)"></td>
+                <td class="total">0</td>
+                <td><button onclick="removeRow(this)">- Remove</button></td>
+            `;
+            table.appendChild(row);
+            updateTotalSum();
+        }
+
+        function removeRow(button) {
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            updateTotalSum();
+        }
+
+        function calculateRowTotal(input) {
+            let row = input.parentNode.parentNode;
+            let price = row.querySelector(".price").value;
+            let qty = row.querySelector(".qty").value;
+            let totalCell = row.querySelector(".total");
+
+            let total = price * qty;
+            totalCell.textContent = total;
+
+            updateTotalSum();
+        }
+
+        function updateTotalSum() {
+            let sum = 0;
+            document.querySelectorAll(".total").forEach(cell => {
+                sum += parseFloat(cell.textContent);
+            });
+            document.getElementById("totalSum").textContent = sum;
+        }
+
+        // Initialize with 3 rows
+        for (let i = 0; i < 3; i++) addRow();
+    </script>
+
+</body>
+</html>

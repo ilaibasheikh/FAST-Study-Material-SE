@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Custom Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	
+	<style>
+	.container{ border: 5px solid #000; }
+	</style>
+</head>
+
+<body>
+    <div class="container mb-5">
+        <h2 class="py-3 text-center">Bootstrap Input Group Classes</h2>
+        <div class="row py-3">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="User Name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary">SignIn</button>
+                        <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item">Link One</a>
+                            <a href="" class="dropdown-item">Link Two</a>
+                            <a href="" class="dropdown-item">Link Three</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Mr.</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="First Name">
+                    <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <input type="checkbox">
+                        </span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <input type="radio">
+                        </span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <select name="" id="" class="custom-select">
+                        <option value="">One</option>
+                        <option value="">Two</option>
+                        <option value="">Three</option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary">Click</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input">
+                        <label class="custom-file-label">Choose File</label>
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@yahoobaba.net</span>
+                    </div>
+                </div>
+                <div class="input-group input-group-lg mb-3">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@yahoobaba.net</span>
+                    </div>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@yahoobaba.net</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

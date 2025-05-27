@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        #test{
+            background: #ffff00;
+            width: 800px;
+            height: 200px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam eos vel consequatur. Delectus voluptas
+            dolorem id exercitationem, ad ipsam consectetur hic ullam provident! Adipisci exercitationem ipsam rerum sunt
+            doloremque magni soluta, delectus maiores, sapiente quasi labore praesentium accusamus earum cum nam saepe qui?
+            Accusamus provident quo perferendis sint sed.</p>
+    </div>
+    <script>
+        
+        //  insertAdjacentElement Method
+
+var newElement = document.createElement("h2");
+
+var newText = document.createTextNode("This is just element");
+
+newElement.appendChild(newText);
+
+var target = document.getElementById("test");
+
+target.insertAdjacentElement("afterbegin",newElement);
+
+
+//  insertAdjacentHTML Method
+
+var newElement = "<h2>This is just Html</h2>";
+
+var target = document.getElementById("test");
+
+target.insertAdjacentHTML("afterend",newElement);
+
+//  insertAdjacentText Method
+
+var newText = "<h2>This is just Text</h2>";
+
+var target = document.getElementById("test");
+
+target.insertAdjacentHTML("beforeend",newText);
+
+    </script>
+</body>
+</html>

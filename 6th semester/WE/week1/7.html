@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Styles with CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: navy;
+            text-align: center;
+        }
+        .highlight {
+            color: white;
+            background-color: darkorange;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #unique-paragraph {
+            font-style: italic;
+            border-left: 4px solid green;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Styling with CSS</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: red; font-size: 18px;">
+        This paragraph uses inline CSS to change the text color to red.
+    </p>
+
+    <p class="highlight">
+        This paragraph uses a CSS class to add a background and padding.
+    </p>
+
+    <p id="unique-paragraph">
+        This paragraph is styled using an ID selector with a border.
+    </p>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <p class="external-style">
+        This paragraph is styled using an external CSS file.
+    </p>
+</body>
+</html>

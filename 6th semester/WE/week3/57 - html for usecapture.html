@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Layout</title>
+		<style>
+			#outer{
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+				background: LIGHTSALMON;
+			}
+			#inner{
+				width: 300px;
+				height: 300px;
+				margin: 100px auto 0;
+				background: MEDIUMORCHID;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<h2>Outer</h2>
+      <div id="inner">
+				<h2>Inner</h2>
+      </div>
+    </div>
+		<script>
+			
+			document.querySelector("#inner").addEventListener('click',function(){
+  alert('Inner Div');
+},false);
+
+document.querySelector("#outer").addEventListener('click',function(){
+  alert('Outer Div');
+},false);
+
+		</script>
+	</body>
+</html>

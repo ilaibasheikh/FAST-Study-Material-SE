@@ -1,0 +1,39 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advance JS</title>
+<script>
+async function test(){
+return "Hello";
+}
+test().then((result) => {
+console.log(result);
+});
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advance JS</title>
+<script>
+async function test(){
+console.log("2 : Message");
+await console.log("3: Message");
+console.log("4 : Message");
+console.log("1 : Message");
+test();
+
+console.log("5: Message");
+</script>
+</head>
+<body>
+</body>
+</html>

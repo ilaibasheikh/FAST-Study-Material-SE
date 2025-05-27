@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#myTab a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+
+            $('#myTab a').on('shown.bs.tab', function (e) {
+                console.log(e.target);
+                console.log(e.relatedTarget);
+            })
+
+            $('#myTab a').on('hide.bs.tab', function (e) {
+                alert('Hide');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Tabs</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-6">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content py-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nesciunt.
+                    </div>
+                    <div class="tab-pane fade" id="profile">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit harum est minima veritatis consequuntur, illo mollitia
+                        corrupti ad aspernatur architecto. Natus aspernatur ex voluptatibus nostrum dignissimos cumque, reprehenderit
+                        placeat!
+                    </div>
+                    <div class="tab-pane fade" id="contact">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, magni, accusantium. Voluptas tempora at impedit hic enim
+                        nisi officiis, ipsa.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav nav-pills" id="pills-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#home1">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#profile1">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#contact1">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content py-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nesciunt.
+                    </div>
+                    <div class="tab-pane fade" id="profile1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit harum est minima veritatis consequuntur, illo mollitia
+                        corrupti ad aspernatur architecto. Natus aspernatur ex voluptatibus nostrum dignissimos cumque, reprehenderit
+                        placeat!
+                    </div>
+                    <div class="tab-pane fade" id="contact1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, magni, accusantium. Voluptas tempora at impedit hic enim
+                        nisi officiis, ipsa.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <ul class="nav nav-pills flex-column" id="vertical-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#home2">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#profile2">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#contact2">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <div class="tab-content py-3" id="vertical-TabContent">
+                    <div class="tab-pane fade show active" id="home2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, nesciunt.
+                    </div>
+                    <div class="tab-pane fade" id="profile2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus sit harum est minima veritatis consequuntur, illo mollitia
+                        corrupti ad aspernatur architecto. Natus aspernatur ex voluptatibus nostrum dignissimos cumque, reprehenderit
+                        placeat!
+                    </div>
+                    <div class="tab-pane fade" id="contact2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, magni, accusantium. Voluptas tempora at impedit hic enim
+                        nisi officiis, ipsa.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

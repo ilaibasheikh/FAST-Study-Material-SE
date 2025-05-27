@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form Events</title>
+</head>
+<body>
+	<form action="">
+		<label for="">Name</label><input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputFunction(this)"><br><br>
+
+		<label for="">Class</label><input type="text" id="" onfocus="focusFunction(this)" onblur="blurFunction(this)"><br><br>
+
+		<select id="" onfocus="focusFunction(this)" onblur="blurFunction(this)">
+			<option value="">India</option>
+			<option value="">Pakistan</option>
+			<option value="">Bangladesh</option>
+			<option value="">Sri Lanka</option>
+			<option value="">Nepal</option>
+		</select>
+		<br>
+	</form>
+
+	<div id="test" style="border:1px solid red"></div>
+	<script>
+		/*  JavaScript Focus Event  */
+
+		function focusFunction(element){
+			element.style.background = "lime";
+		} 
+
+		/*  JavaScript Blur Event  */
+			function blurFunction(element){
+				element.style.background = "";
+			} 
+
+		/*  JavaScript Input Event  */
+			function inputFunction(element){
+				var x = element.value;
+				document.getElementById("test").innerHTML = x;
+			} 
+	</script>
+</body>
+</html>

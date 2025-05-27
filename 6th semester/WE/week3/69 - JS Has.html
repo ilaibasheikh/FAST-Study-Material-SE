@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        h2{ margin: 0 0 10px; }
+        #test{
+            background: #ffff00;
+            width: 800px;
+            min-height: 250px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test" class="abc">
+        <h2>Yahoo Baba : JavaScript hasAttribute Method</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo corporis adipisci alias cupiditate officiis consequatur, fuga, amet quos numquam perferendis saepe labore dolorem reiciendis reprehenderit facilis repudiandae praesentium quis delectus voluptates, repellendus recusandae. Itaque consequuntur, corrupti quasi illum iusto perferendis autem blanditiis magni eum, repellendus architecto ratione ipsum molestiae laboriosam.
+        </p>
+         <h2>Yahoo Baba : JavaScript hasChildNodes Method</h2>
+    </div>
+    <script>
+        /* JavaScript hasAttribute*/
+
+var target  = document.getElementById("test");
+
+var find = target.hasAttribute("class");
+
+console.log(find);
+
+
+/* JavaScript hasChildNodes*/
+
+var target  = document.getElementById("test");
+
+var find = target.hasChildNodes();
+
+console.log(find);
+        
+    </script>
+</body>
+</html>

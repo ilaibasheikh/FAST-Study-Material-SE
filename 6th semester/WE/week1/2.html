@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes Demo</title>
+    <style>
+        .highlight { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading" class="highlight" title="Main Heading">HTML Attributes Demo</h1>
+
+    <p style="color:blue;" title="This is a tooltip">This paragraph uses inline CSS styling and a title attribute.</p>
+
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" title="Go to Example">Visit Example</a>
+
+    <img src="image.jpg" alt="Example Image" width="300" height="200" title="Sample Image">
+
+    <input type="text" placeholder="Enter your name" value="John Doe" readonly>
+
+    <button onclick="alert('Button Clicked!')" disabled>Click Me</button>
+
+    <form action="submit.php" method="POST" autocomplete="off">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <ul>
+        <li data-id="1" data-category="fruit">Apple</li>
+        <li data-id="2" data-category="vegetable">Carrot</li>
+    </ul>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

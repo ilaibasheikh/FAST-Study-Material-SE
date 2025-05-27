@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Navigation</title>
+    <style>
+        #test{
+            background: #ffff00;
+            width: 800px;
+            height: 200px;
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <ul id= "list1">
+        <li class="abc">orange</li>
+        <li>Apple</li>
+        <li>Grapes</li> 
+        <li>Banana</li>
+    </ul>
+    <ul id= "list2">
+        <li>Carrot</li>
+        <li>Reddish</li>
+    </ul>
+    <div id="test"></div>
+    <script>
+        /* JavaScript CloneNode*/
+
+var target = document.getElementById("list1").children[0];
+
+var copyElement = target.cloneNode(true);
+
+console.log(copyElement);
+
+
+document.getElementById("list2").appendChild(copyElement);
+
+document.getElementById("test").appendChild(copyElement);
+
+
+        
+    </script>
+</body>
+</html>

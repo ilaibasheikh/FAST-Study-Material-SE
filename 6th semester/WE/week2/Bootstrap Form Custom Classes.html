@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+	.container{ border: 5px solid #000; }
+	</style>
+</head>
+
+<body>
+    <div class="container mb-5">
+        <h2 class="py-3 text-center">Bootstrap 4 Custom Form Classes</h2>
+        <div class="row py-3">
+            <div class="col">
+                <select name="" class="custom-select mb-3">
+                    <option value="">India</option>
+                    <option value="">Pakistan</option>
+                    <option value="">Bangladesh</option>
+                    <option value="">Nepal</option>
+                    <option value="">SriLanka</option>
+                </select>
+
+                <select name="" class="custom-select custom-select-lg mb-3">
+                    <option value="">India</option>
+                    <option value="">Pakistan</option>
+                    <option value="">Bangladesh</option>
+                    <option value="">Nepal</option>
+                    <option value="">SriLanka</option>
+                </select>
+
+                <select name="" class="custom-select custom-select-sm mb-3">
+                    <option value="">India</option>
+                    <option value="">Pakistan</option>
+                    <option value="">Bangladesh</option>
+                    <option value="">Nepal</option>
+                    <option value="">SriLanka</option>
+                </select>
+
+                <select name="" class="custom-select mb-3" multiple size="3">
+                    <option value="">India</option>
+                    <option value="">Pakistan</option>
+                    <option value="">Bangladesh</option>
+                    <option value="">Nepal</option>
+                    <option value="">SriLanka</option>
+                </select>
+            </div>
+            <div class="col">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customcheckbox1">
+                    <label class="custom-control-label" for="customcheckbox1">Music</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customcheckbox2">
+                    <label class="custom-control-label" for="customcheckbox2">Sports</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customcheckbox3">
+                    <label class="custom-control-label" for="customcheckbox3">Books</label>
+                </div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="gender" class="custom-control-input" id="customcheckbox4">
+                    <label class="custom-control-label" for="customcheckbox4">Male</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="gender" class="custom-control-input" id="customcheckbox5">
+                    <label class="custom-control-label" for="customcheckbox5">Female</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customcheckbox6">
+                    <label class="custom-control-label" for="customcheckbox6">Sports</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customcheckbox7">
+                    <label class="custom-control-label" for="customcheckbox7">Music</label>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col">
+                <input type="range" class="custom-range">
+            </div>
+            <div class="col">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input">
+                    <label class="custom-file-label">Choose File</label>
+                </div>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only">Enter name</label>
+                        <input type="text" class="form-control is-valid" placeholder="Enter Username">
+                        <div class="valid-feedback">Look Good!</div>
+                    </div>
+                    <div class="form-group mx-3">
+                        <label class="sr-only">Enter Password</label>
+                        <input type="password" class="form-control is-invalid" placeholder="Password">
+                        <div class="invalid-feedback">Enter valid Password</div>
+                    </div>
+                    <button class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
