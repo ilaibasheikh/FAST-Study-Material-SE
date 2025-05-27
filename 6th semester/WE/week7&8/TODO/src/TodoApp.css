@@ -1,0 +1,122 @@
+/* TodoApp.css */
+
+.todo-app {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .task-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  .task-input button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-input button:hover {
+    background-color: #45a049;
+  }
+  
+  .task-actions {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-actions button {
+    padding: 10px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task-actions button:hover {
+    background-color: #0b7dda;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item span {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .task-item span.completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .task-buttons button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 5px 10px;
+  }
+  
+  .task-buttons button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .task-buttons button:nth-child(1) {
+    background-color: #ff9800;
+  }
+  
+  .task-buttons button:nth-child(1):hover {
+    background-color: #e68900;
+  }
+/* TodoApp.css */
+
+/* Adding a style for the task statistics */
+.task-stats {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-stats p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+  }
+    

@@ -1,0 +1,3 @@
+npm create vite@4.1.0
+npm isntall
+npm run dev

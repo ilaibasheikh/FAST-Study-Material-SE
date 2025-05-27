@@ -1,0 +1,4 @@
+npm create vite@lates routess
+cd routess
+npm install
+npm install react-router-dom@6

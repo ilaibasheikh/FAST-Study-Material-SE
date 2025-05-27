@@ -1,0 +1,7 @@
+
+npm create vite@latest hooks --tempalte typrescript 
+cd hooks 
+npm install
+npm install react-hook-form       
+npm install -D @hookform/devtools 
+npm run dev

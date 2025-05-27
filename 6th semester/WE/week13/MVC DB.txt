@@ -1,0 +1,114 @@
+Install-Package EntityFramework
+Install-Package Microsoft.jQuery.Unobtrusive.Ajax
+Install-Package Microsoft.AspNet.Mvc (Optional)
+
+
+-- 1. Department Table
+CREATE TABLE Department (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(100)
+);
+
+-- 2. Faculty Table
+CREATE TABLE Faculty (
+    FacultyID INT PRIMARY KEY,
+    FacultyName VARCHAR(100),
+    DeptID INT FOREIGN KEY REFERENCES Department(DeptID)
+);
+
+-- 3. Student Table
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(100),
+    DeptID INT FOREIGN KEY REFERENCES Department(DeptID),
+    EnrollmentYear INT
+);
+
+-- 4. Course Table
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT,
+    DeptID INT FOREIGN KEY REFERENCES Department(DeptID)
+);
+
+-- 5. CourseOffering Table
+CREATE TABLE CourseOffering (
+    OfferingID INT PRIMARY KEY,
+    CourseID INT FOREIGN KEY REFERENCES Course(CourseID),
+    FacultyID INT FOREIGN KEY REFERENCES Faculty(FacultyID),
+    Semester VARCHAR(10),
+    Year INT
+);
+
+-- 6. Enrollment Table
+CREATE TABLE Enrollment (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID INT FOREIGN KEY REFERENCES Student(StudentID),
+    OfferingID INT FOREIGN KEY REFERENCES CourseOffering(OfferingID),
+    Grade CHAR(2)
+);
+
+-- 7. Classroom Table
+CREATE TABLE Classroom (
+    RoomID INT PRIMARY KEY,
+    Building VARCHAR(50),
+    Capacity INT
+);
+
+-- 8. Timetable Table
+CREATE TABLE Timetable (
+    ScheduleID INT PRIMARY KEY,
+    OfferingID INT FOREIGN KEY REFERENCES CourseOffering(OfferingID),
+    RoomID INT FOREIGN KEY REFERENCES Classroom(RoomID),
+    DayOfWeek VARCHAR(10),
+    StartTime TIME,
+    EndTime TIME
+);
+
+-- 9. Attendance Table
+CREATE TABLE Attendance (
+    AttendanceID INT PRIMARY KEY,
+    EnrollmentID INT FOREIGN KEY REFERENCES Enrollment(EnrollmentID),
+    AttendanceDate DATE,
+    Status VARCHAR(10)  -- Present/Absent
+);
+
+-- 10. Admin Table
+CREATE TABLE Admin (
+    AdminID INT PRIMARY KEY,
+    AdminName VARCHAR(100),
+    DeptID INT FOREIGN KEY REFERENCES Department(DeptID)
+);
+
+-- Inserting Sample Data
+-- Departments
+INSERT INTO Department VALUES (1, 'Computer Science'), (2, 'Mathematics');
+
+-- Faculty
+INSERT INTO Faculty VALUES (101, 'Dr. Smith', 1), (102, 'Dr. Allen', 2);
+
+-- Students
+INSERT INTO Student VALUES (201, 'Alice', 1, 2022), (202, 'Bob', 2, 2023);
+
+-- Courses
+INSERT INTO Course VALUES (301, 'Data Structures', 4, 1), (302, 'Calculus', 3, 2);
+
+-- Course Offerings
+INSERT INTO CourseOffering VALUES (401, 301, 101, 'Fall', 2024), (402, 302, 102, 'Spring', 2024);
+
+-- Enrollments
+INSERT INTO Enrollment VALUES (501, 201, 401, 'A'), (502, 202, 402, 'B');
+
+-- Classrooms
+INSERT INTO Classroom VALUES (601, 'Building A', 50), (602, 'Building B', 30);
+
+-- Timetable
+INSERT INTO Timetable VALUES (701, 401, 601, 'Monday', '09:00', '10:30'),
+                             (702, 402, 602, 'Tuesday', '11:00', '12:30');
+
+-- Attendance
+INSERT INTO Attendance VALUES (801, 501, '2025-04-10', 'Present'), (802, 502, '2025-04-10', 'Absent');
+
+-- Admin
+INSERT INTO Admin VALUES (901, 'Mr. Clark', 1);
