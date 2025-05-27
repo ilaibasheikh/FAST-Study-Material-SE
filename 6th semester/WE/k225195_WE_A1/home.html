@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900">
+    <header class="bg-pink-800 text-white text-center py-5 text-2xl font-bold">
+        Laiba Fatima 22K-5195
+    </header>
+
+
+    <nav class="bg-pink-700 p-4">
+        <div class="container mx-auto flex justify-center">
+            <div class="flex space-x-6">
+                <a href="home.html" class="text-black font-bold hover:text-white">Home</a>
+                <a href="quiz.html" class="text-black font-bold hover:text-white">Quiz</a>
+                <a href="contact.html" class="text-black font-bold hover:text-white">Contact Us</a>
+                <a href="about.html" class="text-black font-bold hover:text-white">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="max-w-4xl mx-auto mt-20 p-6 bg-gray-200 shadow-lg rounded-md">
+        <div class="relative overflow-hidden">
+            <div id="slider" class="flex transition-transform duration-500">
+                <div class="w-full flex-shrink-0 text-center p-6 bg-indigo-500 text-white ">Explore New Knowledge!</div>
+                <div class="w-full flex-shrink-0 text-center p-6 bg-purple-500 text-white">Enhance Your Skills!</div>
+                <div class="w-full flex-shrink-0 text-center p-6 bg-pink-500 text-white">Challenge Your Mind!</div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-5">
+            <button onclick="previousSlide()" class="bg-gray-700 text-white px-4 py-2 mx-2">Prev</button>
+            <button onclick="nextSlide()" class="bg-gray-700 text-white px-4 py-2 mx-2">Next</button>
+        </div>
+    </main>
+    <script>
+        let currentIndex = 0;
+        function updateSlider() {
+            document.getElementById("slider").style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % 3;
+            updateSlider();
+        }
+        function previousSlide() {
+            currentIndex = (currentIndex - 1 + 3) % 3;
+            updateSlider();
+        }
+        setInterval(nextSlide, 2000);
+    </script>
+</body>
+</html>
+
+
+
+

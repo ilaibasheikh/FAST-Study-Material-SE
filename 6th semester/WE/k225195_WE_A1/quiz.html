@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900">
+    <header class="bg-pink-800 text-white text-center py-5 text-2xl font-bold">
+        Laiba Fatima 22K-5195
+    </header>
+
+    <nav class="bg-pink-700 p-4">
+        <div class="container mx-auto flex justify-center">
+            <div class="flex space-x-6">
+                <a href="home.html" class="text-black font-bold hover:text-white">Home</a>
+                <a href="quiz.html" class="text-black font-bold hover:text-white">Quiz</a>
+                <a href="contact.html" class="text-black font-bold hover:text-white">Contact Us</a>
+                <a href="about.html" class="text-black font-bold hover:text-white">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex items-center justify-center mt-20">
+        <div class="w-full max-w-md p-6 bg-gray-200 shadow-lg rounded-lg">
+            <h2 class="text-xl font-bold text-center mb-4">Quiz</h2>
+
+            <div id="category-selection" class="flex flex-col space-y-2">
+                <h2 class="text-xl font-bold text-center mb-4">Select a Category</h2>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" onclick="startQuiz('math')">Math</button>
+                <button class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" onclick="startQuiz('geography')">Geography</button>
+                <button class="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600" onclick="startQuiz('science')">Science</button>
+            </div>
+
+            <div id="quiz-container" class="hidden">
+                <div id="quiz" class="mt-4"></div>
+                <div id="timer" class="text-lg font-bold text-red-600 text-center mt-2"></div>
+                <button id="next" class="mt-4 w-full px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 hidden" onclick="nextQuestion()">Next</button>
+                <div id="score" class="mt-4 text-lg font-bold text-center hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quizData = {
+            math: [
+                { question: "What is 5 + 3?", options: ["7", "8", "9"], answer: "8" },
+                { question: "What is 5 + 6?", options: ["7", "8", "11"], answer: "11" },
+                { question: "What is 5 + 9?", options: ["7", "8", "14"], answer: "14" },
+                { question: "What is 12 - 4?", options: ["6", "8", "10"], answer: "8" }
+            ],
+            geography: [
+                { question: "What is the capital of Japan?", options: ["Seoul", "Tokyo", "Beijing"], answer: "Tokyo" },
+                { question: "What is the capital of Japan?", options: ["Seoul", "Tokyo", "Beijing"], answer: "Tokyo" },
+                { question: "What is the capital of Japan?", options: ["Seoul", "Tokyo", "Beijing"], answer: "Tokyo" },
+                { question: "Which continent is Brazil in?", options: ["Africa", "South America", "Asia"], answer: "South America" }
+            ],
+            science: [
+                { question: "What planet is known as the Red Planet?", options: ["Venus", "Mars", "Saturn"], answer: "Mars" },
+                { question: "Water boils at what temperature ?", options: ["90", "100", "110"], answer: "100" }
+            ]
+        };
+
+        let selectedCategory = "";
+        let currentQuestion = 0;
+        let score = 0;
+        let timer;
+        let timeLeft = 10; 
+
+        function startQuiz(category) {
+            selectedCategory = category;
+            document.getElementById("category-selection").classList.add("hidden");
+            document.getElementById("quiz-container").classList.remove("hidden");
+            currentQuestion = 0;
+            score = 0;
+            loadQuiz();
+        }
+
+        function loadQuiz() {
+            clearInterval(timer); 
+            timeLeft = 10;
+            updateTimerDisplay();
+            startTimer();
+
+            document.getElementById("next").classList.add("hidden");
+            const quiz = document.getElementById("quiz");
+            const questions = quizData[selectedCategory];
+
+            if (currentQuestion < questions.length) {
+                quiz.innerHTML = `<div class="text-lg font-semibold">${questions[currentQuestion].question}</div>`;
+                const options = questions[currentQuestion].options.map(option =>
+                    `<button class="w-full px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 mt-2" onclick="selectAnswer(this, '${option}')">${option}</button>`
+                ).join("");
+                quiz.innerHTML += `<div class="options mt-2">${options}</div>`;
+            } else {
+                showScore();
+            }
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    document.getElementById("quiz").innerHTML += `<p class="text-red-500 font-bold mt-2 text-center">Time's up!</p>`;
+                    disableOptions();
+                    document.getElementById("next").classList.remove("hidden");
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            document.getElementById("timer").innerHTML = `Time Left: ${timeLeft}s`;
+        }
+
+        function selectAnswer(button, selected) {
+            clearInterval(timer); 
+            const correct = quizData[selectedCategory][currentQuestion].answer;
+            if (selected === correct) score++;
+
+            document.querySelectorAll(".options button").forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === correct) btn.classList.add("bg-green-500", "text-white");
+                else btn.classList.add("bg-red-500", "text-white");
+            });
+
+            document.getElementById("next").classList.remove("hidden");
+        }
+
+        function disableOptions() {
+            document.querySelectorAll(".options button").forEach(btn => {
+                btn.disabled = true;
+            });
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizData[selectedCategory].length) {
+                loadQuiz();
+            } else {
+                showScore();
+            }
+        }
+
+        function showScore() {
+            document.getElementById("quiz").innerHTML = "";
+            document.getElementById("next").classList.add("hidden");
+            document.getElementById("score").classList.remove("hidden");
+            document.getElementById("score").innerHTML = `Quiz Finished! Your Score: ${score}/${quizData[selectedCategory].length}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+  font-family: 'Lato', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif; 
+}
+
+.math-text {
+  font-family: 'Noto Sans Math', sans-serif; 
+}
+
+
+.container {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.calculator-box {
+  background-color: #f8bbd0;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 640px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: black;
+}
+
+.course-row {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.add-course-btn,
+.calculate-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.add-course-btn {
+  background-color: #ec4899;
+}
+
+.calculate-btn {
+  background-color: #9d174d;
+}
+
+.add-course-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.remove-course-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.remove-course-btn:hover {
+  background-color: #dc2626;
+}
+
+.gpa-result {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.gpa-result h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}

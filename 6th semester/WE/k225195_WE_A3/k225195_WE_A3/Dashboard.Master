@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="k225195_WE_A3.Dashboard" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Employee Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #004080;
+        }
+
+        .nav a:hover {
+            color: #007acc;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>Employee Management System</h1>
+            
+        </div>
+
+        <div class="nav">
+            <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="~/Home.aspx" Text="Dashboard" Visible="true" />
+
+            <asp:HyperLink ID="EmployeeLink" runat="server" NavigateUrl="~/EmployeeList.aspx" Text="Employee List" Visible="false" />
+            <asp:HyperLink ID="ReportLink" runat="server" NavigateUrl="~/Report.aspx" Text="Report" Visible="false" />
+            <asp:HyperLink ID= "ProfileLink" runat="server" NavigateUrl="~/Profile.aspx" Text="My Profile" Visible="false" />
+           <asp:Button ID="LogoutButton" runat="server" Text="Logout" OnClick="LogoutButton_Click" />
+        </div>
+        <div>
+            <asp:Label ID="WelcomeMessage" runat="server" Font-Size="Large" />
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Employee Management System - All Rights Reserved</p>
+        </div>
+    </form>
+    <script type="text/javascript">
+        var warningTimeout = 1 * 60 * 1000; 
+        var logoutTimeout = 1 * 60 * 1000;  
+        
+
+
+        var warningTimer;
+        var logoutTimer;
+
+        function startSessionTimers() {
+            clearTimeout(warningTimer);
+            clearTimeout(logoutTimer);
+
+            warningTimer = setTimeout(function () {
+                showWarning();
+            }, warningTimeout);
+        }
+
+        function showWarning() {
+            if (confirm("Your session is about to expire in 2 minutes. Click OK to stay logged in.")) {
+                startSessionTimers();
+            } else {
+                logoutTimer = setTimeout(function () {
+                    window.location.href = "Login.aspx?timeout=true";
+                }, logoutTimeout);
+            }
+        }
+
+        document.addEventListener("mousemove", startSessionTimers);
+        document.addEventListener("keydown", startSessionTimers);
+        document.addEventListener("click", startSessionTimers);
+
+        window.onload = function () {
+            startSessionTimers();
+        };
+    </script>
+</body>
+</html>
