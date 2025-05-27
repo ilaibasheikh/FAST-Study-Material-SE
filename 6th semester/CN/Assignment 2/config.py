@@ -1,0 +1,7 @@
+TIMEOUT = 1
+PACKET_COUNT = 5           
+PACKET_SIZE = 64            
+LOSS_PROB= 0.2
+CORRUPTION_PROB= 0
+DELAY_PROB = 0
+WINDOW_SIZE = 4            
