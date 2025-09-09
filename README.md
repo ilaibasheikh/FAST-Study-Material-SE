@@ -57,6 +57,13 @@ This repository contains course materials for the FAST-NUCES 22k batch (2022-202
 - **Business Process Engineering: Abdul Aziz**
 - **Applied Artifical Intelligence: Saif ur Rehman**
 - **Simulation and Modelling: Shahid Ashraf**
+
+### 7th Semester
+- **Information Security: Hira Tunio**
+- **Fundamentals of Software Project Management: Minhal Raza**
+- **Professional Practices of Information Technology: Ghulam Raza**
+- **Introduction to Cloud Computing: Muhammad Sudais**
+- **Final Year Project - I : Saad Mansoor**
   
 ## Usage
 
