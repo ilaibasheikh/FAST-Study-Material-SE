@@ -1,0 +1,52 @@
+Question: (Homework Assignment)
+
+A. Balance Sheet
+
+Using the information below for ABC Company as of December 31, prepare a balance sheet.
+
+Cash: $90,000
+
+Inventory: $60,000
+
+Equipment: $150,000
+
+Notes Payable: $50,000
+
+Accounts Receivable: $40,000
+
+Bonds Payable: $100,000
+
+Owner's Equity: ?
+------------------------------------
+B. Income Statement
+
+Based on the information below for ABC Company, prepare an income statement for the year ended December 31.
+
+Sales Revenue: $400,000
+
+Cost of Goods Sold (COGS): $180,000
+
+Operating Expenses: $100,000
+
+Depreciation Expense: $20,000
+
+Interest Expense: $8,000
+
+Tax Expense: $22,000
+-----------------------------------------
+C. Cash Flow Statement
+
+Given the following for ABC Company, prepare a cash flow statement for the year.
+
+Net Income: $70,000
+
+Depreciation Expense: $20,000
+
+Decrease in Accounts Receivable: $5,000
+
+Purchase of new factory: $60,000
+
+Issuance of long-term debt: $20,000
+
+Payment of dividends: $15,000
+--------------------------------------------------
