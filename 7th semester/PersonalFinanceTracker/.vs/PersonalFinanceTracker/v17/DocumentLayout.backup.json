@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\home\\intro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\home\\intro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\home\\architecture.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\home\\architecture.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\views\\home\\azureservices.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:views\\home\\azureservices.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|c:\\users\\hp\\desktop\\7th semester\\icc- introduction to cloud computing- muhammad sudais\\a1\\personalfinancetracker\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A788E37-3080-43A1-A560-8066D4C78DDA}|PersonalFinanceTracker.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T21:52:57.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T21:52:49.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-01T21:52:47.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-04T06:50:05.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T17:13:59.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AzureServices.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\AzureServices.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AzureServices.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\AzureServices.cshtml",
+              "RelativeToolTip": "Views\\Home\\AzureServices.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T17:11:24.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Architecture.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Architecture.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Architecture.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Architecture.cshtml",
+              "RelativeToolTip": "Views\\Home\\Architecture.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T17:10:55.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Intro.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Intro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Intro.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Home\\Intro.cshtml",
+              "RelativeToolTip": "Views\\Home\\Intro.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4BAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T17:10:18.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T17:09:27.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\7th semester\\ICC- Introduction to Cloud Computing- Muhammad Sudais\\A1\\PersonalFinanceTracker\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T17:08:41.861Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1329,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

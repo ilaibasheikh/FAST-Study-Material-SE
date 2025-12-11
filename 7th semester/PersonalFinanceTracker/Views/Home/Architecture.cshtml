@@ -1,0 +1,47 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="bg-white/10 backdrop-blur-md rounded-2xl shadow p-6 sm:p-8 border border-white/10">
+	<h1 class="text-2xl sm:text-3xl font-bold mb-4 flex items-center gap-2 text-white text-center sm:text-left">
+		<svg data-lucide="server-cog" class="w-6 h-6 text-emerald-400"></svg>
+		System Architecture
+	</h1>
+	<p class="text-gray-300 mb-6 text-center sm:text-left text-sm sm:text-base">MoneyTalks is designed as a cloud-native, scalable, and secure system leveraging multiple Azure services to ensure performance and reliability.</p>
+	<div class="space-y-6">
+		<div class="p-4 bg-gray-900/30 border border-white/10 rounded-lg text-center">
+			<h3 class="text-lg sm:text-xl font-semibold mb-3 flex items-center justify-center gap-2 text-emerald-400">
+				Architecture Diagram
+			</h3>
+			<img src="@Url.Content("~/images/ArchitectureDiagram.png")"
+				 alt="System Architecture Diagram"
+				 class="rounded-xl border border-emerald-700/40 shadow-lg hover:scale-[1.02] transition-transform duration-300 w-full h-auto mx-auto" />
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="p-4 border border-white/10 rounded-lg bg-gray-900/30 text-center sm:text-left">
+				<h3 class="font-semibold mb-2 flex items-center justify-center sm:justify-start gap-2 text-white">
+					<svg data-lucide="monitor" class="w-5 h-5 text-emerald-400"></svg> Frontend
+				</h3>
+				<p class="text-gray-300 text-sm sm:text-base">ASP.NET Core MVC hosted on Azure App Service for a responsive and secure web UI.</p>
+			</div>
+			<div class="p-4 border border-white/10 rounded-lg bg-gray-900/30 text-center sm:text-left">
+				<h3 class="font-semibold mb-2 flex items-center justify-center sm:justify-start gap-2 text-white">
+					<svg data-lucide="cpu" class="w-5 h-5 text-emerald-400"></svg> Backend & APIs
+				</h3>
+				<p class="text-gray-300 text-sm sm:text-base">Azure Functions provide business logic and integrate with Azure API Management for controlled API access.</p>
+			</div>
+		</div>
+		<div class="p-4 border border-white/10 rounded-lg bg-gray-900/30 text-center sm:text-left">
+			<h3 class="font-semibold mb-2 flex items-center justify-center sm:justify-start gap-2 text-white">
+				<svg data-lucide="database" class="w-5 h-5 text-emerald-400"></svg> Data & Storage
+			</h3>
+			<p class="text-gray-300 text-sm sm:text-base">Cosmos DB stores user and transaction data, while Azure Blob Storage securely handles uploaded receipts.</p>
+		</div>
+		<div class="p-4 border border-white/10 rounded-lg bg-gray-900/30 text-center sm:text-left">
+			<h3 class="font-semibold mb-2 flex items-center justify-center sm:justify-start gap-2 text-white">
+				<svg data-lucide="shield" class="w-5 h-5 text-emerald-400"></svg> Security & Monitoring
+			</h3>
+			<p class="text-gray-300 text-sm sm:text-base">Azure AD handles authentication, secrets are managed in Key Vault, and insights are captured via Application Insights.</p>
+		</div>
+	</div>
+</section>
+<script>lucide.createIcons();</script>

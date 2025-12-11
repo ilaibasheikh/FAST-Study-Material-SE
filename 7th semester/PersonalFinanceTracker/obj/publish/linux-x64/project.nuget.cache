@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jujAtplI74M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hp\\Desktop\\PersonalFinanceTracker\\PersonalFinanceTracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.15\\microsoft.netcore.app.host.linux-x64.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

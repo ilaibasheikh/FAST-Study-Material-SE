@@ -1,0 +1,7 @@
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\PersonalFinanceTracker
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\PersonalFinanceTracker.dll
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\PersonalFinanceTracker.deps.json
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\PersonalFinanceTracker.runtimeconfig.json
+C:\Users\Hp\Desktop\PersonalFinanceTracker\obj\Release\net8.0\linux-x64\PubTmp\Out\PersonalFinanceTracker.pdb

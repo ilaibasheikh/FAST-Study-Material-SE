@@ -1,0 +1,60 @@
+﻿@{
+	var title = ViewData["Title"] ?? "MoneyTalks";
+}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💲</text></svg>">
+	<title>@title - MoneyTalks</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-emerald-900 to-gray-950 text-gray-100 min-h-screen antialiased">
+	<header class="backdrop-blur-md bg-white/10 border-b border-white/10 sticky top-0 z-50">
+		<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+			<a href="/Home/Intro" class="flex items-center gap-3">
+				<svg data-lucide="wallet" class="w-6 h-6 text-emerald-400"></svg>
+				<div class="font-semibold text-lg tracking-wide">MoneyTalks</div>
+			</a>
+			<nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
+				<a href="/Home/Intro" class="hover:text-emerald-400">Introduction</a>
+				<a href="/Home/Architecture" class="hover:text-emerald-400">Architecture</a>
+				<a href="/Home/AzureServices" class="hover:text-emerald-400">Azure Services</a>
+			</nav>
+			<button id="menu-btn" class="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none">
+				<svg data-lucide="menu" class="w-6 h-6"></svg>
+			</button>
+		</div>
+		<nav id="mobile-menu" class="hidden md:hidden bg-gray-900/90 border-t border-white/10 px-6 py-4 space-y-3 text-sm text-gray-300">
+			<a href="/Home/Intro" class="block hover:text-emerald-400">Introduction</a>
+			<a href="/Home/Architecture" class="block hover:text-emerald-400">Architecture</a>
+			<a href="/Home/AzureServices" class="block hover:text-emerald-400">Azure Services</a>
+		</nav>
+	</header>
+	<main class="max-w-6xl mx-auto px-6 py-12">
+		@RenderBody()
+	</main>
+	<footer class="border-t border-white/10 bg-gray-900/50 mt-12">
+		<div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-400 flex justify-between">
+			<div>© @DateTime.Now.Year MoneyTalks</div>
+			<div>by Laiba Fatima</div>
+		</div>
+	</footer>
+	<script>
+		lucide.createIcons();
+		const menuBtn = document.getElementById("menu-btn");
+		const mobileMenu = document.getElementById("mobile-menu");
+		let open = false;
+		menuBtn.addEventListener("click", () => {
+			open = !open;
+			mobileMenu.classList.toggle("hidden", !open);
+			menuBtn.innerHTML = open
+				? `<svg data-lucide="x" class="w-6 h-6"></svg>`
+				: `<svg data-lucide="menu" class="w-6 h-6"></svg>`;
+			lucide.createIcons();
+		});
+	</script>
+</body>
+</html>
