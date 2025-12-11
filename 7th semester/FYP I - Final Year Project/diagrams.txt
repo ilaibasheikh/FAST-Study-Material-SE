@@ -1,0 +1,722 @@
+Login 
+@startuml
+
+actor User
+participant "Web UI (React)" as UI
+participant "Backend API" as API
+participant "Auth Service\n(ASP.NET Identity)" as Auth
+database "SQL Server DB" as DB
+participant "Email Service\n(Resend API)" as Email
+
+== Homepage ==
+User -> UI: Visits IntelliMeet Pro website
+UI -> API: GET / landing
+API -> UI: Homepage shown to User
+
+== Signup ==
+User -> UI: Clicks "Sign Up"
+UI -> API: POST /auth/signup (name, email, password)
+API -> Auth: Create user (email, pass_hash)
+Auth -> API: User created
+API -> DB: INSERT workspace (workspace_id, owner_id)
+DB -> API: Workspace created
+
+== Email Verification ==
+API -> Email: Send verification link
+Email -> User: Verification email delivered
+
+User -> API: GET /auth/verify?token=abc
+API -> Auth: Validate and activate account
+Auth -> API: Account verified
+
+== Login ==
+User -> UI: Enter email/password
+UI -> API: POST /auth/login
+API -> Auth: Validate credentials
+Auth -> API: Return JWT + refresh token
+API -> UI: Tokens returned
+
+== Dashboard ==
+UI -> API: GET /dashboard/init
+API -> DB: SELECT workspace, users, history
+DB -> API: Data returned
+API -> UI: Dashboard payload
+UI -> User: Display dashboard
+
+@enduml
+@startuml
+
+actor User
+boundary "Web UI (React)" as UI
+control "Backend API" as API
+control "Auth Service\n(ASP.NET Identity)" as Auth
+database "SQL Server DB" as DB
+boundary "Email Service\n(Resend API)" as Email
+
+== Homepage ==
+User -> UI: Visit IntelliMeet Pro website
+UI -> API: GET /landing
+API --> UI: Homepage payload
+
+== Signup ==
+User -> UI: Click "Sign Up"
+UI -> API: POST /auth/signup (name, email, password)
+
+' Create Auth service instance BEFORE first call
+create Auth
+API -> Auth: createUser()
+Auth --> API: userCreated()
+
+API -> DB: INSERT workspace(owner_id)
+DB --> API: workspaceCreated()
+
+== Email Verification ==
+API -> Email: sendVerificationEmail()
+Email --> User: Verification Email Delivered
+
+User -> API: GET /auth/verify?token=abc
+API -> Auth: validateToken()
+Auth --> API: accountVerified
+
+== Login ==
+User -> UI: Enter email/password
+UI -> API: POST /auth/login
+
+API -> Auth: validateCredentials()
+Auth --> API: JWT + Refresh Token
+
+API --> UI: Tokens Returned
+
+== Dashboard ==
+UI -> API: GET /dashboard/init
+API -> DB: SELECT workspace, users, history
+DB --> API: Data Returned
+
+API --> UI: dashboardPayload
+UI --> User: Display Dashboard
+
+@enduml
+
+
+Meeting Trasncription
+@startuml
+
+participant Scheduler
+participant "Backend API" as API
+participant "Platform API\n(Zoom/Meet/Teams)" as Platform
+participant "Whisper API" as Whisper
+participant "Diarization Engine" as Diarization
+database "SQL Server" as DB
+participant "GPT Model" as GPT
+participant "Pinecone Vector DB" as Pinecone
+participant "PM Tools\n(Jira/Trello/Asana)" as PM
+
+== Scheduled Meeting Start ==
+Scheduler -> API: Scan for meetings due now
+API -> DB: SELECT meetings WHERE start_time = NOW
+DB -> API: Return meeting list
+
+== Bot Joins Meeting ==
+API -> Platform: Authenticate & join meeting
+Platform -> API: Bot joined
+
+== Transcription ==
+loop For each audio chunk
+    Platform -> API: Audio stream chunk
+    API -> Whisper: Transcribe chunk
+    Whisper -> API: Text + timestamps
+    API -> Diarization: Identify speaker
+    Diarization -> API: speaker_id
+    API -> DB: INSERT transcript chunk
+end
+
+== Summary Generation ==
+API -> GPT: Generate summary + action items
+GPT -> API: Return summary + tasks
+
+API -> DB: INSERT summary
+API -> DB: INSERT action items
+
+== Index to Semantic Search ==
+API -> Pinecone: Store embeddings of transcript + summary
+Pinecone -> API: Vector stored
+
+== PM Tools Sync ==
+loop For each action item
+    API -> PM: Create task
+    PM -> API: Task ID returned
+    API -> DB: Update action item with external task ID
+end
+
+== End Meeting ==
+API -> Platform: Leave meeting
+Platform -> API: Success
+
+@enduml
+
+@startuml
+
+control Scheduler
+control "Backend API" as API
+boundary "Platform API\n(Zoom/Meet/Teams)" as Platform
+boundary "Whisper API" as Whisper
+control "Diarization Engine" as Diarization
+database "SQL Server" as DB
+control "GPT Model" as GPT
+boundary "Pinecone Vector DB" as Pinecone
+boundary "PM Tools\n(Jira/Trello/Asana)" as PM
+
+== Scheduled Meeting Start ==
+Scheduler -> API: Scan for meetings due now
+API -> DB: SELECT meetings WHERE start_time = NOW
+DB --> API: Meeting list
+
+== Bot Joins Meeting ==
+API -> Platform: Authenticate & join meeting
+Platform --> API: Bot joined
+
+== Transcription ==
+loop For each audio chunk
+    Platform -> API: Audio stream chunk
+    API -> Whisper: Transcribe chunk
+    Whisper --> API: Text + timestamps
+
+    API -> Diarization: Identify speaker
+    Diarization --> API: speaker_id
+
+    API -> DB: INSERT transcript chunk
+end loop
+
+== Summary Generation ==
+API -> GPT: Generate summary + action items
+GPT --> API: Summary + tasks
+
+API -> DB: INSERT summary
+API -> DB: INSERT action items
+
+== Index to Semantic Search ==
+API -> Pinecone: Store embeddings
+Pinecone --> API: Vector stored
+
+== PM Tools Sync ==
+loop For each action item
+    API -> PM: Create task
+    PM --> API: Task ID returned
+    API -> DB: Update action item with task ID
+end loop
+
+== End Meeting ==
+API -> Platform: Leave meeting
+Platform --> API: Success
+
+@enduml
+
+Slack bot
+
+@startuml
+
+actor User
+participant "Slack API" as Slack
+participant "Slack Bot\n(Bolt Framework)" as Bot
+participant "Backend API" as API
+participant "Pinecone\nVector DB" as Pinecone
+database "SQL Server" as DB
+participant "GPT Model" as GPT
+
+== User Sends Query ==
+User -> Slack: "What were the deadlines in last sprint review?"
+Slack -> Bot: Message event delivered
+Bot -> API: POST /slack/query (user message)
+
+== Semantic Search ==
+API -> Pinecone: Embed query search
+Pinecone -> API: Transcript chunk matches
+
+API -> DB: SELECT detailed transcript sections
+DB -> API: Transcript excerpts returned
+
+== RAG Prompt ==
+API -> GPT: Build prompt with\nquery + chunks + summaries
+GPT -> API: generated answer
+
+== Send Response ==
+API -> Bot: Deliver formatted answer
+Bot -> Slack: Post message
+Slack -> User: Display response
+
+@enduml
+
+@startuml
+
+actor User
+boundary "Slack API" as Slack
+control "Slack Bot\n(Bolt Framework)" as Bot
+control "Backend API" as API
+boundary "Pinecone Vector DB" as Pinecone
+database "SQL Server" as DB
+control "GPT Model" as GPT
+
+== User Sends Query ==
+User -> Slack: User query
+Slack -> Bot: Message event delivered
+Bot -> API: POST /slack/query (user message)
+
+== Semantic Search ==
+API -> Pinecone: Embed & search query
+Pinecone --> API: Matching transcript chunks
+
+API -> DB: SELECT transcript sections
+DB --> API: Transcript excerpts
+
+== RAG Prompt ==
+API -> GPT: Build prompt\n(query + chunks + summaries)
+GPT --> API: Generated answer
+
+== Send Response ==
+API -> Bot: Formatted response
+Bot -> Slack: Post message
+Slack -> User: Display response
+
+@enduml
+
+Authntication
+@startuml
+title State Diagram 1: Authentication & Account Lifecycle
+
+[*] --> Start
+
+Start --> SignupInitiated : User clicks Sign Up
+SignupInitiated --> EmailSent : System sends verification email
+EmailSent --> PendingVerification
+
+PendingVerification --> Verified : User clicks verification link
+PendingVerification --> SignupInitiated : Token expired / retry
+
+Verified --> LoginAttempt : User enters email/password
+
+LoginAttempt --> Authenticated : Valid credentials
+LoginAttempt --> InvalidCredentials : Invalid credentials
+
+InvalidCredentials --> LoginAttempt : User retries
+
+Authenticated --> SessionActive
+SessionActive --> LoggedOut : User logs out
+
+SessionActive --> PasswordResetRequested : User clicks "Forgot Password"
+PasswordResetRequested --> ResetTokenSent : Email with OTP
+ResetTokenSent --> ResetCompleted : User sets new password
+ResetCompleted --> LoginAttempt
+
+LoggedOut --> LoginAttempt
+
+@enduml
+@startuml
+title State Diagram 1: Authentication & Account Lifecycle
+
+[*] --> Start
+
+state Start {
+    [*] --> SignupOrLogin
+    SignupOrLogin --> SignupFlow : User clicks Sign Up
+    SignupOrLogin --> LoginAttempt : User clicks Login
+}
+
+state SignupFlow {
+    [*] --> SignupInitiated
+    SignupInitiated --> EmailSent : System sends verification email
+    EmailSent --> PendingVerification
+    PendingVerification --> Verified : User clicks verification link
+    PendingVerification --> SignupInitiated : Token expired / retry
+    Verified --> [*]
+}
+
+state LoginAttempt {
+    [*] --> EnterCredentials
+    EnterCredentials --> Validating
+
+    state Validating {
+        [*] --> CheckingCredentials
+        CheckingCredentials --> ChoicePoint
+        state ChoicePoint <<choice>>
+        ChoicePoint --> Authenticated : credentials valid
+        ChoicePoint --> EnterCredentials : credentials invalid
+    }
+
+    Authenticated --> [*]
+}
+
+@enduml
+
+
+
+MeetingLifecycle
+@startuml
+title State Diagram 2: Meeting Processing Lifecycle
+
+[*] --> MeetingScheduled
+
+MeetingScheduled --> PreJoinValidation : Validate permissions
+PreJoinValidation --> BotJoining : All checks passed
+PreJoinValidation --> ErrorState : Missing access tokens
+
+BotJoining --> BotConnected : Joined successfully
+BotJoining --> ErrorState : Failed to join
+
+BotConnected --> Recording
+
+Recording --> TranscribingAudio : Audio chunk captured
+TranscribingAudio --> SpeakerDiarization : Whisper output ready
+SpeakerDiarization --> SummaryGeneration : Chunks processed
+SpeakerDiarization --> ErrorState : Diarization failed
+
+SummaryGeneration --> ActionItemExtraction : GPT outputs summary
+ActionItemExtraction --> TaskSync : Action items ready
+
+TaskSync --> VectorIndexing : Sync to Jira/Trello/Asana
+VectorIndexing --> MeetingCompleted : Index stored
+
+ErrorState --> MeetingCompleted : Abort meeting safely
+
+MeetingCompleted --> [*]
+
+@enduml
+@startuml
+title State Diagram 5: Meeting Processing Lifecycle with Conditional and Parallel Tasks
+
+[*] --> MeetingScheduled
+
+' ---- PreJoinValidation as a choice/decision ----
+state "PreJoinValidation" as PreJoinValidation
+state c <<choice>>
+
+MeetingScheduled --> PreJoinValidation: validate permissions
+PreJoinValidation --> c
+c --> BotJoining : All checks passed
+c --> ErrorState : Missing access tokens
+
+state BotJoining {
+    [*] --> JoiningProcess
+    JoiningProcess --> BotConnected : Joined successfully
+    JoiningProcess --> ErrorState : Failed to join
+}
+
+state BotConnected {
+    [*] --> Recording
+    Recording --> TranscribingAudio : Audio chunk captured
+    TranscribingAudio --> SpeakerDiarization : Whisper output ready
+    SpeakerDiarization --> ForkSummaryExtraction : chunks processed 
+    SpeakerDiarization --> ErrorState : Diarization failed
+
+    ' ---- Fork for parallel SummaryGeneration & ActionItemExtraction ----
+    state ForkSummaryExtraction <<fork>>
+    ForkSummaryExtraction --> SummaryGeneration
+    ForkSummaryExtraction --> ActionItemExtraction
+
+    state SummaryGeneration {
+        [*] --> GeneratingSummary
+        GeneratingSummary --> JoinSummaryExtraction
+    }
+
+    state ActionItemExtraction {
+        [*] --> ExtractingItems
+        ExtractingItems --> JoinSummaryExtraction
+    }
+
+    state JoinSummaryExtraction <<join>>
+    JoinSummaryExtraction --> TaskSync
+}
+
+state TaskSync {
+    [*] --> VectorIndexing : sync to Jira/Trello/Asana
+    VectorIndexing --> MeetingCompleted : Index stored
+}
+
+state ErrorState {
+    [*] --> AbortMeeting
+    AbortMeeting --> MeetingCompleted
+}
+
+state MeetingCompleted {
+    /'MeetingCompleted --> [*]'/
+}
+MeetingCompleted --> [*]
+@enduml
+
+RAG
+@startuml
+title State Diagram 3: RAG Semantic Search Flow
+
+[*] --> QueryReceived
+
+QueryReceived --> Preprocessing : Clean/normalize query
+Preprocessing --> EmbeddingQuery
+
+EmbeddingQuery --> VectorSearchExecution : Pinecone query
+VectorSearchExecution --> NoResults : No matches
+VectorSearchExecution --> TopKResultsFound : Matches found
+
+TopKResultsFound --> MetadataFetching : Fetch transcript sections
+MetadataFetching --> PromptConstruction
+PromptConstruction --> LLMAnswering : GPT processing
+LLMAnswering --> ResponseFormatting
+ResponseFormatting --> DeliveredToUser
+
+NoResults --> QueryError
+QueryError --> DeliveredToUser
+
+DeliveredToUser --> [*]
+
+@enduml
+
+@startuml
+
+[*] --> QueryReceived
+QueryReceived --> QueryProcessing : Clean/ Normalize Query
+' --- Composite: QueryProcessing ---
+state QueryProcessing {
+    [*] --> Preprocessing 
+    Preprocessing --> EmbeddingQuery : Create Query Vector
+}
+
+' --- Fork: Vector Search Execution ---
+state VectorSearchExecution
+EmbeddingQuery --> VectorSearchExecution : pinecone query
+
+' --- Composite: ResultHandling ---
+state ResultHandling {
+    TopKResultsFound --> MetadataFetching : Fetch Transcript Sections
+    MetadataFetching --> PromptConstruction
+    PromptConstruction --> LLMAnswering : GPT Processing
+    LLMAnswering --> ResponseFormatting
+    ResponseFormatting --> DeliveredToUser
+
+    NoResults --> QueryError
+    QueryError --> DeliveredToUser
+}
+
+DeliveredToUser --> [*]
+
+' --- Choice State ---
+state Decision <<choice>>
+
+Decision --> TopKResultsFound : matches found
+Decision --> NoResults : no matches
+
+
+
+VectorSearchExecution --> Decision
+
+@enduml
+
+workspace
+
+@startuml
+title State Diagram 4: Workspace & RBAC Flow
+
+[*] --> WorkspaceCreated
+
+WorkspaceCreated --> OwnerAssigned : Initial user
+OwnerAssigned --> InvitesPending : Owner sends invites
+
+InvitesPending --> MemberAdded : Member accepts invite
+InvitesPending --> OwnerAssigned : Invite expired / resend
+
+MemberAdded --> PermissionCheck : User performs an action
+
+PermissionCheck --> AuthorizedOperation : Allowed
+PermissionCheck --> UnauthorizedOperation : Blocked
+
+AuthorizedOperation --> WorkspaceSettingsUpdate : Owner modifies settings
+UnauthorizedOperation --> PermissionCheck : Retry allowed action
+
+WorkspaceSettingsUpdate --> WorkspaceDisabled : Subscription expired
+WorkspaceDisabled --> [*]
+
+@enduml
+
+@startuml
+
+
+' Initial State
+[*] --> WorkspaceCreated
+
+state WorkspaceCreated {
+  [*] --> SetupComplete
+  SetupComplete --> OwnerAssigned : Initial user
+}
+
+' Composite State for Invite Flow
+state InviteFlow {
+  [*] -> InvitesPending
+  InvitesPending --> MemberAdded : Member accepts invite
+  InvitesPending --> OwnerAssigned : Invite expired / resend
+}
+
+WorkspaceCreated --> InviteFlow: Owner sends invite
+
+
+
+' Composite State for Permission Check
+state PermissionFlow {
+  [*] -> PermissionCheck
+
+  state PermissionCheck {
+    [*] --> Check
+    Check --> AuthorizedOperation : Allowed
+    Check --> UnauthorizedOperation :Blocked
+  }
+
+ 
+  UnauthorizedOperation --> PermissionCheck : Retry allowed action
+}
+
+
+
+
+InviteFlow --> PermissionFlow: User performs an event
+
+
+
+PermissionFlow --> [*]
+
+
+
+@enduml
+
+payment
+@startuml
+title State Diagram 5: Payment & Subscription Lifecycle
+
+[*] --> NoSubscription
+
+NoSubscription --> PlanSelected : User picks a plan
+PlanSelected --> CheckoutInitiated : Create Stripe session
+CheckoutInitiated --> StripeCheckout
+
+StripeCheckout --> PaymentProcessing
+
+PaymentProcessing --> PaymentSuccessful : Stripe webhook success
+PaymentProcessing --> PaymentFailed : Card declined
+
+PaymentSuccessful --> ActiveSubscription
+ActiveSubscription --> RenewalPending : Period end approaching
+
+RenewalPending --> SubscriptionRenewed : Payment OK
+RenewalPending --> PaymentFailed
+
+PaymentFailed --> LockedMode : System restricts features
+LockedMode --> PlanSelected : User retries billing
+
+ActiveSubscription --> SubscriptionCanceled : User cancels
+SubscriptionCanceled --> LockedMode
+
+LockedMode --> [*]
+
+@enduml
+
+@startuml
+
+/' -----------------------------------------------------
+   INITIAL PHASE – USER HAS NO SUBSCRIPTION
+------------------------------------------------------ '/
+
+[*] --> NoSubscription
+
+state NoSubscription {
+  [*] --> WaitingForSelection
+  WaitingForSelection --> PlanSelected : User picks a plan
+}
+
+
+ /' -----------------------------------------------------
+    CHECKOUT PROCESS – SEQUENTIAL ONLY
+ ------------------------------------------------------ '/
+
+state CheckoutFlow {
+  [*] --> CheckoutInitiated : Create Stripe session
+  CheckoutInitiated --> StripeCheckout
+  StripeCheckout --> PaymentProcessing
+}
+
+PlanSelected --> CheckoutFlow
+
+
+ /' -----------------------------------------------------
+    PAYMENT PROCESSING WITH CONDITIONAL DECISION
+ ------------------------------------------------------ '/
+
+state PaymentProcessing {
+  [*] --> PaymentChoice
+
+  state PaymentChoice <<choice>>
+
+  PaymentChoice --> PaymentSuccessful : Stripe webhook OK
+  PaymentChoice --> PaymentFailed     : Card declined
+}
+
+CheckoutFlow --> PaymentProcessing
+
+
+ /' -----------------------------------------------------
+    SUBSCRIPTION ACTIVE – PARALLEL TASKS (VALID)
+ ------------------------------------------------------ '/
+
+state ActiveSubscription {
+  [*] --> ForkNode
+
+  state ForkNode <<fork>>
+  state JoinNode <<join>>
+
+  ForkNode --> UsageEnabled
+  ForkNode --> ActivityLogged
+
+  UsageEnabled --> JoinNode
+  ActivityLogged --> JoinNode
+
+  JoinNode --> RenewalPending: period end approaching
+}
+
+PaymentSuccessful --> ActiveSubscription
+
+
+ /' -----------------------------------------------------
+    RENEWAL PROCESS WITH CONDITIONAL DECISION
+ ------------------------------------------------------ '/
+
+state RenewalPending {
+  [*] --> RenewalCheck
+  RenewalCheck --> RenewalChoice
+
+  state RenewalChoice <<choice>>
+
+  RenewalChoice --> SubscriptionRenewed : Auto-payment OK
+  RenewalChoice --> PaymentFailed       : Payment failed
+}
+
+ActiveSubscription --> SubscriptionCanceled : User cancels
+SubscriptionCanceled --> LockedMode
+
+SubscriptionRenewed --> ActiveSubscription
+
+
+ /' -----------------------------------------------------
+    LOCKED MODE – SEQUENTIAL (NO CONCURRENCY)
+ ------------------------------------------------------ '/
+
+state LockedMode {
+  [*] --> LimitedAccess
+
+  LimitedAccess --> BillingRetry : User retries billing
+
+  
+
+  LimitedAccess --> SupportRequested : User seeks help
+}
+
+PaymentFailed --> LockedMode
+
+LockedMode --> PlanSelected
+LockedMode --> [*]
+
+@enduml
+
