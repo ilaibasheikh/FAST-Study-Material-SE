@@ -1,0 +1,74 @@
+Task 1: Setting Up Multichain on Windows
+Step 1.1: Download and Install Multichain
+1. Download Multichain from the official website: Multichain Download.
+o Select the Windows installer and follow the prompts to install Multichain on your
+system.
+
+Step 1.2: Configure Environment Variables
+2. Add Multichain executables (multichaind, multichain-cli, and multichain-util) to
+your system’s PATH to access them from the command line:
+o Open Control Panel -> System and Security -> System -> Advanced System
+Settings.
+o In the System Properties window, click Environment Variables.
+o Under System Variables, locate Path, select it, and click Edit.
+o Add the directory where the Multichain executables are installed (e.g.,
+C:\Program Files\Multichain).
+
+Now you can use Multichain commands from the Windows command prompt or
+PowerShell.
+Step 1.3: Create a New Blockchain
+3. Open the command prompt and create a new blockchain called blockchain1:
+
+multichain-util create blockchain1
+4. Start the blockchain:
+
+multichaind blockchain1 -daemon
+5. Open a node on your system to connect to the blockchain:
+
+multichaind blockchain1
+
+Task 2: Permissions Management
+Step 2.1: Grant Node Permissions
+1. Grant other nodes permissions to connect, send, and receive assets. This is useful when
+simulating multiple organizations or nodes:
+
+multichain-cli blockchain1 grant [address] connect,send,receive
+2. To view all granted permissions:
+
+multichain-cli blockchain1 listpermissions
+
+Task 3: Asset Creation and Management
+Step 3.1: Create a New Asset
+1. Create a new asset called "Silver" and issue 1000 units:
+
+multichain-cli blockchain1 issue [address] "Silver" 1000
+Step 3.2: Check Asset Balances
+2. Check the balance of all assets for a specific address:
+
+multichain-cli blockchain1 getaddressbalances [address]
+
+Task 4: Transferring Assets
+Step 4.1: Transfer Assets Between Nodes
+1. Transfer 100 units of "Silver" from one node to another:
+
+multichain-cli blockchain1 sendassettoaddress [recipient-address]
+"Silver" 100
+Step 4.2: Verify the Transfer
+2. Verify the transfer by checking the recipient node's balance:
+
+multichain-cli blockchain1 getaddressbalances [recipient-address]
+
+Task 5: Recording and Accessing Data Using Streams
+Step 5.1: Create a Stream
+1. Create a new stream to record transaction data:
+
+multichain-cli blockchain1 create stream stream1 true
+Step 5.2: Publish Data to Stream
+2. Publish transaction data to the stream:
+
+multichain-cli blockchain1 publish stream1 key1 "{\"transaction\":
+\"txid1\", \"asset\": \"Silver\"}"
+Step 5.3: Retrieve Data from Stream
+3. Retrieve data from the stream using the key:
+
+multichain-cli blockchain1 liststreamkeyitems stream1 key1
