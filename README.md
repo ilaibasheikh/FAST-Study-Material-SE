@@ -64,6 +64,13 @@ This repository contains course materials for the FAST-NUCES 22k batch (2022-202
 - **Professional Practices of Information Technology: Ghulam Raza and Rabia Ali Khan and other section**
 - **Introduction to Cloud Computing: Muhammad Sudais**
 - **Final Year Project - I : Saad Mansoor**
+
+### 8th Semester
+- **Software ReEngineering: Maqsood Khatoon**
+- **Data Science (SE): Muhammad Yaseen Khan**
+- **Applied DevOps: Talal Ahmed**
+- **Entrepreneurship: Zehra Mukhtiar**
+- **Final Year Project - II : Saad Mansoor**
   
 ## Usage
 
