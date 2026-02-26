@@ -68,7 +68,7 @@ This repository contains course materials for the FAST-NUCES 22k batch (2022-202
 ### 8th Semester
 - **Software ReEngineering: Maqsood Khatoon**
 - **Data Science (SE): Muhammad Yaseen Khan**
-- **Digital Transformation: Tools and Techniques: Muhammad Mustajab**
+- **Digital Transformation: Tools and Techniques: Rafi Uddin and Komal Ridda**
 - **Arabic Language: Abdullah Siddiqui**
 - **Final Year Project - II : Saad Mansoor**
   
